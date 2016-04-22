@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>首页</title>
+    <!-- <link rel="apple-touch-startup-image" href="images/back.jpg" /> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flickerplate.css">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <nav class="top-nav">
+            <a href="#" class="add"><img src="images/add.png" alt="添加"></a>
+            <input type="text" placeholder="初夏好物...">
+            <a href="#"><img src="images/search.png" alt="搜索"></a>
+        </nav>
+    </header>
+    <section class="focus-wrap">
+        <div class="flicker-example" data-block-text="false">
+            <ul>
+                <li data-background="images/field.jpg">
+                    <div class="flick-title">测试图片1</div>
+                    <div class="flick-sub-text">这里是一些简单的介绍文本</div>
+                </li>
+                <li data-background="images/forest.jpg">
+                    <div class="flick-title">测试图片2</div>
+                    <div class="flick-sub-text">这里是一些简单的介绍文本</div>
+                </li>
+                <li data-background="images/frozen-water.jpg">
+                    <div class="flick-title">测试图片3</div>
+                    <div class="flick-sub-text">这里是一些简单的介绍文本</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="categories">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="images/clothes.png" alt="服装">
+                    <p>服装</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/shoes.png" alt="鞋包">
+                    <p>鞋包</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/peishi.png" alt="配饰">
+                    <p>配饰</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/com.png" alt="数码">
+                    <p>数码</p>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="images/read.png" alt="读物">
+                    <p>读物</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/eat.png" alt="食品">
+                    <p>食品</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/market.png" alt="超市">
+                    <p>超市</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/count.png" alt="折扣">
+                    <p>折扣</p>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <section class="recommend">
+        <h3><img src="images/heart.png" alt="">好物推荐</h2>
+        <ul class="reco-list">
+            <li><a href="#"><img src="images/recommend1.png" alt=""></a></li>
+            <li><a href="#"><img src="images/recommend2.png" alt=""></a></li>
+            <li><a href="#"><img src="images/recommend1.png" alt=""></a></li>
+            <li><a href="#"><img src="images/recommend2.png" alt=""></a></li>
+        </ul>
+    </section>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">
+                        <img src="images/home-pressed.png" alt="主页">
+                        <p>主页</p>
+                    </a></li>
+                <li><a href="#">
+                        <img src="images/shop-car.png" alt="购物车">
+                        <p>购物车</p>
+                    </a></li>
+                <li><a href="#">
+                        <img src="images/mine.png" alt="个人">
+                        <p>个人</p>
+                    </a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="js/jquery-v1.10.2.min.js"></script>
+    <script src="js/jquery-finger-v0.1.0.min.js"></script>
+    <script src="js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="js/flickerplate.min.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.flicker-example').flicker();
+    });
+    </script>
+</body>
+
+</html>
