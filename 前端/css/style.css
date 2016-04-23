@@ -911,3 +911,66 @@ section.shopping-list-container {
     width: 100%;
     margin-bottom: 70px;
 }
+
+
+/* ***************************************** */
+/* 购物车 */
+/*********************************************/
+section.chart-head {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    color: #fff;
+    background-color: #ce4845;
+}
+section.chart-head h3 {
+    font-size: 22px;
+    margin: 0;
+    padding: 1em 0;
+}
+section.chart-head p {
+    position: absolute;
+    right: 14px;
+    top: 20px;
+}
+
+section.chart-list {
+    width: 100%;
+    margin-top: 74px;
+    margin-bottom: 138px;
+    z-index: 999;
+    position: relative;
+}
+
+/* 左滑出现编辑删除按钮 */
+/*section.chart-list ul {
+    position: absolute;
+    z-index: 999;
+    top: 74px;
+    margin-bottom: 138px;
+}*/
+section.chart-list ul li {
+    position: relative;
+}
+section.hideEdit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    /*display: none;*/
+}
+section.hideEdit a {
+    display: inline-block;
+    width: 90px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+section.hideEdit a:first-child {
+    background-color: #DE8A4C;
+}
+section.hideEdit a+a {
+    background-color: #CE4845;
+}
