@@ -1,0 +1,1118 @@
+[ 2016-04-23T08:52:26+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.017836s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012574s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006404s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006706s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.016453s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.016562s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002752s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002916s ]
+
+[ 2016-04-23T09:26:45+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000648s ]
+ERR: Êó†Ê≥ïÂä†ËΩΩÊï∞ÊçÆÂ∫ìÈ©±Âä®: Think\Db\Driver\
+
+[ 2016-04-23T09:32:58+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:32:59+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:34:57+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:34:58+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:34:58+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:34:58+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:36:05+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:36:06+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:36:06+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:36:06+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:36:06+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:36:07+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:36:47+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000511s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:36:48+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:36:48+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:36:48+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:36:48+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000630s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:37:45+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:37:46+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:38:25+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000733s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:41:30+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:41:30+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:41:31+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000757s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:41:31+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:42:35+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:42:35+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:42:35+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:42:36+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:42:56+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+ERR: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND'
+
+[ 2016-04-23T09:44:53+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+ERR: SQLSTATE[HY000] [2019] Unknown character set
+
+[ 2016-04-23T09:44:54+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+ERR: SQLSTATE[HY000] [2019] Unknown character set
+
+[ 2016-04-23T09:44:56+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000856s ]
+ERR: SQLSTATE[HY000] [2019] Unknown character set
+
+[ 2016-04-23T09:45:10+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000722s ]
+ERR: SQLSTATE[HY000] [2019] Unknown character set
+
+[ 2016-04-23T09:45:10+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+ERR: SQLSTATE[HY000] [2019] Unknown character set
+
+[ 2016-04-23T09:45:11+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+ERR: SQLSTATE[HY000] [2019] Unknown character set
+
+[ 2016-04-23T09:45:11+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000375s ]
+ERR: SQLSTATE[HY000] [2019] Unknown character set
+
+[ 2016-04-23T09:49:09+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2016-04-23T09:49:09+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000428s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2016-04-23T09:49:41+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2016-04-23T09:49:41+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000409s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000524s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000582s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2016-04-23T09:49:41+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000343s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000378s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000441s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000464s ]
+
+[ 2016-04-23T09:50:42+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000733s ]
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2016-04-23T09:51:27+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0063s ]
+NOTIC: [8] Undefined variable: data F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+NOTIC: [8] Trying to get property of non-object F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+ERR: Call to a member function where() on null
+
+[ 2016-04-23T09:52:05+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0038s ]
+NOTIC: [8] Undefined variable: data F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+NOTIC: [8] Trying to get property of non-object F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+ERR: Call to a member function where() on null
+
+[ 2016-04-23T09:52:26+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0037s ]
+NOTIC: [8] Undefined variable: data F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+NOTIC: [8] Trying to get property of non-object F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+ERR: Call to a member function find() on null
+
+[ 2016-04-23T09:52:27+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0036s ]
+NOTIC: [8] Undefined variable: data F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+NOTIC: [8] Trying to get property of non-object F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+ERR: Call to a member function find() on null
+
+[ 2016-04-23T09:52:27+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0033s ]
+NOTIC: [8] Undefined variable: data F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+NOTIC: [8] Trying to get property of non-object F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+ERR: Call to a member function find() on null
+
+[ 2016-04-23T09:52:28+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0038s ]
+NOTIC: [8] Undefined variable: data F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+NOTIC: [8] Trying to get property of non-object F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+ERR: Call to a member function find() on null
+
+[ 2016-04-23T09:54:19+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0035s ]
+NOTIC: [8] Undefined variable: data F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+NOTIC: [8] Trying to get property of non-object F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+ERR: Call to a member function where() on null
+
+[ 2016-04-23T09:54:20+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0041s ]
+NOTIC: [8] Undefined variable: data F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+NOTIC: [8] Trying to get property of non-object F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+ERR: Call to a member function where() on null
+
+[ 2016-04-23T09:54:20+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000778s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0070s ]
+NOTIC: [8] Undefined variable: data F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+NOTIC: [8] Trying to get property of non-object F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+ERR: Call to a member function where() on null
+
+[ 2016-04-23T09:54:20+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000808s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0037s ]
+NOTIC: [8] Undefined variable: data F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+NOTIC: [8] Trying to get property of non-object F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Home\Controller\IndexController.class.php Á¨¨ 14 Ë°å.
+ERR: Call to a member function where() on null
+
+[ 2016-04-23T09:55:55+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000511s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `admins` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0054s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000704s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000737s ]
+
+[ 2016-04-23T10:04:46+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+ERR: syntax error, unexpected end of file, expecting function (T_FUNCTION)
+
+[ 2016-04-23T10:06:08+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000586s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `admins` LIMIT 1   [ RunTime:0.0038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000766s ]
+
+[ 2016-04-23T10:13:07+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admins` LIMIT 1   [ RunTime:0.0031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000716s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000749s ]
+
+[ 2016-04-23T10:13:09+08:00 ] ::1 /index.php/home/index/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0035s ]
+ERR: 1364:Field 'id' doesn't have a default value
+ [ SQLËØ≠Âè• ] : INSERT INTO `admins` (`name`,`account`,`password`,`power`) VALUES ('blackcat','bk','bk','1')
+ERR: 1364:Field 'id' doesn't have a default value
+ [ SQLËØ≠Âè• ] : INSERT INTO `admins` (`name`,`account`,`password`,`power`) VALUES ('blackcat','bk','bk','1')
+
+[ 2016-04-23T10:14:48+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `admins` LIMIT 1   [ RunTime:0.0052s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000595s ]
+
+[ 2016-04-23T10:14:49+08:00 ] ::1 /index.php/home/index/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0029s ]
+SQL: INSERT INTO `admins` (`name`,`account`,`password`,`power`) VALUES ('blackcat','bk','bk','1') [ RunTime:0.0131s ]
+ERR: Call to undefined function Home\Controller\hello()
+
+[ 2016-04-23T10:15:21+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `admins` LIMIT 1   [ RunTime:0.0027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000711s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000750s ]
+
+[ 2016-04-23T10:15:34+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `admins` LIMIT 1   [ RunTime:0.0027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000591s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000617s ]
+
+[ 2016-04-23T10:15:36+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `admins` LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000663s ]
+
+[ 2016-04-23T10:15:48+08:00 ] ::1 /index.php/home/index/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000512s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0032s ]
+SQL: INSERT INTO `admins` (`name`,`account`,`password`,`power`) VALUES ('blackcat','bk','bk','1') [ RunTime:0.0145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000644s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000677s ]
+
+[ 2016-04-23T10:15:48+08:00 ] ::1 /index.php/home/index/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0040s ]
+SQL: INSERT INTO `admins` (`name`,`account`,`password`,`power`) VALUES ('blackcat','bk','bk','1') [ RunTime:0.0108s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000630s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000659s ]
+
+[ 2016-04-23T10:15:51+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `admins` LIMIT 1   [ RunTime:0.0028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000559s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000588s ]
+
+[ 2016-04-23T10:15:52+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admins` LIMIT 1   [ RunTime:0.0035s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000621s ]
+
+[ 2016-04-23T10:15:53+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `admins` LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000743s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000780s ]
+
+[ 2016-04-23T10:15:53+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `admins` LIMIT 1   [ RunTime:0.0031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000731s ]
+
+[ 2016-04-23T10:15:53+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `admins` LIMIT 1   [ RunTime:0.0026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000626s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000659s ]
+
+[ 2016-04-23T10:15:53+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `admins` LIMIT 1   [ RunTime:0.0033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000637s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000681s ]
+
+[ 2016-04-23T10:16:20+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `admins` LIMIT 1   [ RunTime:0.0034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001838s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001947s ]
+
+[ 2016-04-23T10:28:47+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.6312s ]
+SQL: SELECT * FROM `admins`  [ RunTime:0.0073s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000733s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000769s ]
+
+[ 2016-04-23T10:29:11+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000862s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:6.8881s ]
+SQL: SELECT * FROM `admins`  [ RunTime:0.0046s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000657s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000694s ]
+
+[ 2016-04-23T10:29:13+08:00 ] ::1 /index.php/home/index/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0224s ]
+SQL: INSERT INTO `admins` (`name`,`account`,`password`,`power`) VALUES ('blackcat','bk','bk','1') [ RunTime:0.0254s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000705s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000740s ]
+
+[ 2016-04-23T10:29:15+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `admins`  [ RunTime:0.0037s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000699s ]
+
+[ 2016-04-23T10:29:17+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.2120s ]
+SQL: SELECT * FROM `admins`  [ RunTime:0.0043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000846s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000893s ]
+
+[ 2016-04-23T10:29:18+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000731s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `admins`  [ RunTime:0.0031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000718s ]
+
+[ 2016-04-23T10:52:12+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `admins`  [ RunTime:0.0036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000671s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000698s ]
+
+[ 2016-04-23T10:52:14+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000467s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.2112s ]
+SQL: SELECT * FROM `admins`  [ RunTime:0.0063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000579s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000606s ]
+
+[ 2016-04-23T10:52:15+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.2136s ]
+SQL: SELECT * FROM `admins`  [ RunTime:0.0034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000588s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000616s ]
+
+[ 2016-04-23T10:55:14+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:3.5509s ]
+SQL: SELECT * FROM `admins`  [ RunTime:0.0037s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.011614s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011684s ]
+NOTIC: [8] Undefined variable: name F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Runtime\Cache\Home\5f1ee435d3f602d14be94a416f733bd3.php Á¨¨ 8 Ë°å.
+NOTIC: [8] Undefined variable: account F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Runtime\Cache\Home\5f1ee435d3f602d14be94a416f733bd3.php Á¨¨ 9 Ë°å.
+NOTIC: [8] Undefined variable: password F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Runtime\Cache\Home\5f1ee435d3f602d14be94a416f733bd3.php Á¨¨ 10 Ë°å.
+NOTIC: [8] Undefined variable: power F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Runtime\Cache\Home\5f1ee435d3f602d14be94a416f733bd3.php Á¨¨ 11 Ë°å.
+NOTIC: [8] Undefined variable: name F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Runtime\Cache\Home\5f1ee435d3f602d14be94a416f733bd3.php Á¨¨ 8 Ë°å.
+NOTIC: [8] Undefined variable: account F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Runtime\Cache\Home\5f1ee435d3f602d14be94a416f733bd3.php Á¨¨ 9 Ë°å.
+NOTIC: [8] Undefined variable: password F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Runtime\Cache\Home\5f1ee435d3f602d14be94a416f733bd3.php Á¨¨ 10 Ë°å.
+NOTIC: [8] Undefined variable: power F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\Application\Runtime\Cache\Home\5f1ee435d3f602d14be94a416f733bd3.php Á¨¨ 11 Ë°å.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.158181s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.158221s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000541s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000563s ]
+
+[ 2016-04-23T10:58:03+08:00 ] ::1 /index.php/home/index/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.6340s ]
+SQL: INSERT INTO `admins` (`name`,`account`,`password`,`power`) VALUES ('blackcat','bk','bk','1') [ RunTime:0.0122s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000664s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000694s ]
+
+[ 2016-04-23T10:58:33+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.6357s ]
+SQL: SELECT * FROM `admins`  [ RunTime:26.7684s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000052s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004220s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004252s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000531s ]
+
+[ 2016-04-23T10:58:33+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000521s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000437s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000465s ]
+
+[ 2016-04-23T10:58:38+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.2123s ]
+SQL: SELECT * FROM `admins`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000057s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005371s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005410s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000441s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000465s ]
+
+[ 2016-04-23T11:04:44+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000502s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.6284s ]
+SQL: SELECT * FROM `admins`  [ RunTime:0.0038s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000046s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004480s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004511s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000637s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000677s ]
+
+[ 2016-04-23T11:07:06+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:1.0246s ]
+SQL: SELECT * FROM `admins`  [ RunTime:0.0086s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000024s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000061s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004787s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000741s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000842s ]
+
+[ 2016-04-23T11:11:03+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000756s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.2130s ]
+SQL: SELECT * FROM `admins`  [ RunTime:0.0058s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010885s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010965s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000920s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001132s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001172s ]
+
+[ 2016-04-23T11:11:24+08:00 ] ::1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000364s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000411s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000482s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000512s ]
+
+[ 2016-04-23T11:11:28+08:00 ] ::1 /index.php/home/index/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000505s ]
+SQL: SHOW COLUMNS FROM `admins` [ RunTime:0.6246s ]
+SQL: SELECT * FROM `admins`  [ RunTime:0.0034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000023s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004595s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000488s ]
+
