@@ -2,17 +2,24 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<titl>数据展示</titl>
-</head>
-<body>
-<volist name="list" id="vo"  >
-<li>{$i}</li>
-<li>{$vo.name}</li>
-<li>{$vo.account}</li>
-<li>{$vo.password}</li>
-<li>{$vo.power}</li>
-<br>
-</volist>
+	<title>数据展示</title>
 
+</head>
+
+<body>
+<form id="add" action="./delete"  method="post" >
+	序号 -- 名字 -- 账号 -- 密码 -- 权限<br>
+	<volist name="list" id="vo"  >
+		{$i} --
+		{$vo.name} --
+		{$vo.account} --
+		{$vo.password} --
+		{$vo.power}
+		<a href="{:U("index.php/home/Index/delete?id=$vo[id]")}" >删除</a>
+	<br>
+	<br>
+	</volist>
+	<input type="hidden" id="id" name='ID'  />
+</form>
 </body>
 </html>
