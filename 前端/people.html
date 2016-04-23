@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
-    <title>支付</title>
+    <title>个人页面</title>
     <link rel="stylesheet" href="css/style.css">
     <!--[if lt IE 9]>
     <script type="text/javascript" src="js/html5shiv.min.js"></script>
@@ -16,29 +16,47 @@
 </head>
 
 <body>
-    <section class="pay-head">
-        <div class="pay-head-h">
-            <a href="#"><img src="images/arrow-left.png" alt="返回"></a>
-            <h3>支付</h3>
-        </div>
-        <div class="pay-info">
-            <img src="images/location.png" alt="location">
-            <div>
-                <p>收货人: <span>XXX</span></p>
-                <p>电话: <span>178xxxx0234</span></p>
-                <p>地址: <span>山东省青岛市崂山区中国海洋大学</span></p>
-                <p></p>
-            </div>
-        </div>
-        <img src="images/bolang.png" alt="bolang">
+    <section class="mine-info">
+        <a href="#"><img src="images/setting.png" alt="setting"></a>
+        <img src="images/me.jpg" alt="me">
+        <p>用户名</p>
     </section>
-    <section class="pay-things">
-        <section class="shop">
-            <div class="shop-info">
-                <img src="images/logo-shop.png" alt="logo-shop">
-                <h3>xxx店铺</h3>
-            </div>
-            <ul class="shopping-list">
+    <section class="tab-choice">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="images/dingdan.png" alt="订单">
+                    <p>订单</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/heart-like.png" alt="收藏">
+                    <p>收藏</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/take.png" alt="运送中">
+                    <p>运送中</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/car.png" alt="待发货">
+                    <p>待发货</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/comment.png" alt="评价">
+                    <p>评价</p>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <section class="shopping-list-container">
+        <ul class="shopping-list">
                 <li>
                     <img src="images/things-pay.png" alt="things">
                     <div>
@@ -80,12 +98,6 @@
                     </div>
                 </li>
             </ul>
-        </section>
-    </section>
-    <section class="pay-confirm">
-    	<a href="#">支付</a>
-    	<p>总计: <span>￥998</span></p>
-    	<div style="clear: both;"></div>
     </section>
     <footer>
         <nav>
@@ -98,13 +110,13 @@
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/shop-car-pressed.png" alt="购物车">
+                        <img src="images/shop-car.png" alt="购物车">
                         <p>购物车</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/mine.png" alt="个人">
+                        <img src="images/mine-pressed.png" alt="个人">
                         <p>个人</p>
                     </a>
                 </li>

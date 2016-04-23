@@ -796,7 +796,7 @@ div.shop-info h3 {
     color: #ce4845;
     padding: 0 6px;
 }
-section.shop ul li {
+ul.shopping-list li {
     font-size: 14px;
     color: #5e5d5d;
     -webkit-box-sizing:border-box;
@@ -804,20 +804,20 @@ section.shop ul li {
     background-color: #EAEAEA;
     margin-bottom: 1px;
 }
-section.shop ul li img {
+ul.shopping-list li img {
     display: inline-block;
     width: 35%;
 }
-section.shop ul div {
+ul.shopping-list div {
     display: inline-block;
     width: 62%;
     position: relative;
 }
-section.shop ul li p+p {
+ul.shopping-list li p+p {
     display: inline;
     margin-right: 6px;
 }
-section.shop ul li strong {
+ul.shopping-list li strong {
     color: #ce4845;
     font-size: 20px;
     position: absolute;
@@ -853,4 +853,61 @@ section.shop ul li strong {
     background-color: #de8a4d;
     color: #fff;
     float: right;
+}
+
+
+/* ***************************************** */
+/* 个人信息页 */
+/*********************************************/
+section.mine-info {
+    width: 100%;
+    background-color: #ce4845;
+    padding: 60px 0 10px 0;
+    position: relative;
+}
+section.mine-info a {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+}
+section.mine-info > img {
+    width: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+section.mine-info p {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+section.tab-choice {
+    width: 100%;
+    margin: 15px 0;
+}
+section.tab-choice ul {
+    width: 88%;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+}
+section.tab-choice ul li {
+    display: inline-block;
+    width: 18.3%;
+}
+section.tab-choice ul li a {
+    display: block;
+    text-align: center;
+    color: #5e5d5d;
+}
+section.tab-choice ul li a img {
+    margin: 0 auto;
+    width: 50px;
+}
+
+section.shopping-list-container {
+    width: 100%;
+    margin-bottom: 70px;
 }
