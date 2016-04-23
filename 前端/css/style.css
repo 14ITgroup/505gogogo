@@ -633,6 +633,9 @@ section.categories ul a {
     width: 80%;
     margin: 0 auto;
 }
+section.categories ul a img {
+    margin: 0 auto;
+}
 section.categories ul a p {
     color: #545454;
     padding-top: 4px;
@@ -667,7 +670,35 @@ section.recommend ul li {
     -webkit-box-sizing:border-box;
     margin-bottom: 4px;
     background-color: #fff;
+    position: relative;
 }
+.reco-list a+a {
+    display: block;
+    color: #959595;
+    font-size: 12px;
+    margin: 4px 2px 6px 4px;
+}
+.reco-list a+a span {
+    background-color: #CE4845;
+    color: #fff;
+    margin-right: 4px;
+}
+.reco-list li p {
+    font-size: 10px;
+    color: #B7B7B7;
+    display: inline-block;
+    padding: 0 0 6px 4px;
+}
+.reco-list li strong {
+    display: inline-block;
+    font-size: 18px;
+    color: #CE4845;
+    position: absolute;
+    right: 6px;
+    bottom: 4px;
+}
+
+
 
 /* 底部导航栏 */
 footer {
@@ -699,4 +730,127 @@ footer ul li a {
 footer ul li a img {
     width: 30px;
     margin: 0 auto;
+}
+
+
+/* ***************************************** */
+/* 支付页 */
+/*********************************************/
+section.pay-head {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    /*background-color: #ce4845;*/
+}
+section.pay-head .pay-head-h {
+    position: relative;
+    text-align: center;
+    background-color: #ce4845;
+}
+div.pay-head-h a {
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: 9px;
+}
+div.pay-head-h h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 24px;
+    padding: 14px 0;
+}
+div.pay-info {
+    background-color: #ce4845;
+    margin: -1px 0;
+    padding: 20px 0;
+}
+div.pay-info img {
+    display: inline-block;
+    width: 12%;
+    margin: 0 2%;
+}
+div.pay-info div {
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+}
+
+section.pay-things {
+    width: 100%;
+    margin-top: 178px;
+    margin-bottom: 138px;
+}
+div.shop-info {
+    margin: 14px 0;
+}
+div.shop-info img {
+    display: inline-block;
+    margin-left: 6px;
+    width: 8%;
+    vertical-align: middle;
+}
+div.shop-info h3 {
+    display: inline-block;
+    margin: 0;
+    color: #ce4845;
+    padding: 0 6px;
+}
+section.shop ul li {
+    font-size: 14px;
+    color: #5e5d5d;
+    -webkit-box-sizing:border-box;
+    padding: 6px;
+    background-color: #EAEAEA;
+    margin-bottom: 1px;
+}
+section.shop ul li img {
+    display: inline-block;
+    width: 35%;
+}
+section.shop ul div {
+    display: inline-block;
+    width: 62%;
+    position: relative;
+}
+section.shop ul li p+p {
+    display: inline;
+    margin-right: 6px;
+}
+section.shop ul li strong {
+    color: #ce4845;
+    font-size: 20px;
+    position: absolute;
+    right: 6px;
+    bottom: 0;
+}
+
+.pay-confirm {
+    position: fixed;
+    bottom: 64px;
+    width: 100%;
+    height: 70px;
+    background-color: #EFEFEF;
+    z-index: 1000;
+}
+.pay-confirm p {
+    color: #5e5d5d;
+    font-size: 14px;
+    display: inline-block;
+    float: right;
+    line-height: 70px;
+    padding-right: 8px;
+}
+.pay-confirm p span {
+    color: #ce4845;
+    font-size: 18px;
+}
+.pay-confirm a {
+    display: inline-block;
+    line-height: 70px;
+    text-align: center;
+    width: 100px;
+    background-color: #de8a4d;
+    color: #fff;
+    float: right;
 }
