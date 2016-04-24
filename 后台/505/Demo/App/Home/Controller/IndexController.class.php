@@ -54,13 +54,36 @@ class IndexController extends Controller {
 
 	public function datatest() {
 		//实例化出来一个商品类(视图)
+		$this->display();
+		if (IS_POST) {
+			if (isset($_POST['add'])) {
+				$color = $_POST['colorname'];
+				$add = D("GoodsView")->addcolor(2, $color);
+				if ($add) {
+					$this->success('操作完成', U('index.php/home/index/datatest'), 5);
+				} else {
+					$this->error('删除失败');
+				}
+			}
+			if (isset($_POST['del'])) {
+				$color = $_POST['colorname'];
+				$add = D("GoodsView")->delcolor(2, $color);
+				if ($add) {
+					$this->success('操作完成', U('index.php/home/index/datatest'), 5);
+				} else {
+					$this->error('删除失败');
+				}
+			}
+		}
 		$da = D("goodsView");
 		//
+		$demo = $da->select(); //->where('goods.id=1')->select();
+		dump($demo);
 		//测试两个方法seecolor，seesize；分别用于查看每个商品的颜色分类和尺寸分类，同样的分类只显示1次，传入的id
-		$goodid = 2;
+		$goodid = 1;
 		$color = $da->seecolor($goodid);
 		dump($color);
-		$goodid = 1;
+		$goodid = 2;
 		$size = $da->seesize($goodid);
 		dump($size);
 	}

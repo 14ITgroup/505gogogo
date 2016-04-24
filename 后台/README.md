@@ -29,7 +29,7 @@
 内容：增加了一个视图类，可以查看商品的类型，还有两个小类可以分别查看商品的颜色的信息，尺寸信息。
 
 
-2个返回分类的方法，还有添加分类的方法。具体请见Home/Model/GoodsViewModel.class.php
+2个返回分类的方法，2个添加分类的方法，2个删除分类的方法。具体请见Home/Model/GoodsViewModel.class.php
 
 Demo对应 controller的 datatest()和datatest2()
 
