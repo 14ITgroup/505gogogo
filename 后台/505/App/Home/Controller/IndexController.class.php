@@ -40,28 +40,23 @@ class IndexController extends Controller
 	public function register(){
 		$this->display();
 		if(IS_POST){
-			//判断是否两次输入的密码一致
-			if($_POST['password1']==$_POST['password2']){
-				$user=M('users');
-				$user->name=$_POST['name'];
-				$user->account=$_POST['account'];
-				//md5后存入数据库
-				$pwd=$_POST['password1'];
-				$user->password=md5($pwd);
-				$user->email=$_POST['email'];
-				$user->phonenumber=$_POST['phone'];
-				$user->address=$_POST['address'];
-				if($user->where('account="%s"',$user->account)->select()){
-					$this->error('您输入的账号已存在');
-				}
-				$result=$user->add();
-				if ($result) {
-				$this->success('注册成功', U("index.php/home/Index/login"));
-				} else {
-					$this->error('注册失败');
-				}
-			}else{
-				$this->error('两次输入的密码不一致');
+			$user=M('users');
+			$user->name=$_POST['name'];
+			$user->account=$_POST['account'];
+			//md5后存入数据库
+			$pwd=$_POST['password1'];
+			$user->password=md5($pwd);
+			$user->email=$_POST['email'];
+			$user->phonenumber=$_POST['phone'];
+			$user->address=$_POST['address'];
+			if($user->where('account="%s"',$user->account)->select()){
+				$this->error('您输入的账号已存在');
+			}
+			$result=$user->add();
+			if ($result) {
+			$this->success('注册成功', U("index.php/home/Index/login"));
+			} else {
+				$this->error('注册失败');
 			}
 		}
 	}
