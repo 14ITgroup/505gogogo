@@ -5,7 +5,7 @@ return array(
 	'DB_TYPE' => 'mysql',
 	'DB_HOST' => '120.27.104.254',
 	'DB_PORT' => '3306',
-	'DB_NAME' => 'WebShop',
+	'DB_NAME' => 'shop',
 	'DB_USER' => 'blackcat',
 	'DB_PWD' => '960214',
 	'DB_CHARSET' => 'utf8',

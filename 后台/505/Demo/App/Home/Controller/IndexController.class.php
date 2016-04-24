@@ -51,4 +51,14 @@ class IndexController extends Controller {
 			$this->error('删除失败');
 		}
 	}
+
+	public function datatest() {
+		$da = D("GoodsView")->select();
+		dump($da);
+		$da = D("ColorView")->select();
+		dump($da);
+		$data = M("goodsclassify")->select();
+		dump($data);
+
+	}
 }
