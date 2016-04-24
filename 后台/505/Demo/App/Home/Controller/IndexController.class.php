@@ -53,12 +53,25 @@ class IndexController extends Controller {
 	}
 
 	public function datatest() {
-		$da = D("GoodsView")->select();
-		dump($da);
-		$da = D("ColorView")->select();
-		dump($da);
-		$data = M("goodsclassify")->select();
-		dump($data);
+		//实例化出来一个商品类(视图)
+		$da = D("goodsView");
+		//
+		//测试两个方法seecolor，seesize；分别用于查看每个商品的颜色分类和尺寸分类，同样的分类只显示1次，传入的id
+		$goodid = 2;
+		$color = $da->seecolor($goodid);
+		dump($color);
+		$goodid = 1;
+		$size = $da->seesize($goodid);
+		dump($size);
+	}
 
+//当有没有记录时跳转；
+	public function datatest2() {
+		$d1 = "红";
+		$da = D("GoodsView")->where('goodstype.color="%s"', $d1)->count();
+		dump($da);
+		if ($da == '0') {
+			$this->success('操作完成', U('index.php/home/index/datatest'), 5);
+		}
 	}
 }
