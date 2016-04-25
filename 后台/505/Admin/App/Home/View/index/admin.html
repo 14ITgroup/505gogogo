@@ -1,0 +1,83 @@
+<script> 
+function checkUser(){
+   var name = document.getElementById("name").value;
+   var account = document.getElementById("account").value;
+   var password = document.getElementById("password").value;
+   if(name == ""  ){
+     alert("用户名不能为空");
+     return false;
+   }
+   if(account == ""  ){
+     alert("用户名不能为空");
+     return false;
+   }
+   if(password == ""  ){
+    alert("密码不能为空");
+     return false;
+   }else{
+   return true;
+   }
+}
+</script>
+
+    <div class="content">
+        <div class="main-content">
+<div class="row">
+  <div class="col-md-4">
+    <br>
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane active in" id="home" >
+      <form id="tab" method='post' onsubmit = "return checkUser();" >
+        <div class="form-group">
+        <label>用户名</label>
+        <input type="text" name="name" value="{$list[0]['name']}" class="form-control">
+        </div>
+        <div class="form-group">
+        <label>帐号</label>
+        <input type="text" name="account" value="{$list[0]['account']}" class="form-control">
+        </div>
+        <div class="form-group">
+        <label>密码</label>
+        <input type="text" name="password" value="{$list[0]['password']}" class="form-control">
+        </div>
+        <div class="form-group">
+        <label>权限</label>
+        <input type="text" name="power" value="{$list[0]['power']}" class="form-control">
+        </div>
+      
+      </div>
+
+    <div class="btn-toolbar list-toolbar">
+      <button class="btn btn-primary"><i class="fa fa-save" ></i> 保存</button>
+      <a href="{:U("Home/Index/delete?id=$id")}" data-toggle="modal" class="btn btn-danger">删除</a>
+    </div>
+    </form>
+  </div>
+</div>
+
+<div class="modal small fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Delete Confirmation</h3>
+      </div>
+      <div class="modal-body">
+        
+        <p class="error-text"><i class="fa fa-warning modal-icon"></i>Are you sure you want to delete the user?</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        <button class="btn btn-danger" data-dismiss="modal">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+    </div>
+
+
+    
+  
+</body></html>

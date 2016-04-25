@@ -1,0 +1,54 @@
+[ 2016-04-24T08:22:27+08:00 ] ::1 /505/Admin/index.php/motice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+ERR: 无法加载模块:Motice
+
+[ 2016-04-24T08:22:35+08:00 ] ::1 /505/Admin/index.php/notice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+ERR: 无法加载模块:Notice
+
+[ 2016-04-24T13:04:32+08:00 ] ::1 /505/Admin/index.php/index.php/home/Index/delete/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+ERR: 无法加载模块:Index.php
+
+[ 2016-04-24T13:06:16+08:00 ] ::1 /505/Admin/index.php/index.php/home/Index/delete/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+ERR: 无法加载模块:Index.php
+
+[ 2016-04-24T13:06:20+08:00 ] ::1 /505/Admin/index.php/index.php/home/Index/delete/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+ERR: 无法加载模块:Index.php
+
+[ 2016-04-24T13:15:29+08:00 ] ::1 /505/Admin/index.php/index.php/home/Index/delete/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000787s ]
+ERR: 无法加载模块:Index.php
+
+[ 2016-04-24T13:17:29+08:00 ] ::1 /505/Admin/index.php/index.php/home/Index/delete/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+ERR: 无法加载模块:Index.php
+
+[ 2016-04-24T13:28:58+08:00 ] ::1 /505/Admin/index.php/index.php/home/Index/delete/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001426s ]
+ERR: 无法加载模块:Index.php
+
+[ 2016-04-24T13:29:33+08:00 ] ::1 /505/Admin/index.php/index.php/home/Index/delete/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+ERR: 无法加载模块:Index.php
+
