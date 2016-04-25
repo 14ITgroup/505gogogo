@@ -54,6 +54,9 @@ class IndexController extends Controller {
 
 	public function datatest() {
 		//实例化出来一个商品类(视图)
+		$s = date('Y-m-d H:i:s') . '';
+
+		dump($s);
 		$this->display();
 		if (IS_POST) {
 			if (isset($_POST['add'])) {
@@ -80,7 +83,7 @@ class IndexController extends Controller {
 		$demo = $da->select(); //->where('goods.id=1')->select();
 		dump($demo);
 		//测试两个方法seecolor，seesize；分别用于查看每个商品的颜色分类和尺寸分类，同样的分类只显示1次，传入的id
-		$goodid = 1;
+		$goodid = 2;
 		$color = $da->seecolor($goodid);
 		dump($color);
 		$goodid = 2;
