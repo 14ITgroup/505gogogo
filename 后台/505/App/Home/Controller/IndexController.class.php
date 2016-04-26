@@ -16,18 +16,20 @@ class IndexController extends Controller
     	$this->display();
     	if(IS_POST){
     		$user = M('users');
-    		$username=$_POST['username'];
+    		$useraccount=$_POST['useraccount'];
     		$pwd=$_POST['password'];
     		//这里使用md5加密
     		$password=md5($pwd);
-    		if($username==""||$password==""){
+    		if($useraccount==""||$password==""){
     			echo "<script>alert('请输入用户名和密码！');history.go(-1);</script>";
     		}else{
-    			$result=$user->where('account="%s" and password="%s"',$username,$password)->select();
+    			$result=$user->where('account="%s" and password="%s"',$useraccount,$password)->select();
     			if($result){
-    				$this->success('登陆成功', U("index.php/home/Index/homepage"));
+    				//将用户账号存入session
+    				$_SESSION['useraccount'] = $useraccount;
+    				$this->success('登录成功', U("index.php/home/Index/homepage"));
     			}else{
-    				$this->error('登陆失败');
+    				$this->error('登录失败');
     			}
     		}
     	}
