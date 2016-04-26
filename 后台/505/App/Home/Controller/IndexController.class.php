@@ -40,6 +40,13 @@ class IndexController extends Controller
 	public function register(){
 		$this->display();
 		if(IS_POST){
+			//由于新版的thinkphp验证码生成后不是简单的md5后存入session，所以不能用如下的方式比较了
+			//$_SESSION['verify_code']!=md5($_POST['verify'])
+			//封装了函数后不方便调用，所以直接使用框架带的$verify->check($code,$id)函数验证
+			$verify=new \Think\Verify();
+			if(!$verify->check(strtolower($_POST['verify']),$id)){
+				$this->error('验证码输入有误');
+			}
 			$user=M('users');
 			$user->name=$_POST['name'];
 			$user->account=$_POST['account'];
@@ -54,12 +61,26 @@ class IndexController extends Controller
 			}
 			$result=$user->add();
 			if ($result) {
-			$this->success('注册成功', U("index.php/home/Index/login"));
+				$this->success('注册成功', U("index.php/home/Index/login"));
 			} else {
 				$this->error('注册失败');
 			}
 		}
 	}
+
+	public function verify(){
+		$verify=new \Think\Verify();
+		//设置验证码的长度为4
+		$verify->length=4;
+		//设置验证码不生成噪点，不然过于凌乱
+		$verify->useNoise=false;
+		$verify->entry();
+	}
+
+	// public function check_verify($code,$id=''){
+	// 	$verify=new \Think\Verify();
+	// 	return $verify->check($code,$id);
+	// }
 
 	public function homepage(){
 		$this->display();

@@ -5,7 +5,7 @@
 	<title>用户注册</title>
 </head>
 <body>
-	<form action="" method="post" onsubmit="return validate()">
+	<form action="" method="post" onsubmit="return validate();">
 		<input type="text" placeholder="请输入您的昵称" name="name" id="name" required="required"/>
 		<input type="text" placeholder="请输入您的账号" name="account" id="account" required="required"/>
 		<input type="password" placeholder="请输入您的密码" name="password1" id="password1" required="required"/>
@@ -13,6 +13,10 @@
 		<input type="text" placeholder="请输入您的邮箱" name="email" id="email" required="required"/>
 		<input type="text" placeholder="请输入您的电话" name="phone" id="phone" required="required"/>
 		<input type="text" placeholder="请输入您的地址" name="address" id="address" required="required"/>
+		<input type="text" placeholder="请输入验证码" name="verify" id="verify" required="required" />
+		<!-- 生成验证码，src部署时需要更改，点击验证码图片会局部刷新 -->
+		<img src="{:U('index.php/home/Index/verify')}" alt="验证码" onclick="this.src=this.src+'?'+Math.random()">
+		<!--onclick="this.src='{:U(index.php/home/Index/verify)}'+Math.random()"-->
 		<input type="submit" value="注册" />
  	</form>
 </body>
