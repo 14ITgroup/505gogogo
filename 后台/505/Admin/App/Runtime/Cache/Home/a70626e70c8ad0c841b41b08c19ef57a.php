@@ -125,10 +125,10 @@
     <li><a href="#" data-target=".dashboard-menu" class="nav-header" data-toggle="collapse"><i class="fa fa-fw fa-dashboard"></i>505后台<i class="fa fa-collapse"></i></a></li>
     <li><ul class="dashboard-menu nav nav-list collapse in">
             <li><a href="<?php echo U('/Home/index/');?>"><span class="fa fa-caret-right"></span>后台首页</a></li>
-            <li ><a href="/Adminusers.html"><span class="fa fa-caret-right"></span>最新业务</a></li>
+            <li><a href="<?php echo U('/Home/index/order');?>"><span class="fa fa-caret-right"></span>最新业务</a></li>
             <li ><a href="<?php echo U('/Home/index/notice');?>"><span class="fa fa-caret-right"></span>公告管理</a></li>
-            <li ><a href="media.html"><span class="fa fa-caret-right"></span>消息</a></li>
-            <li ><a href="calendar.html"><span class="fa fa-caret-right"></span>日历</a></li>
+            <li ><a href="#"><span class="fa fa-caret-right"></span>消息</a></li>
+            <li ><a href="#"><span class="fa fa-caret-right"></span>日历</a></li>
     </ul></li>
 
     <li data-popover="true" data-content="Items in this group require a <strong><a href='http://portnine.com/bootstrap-themes/aircraft' target='blank'>premium license</a><strong>." rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i>商品管理<i class="fa fa-collapse"></i></a></li>
@@ -139,20 +139,19 @@
             <li ><a href="premium-blog-item.html"><span class="fa fa-caret-right"></span>商品编辑 </a></li>
     </ul></li>
 
-        <li><a href="#" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-briefcase"></i>用户管理  <span class="label label-info">+3</span></a></li>
+        <li><a href="#" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-briefcase"></i>用户管理<span class="label label-info">+3</span></a></li>
         <li><ul class="accounts-menu nav nav-list collapse">
             <li ><a href="<?php echo U('/Home/index/users');?>"><span class="fa fa-caret-right"></span>用户列表</a></li>
-            <li ><a href="<?php echo U('/Home/index/user');?>"><span class="fa fa-caret-right"></span>用户检索</a></li>
-            <li ><a href="<?php echo U('/Home/index/user');?>"><span class="fa fa-caret-right"></span>用户冻结 </a></li>
+            <li ><a href="<?php echo U('/Home/index/userselect');?>"><span class="fa fa-caret-right"></span>用户检索</a></li>
     </ul></li>
 
         <li><a href="#" data-target=".legal-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-legal"></i>管理员管理<i class="fa fa-collapse"></i></a></li>
         <li><ul class="legal-menu nav nav-list collapse">
             <li ><a href="<?php echo U('/Home/index/admins');?>"><span class="fa fa-caret-right"></span>管理员列表</a></li>
-            <li ><a href="<?php echo U('/Home/index/admin');?>"><span class="fa fa-caret-right"></span>新增管理员</a></li>
+            <li ><a href="<?php echo U('/Home/index/addadmin');?>"><span class="fa fa-caret-right"></span>新增管理员</a></li>
     </ul></li>
 
-        <li><a href="help.html" class="nav-header"><i class="fa fa-fw fa-question-circle"></i>帮助</a></li>
+        <li><a href="#" class="nav-header"><i class="fa fa-fw fa-question-circle"></i>帮助</a></li>
             </ul>
     </div>
 
@@ -164,6 +163,7 @@ function checkUser(){
    var name = document.getElementById("name").value;
    var account = document.getElementById("account").value;
    var password = document.getElementById("password").value;
+   var power = document.getElementById("power").value;
    if(name == ""  ){
      alert("用户名不能为空");
      return false;
@@ -175,7 +175,11 @@ function checkUser(){
    if(password == ""  ){
     alert("密码不能为空");
      return false;
-   }else{
+   }
+   if(power!="0"&&power!="1")
+    alert("权限格式不正确");
+    retuen false;
+   else{
    return true;
    }
 }
@@ -191,19 +195,19 @@ function checkUser(){
       <form id="tab" method='post' onsubmit = "return checkUser();" >
         <div class="form-group">
         <label>用户名</label>
-        <input type="text" name="name" value="<?php echo ($list[0]['name']); ?>" class="form-control">
+        <input type="text" name="name" id="name" value="<?php echo ($list[0]['name']); ?>" class="form-control">
         </div>
         <div class="form-group">
         <label>帐号</label>
-        <input type="text" name="account" value="<?php echo ($list[0]['account']); ?>" class="form-control">
+        <input type="text" name="account" id="account" value="<?php echo ($list[0]['account']); ?>" class="form-control">
         </div>
         <div class="form-group">
         <label>密码</label>
-        <input type="text" name="password" value="<?php echo ($list[0]['password']); ?>" class="form-control">
+        <input type="text" name="password" id="password" value="<?php echo ($list[0]['password']); ?>" class="form-control">
         </div>
         <div class="form-group">
         <label>权限</label>
-        <input type="text" name="power" value="<?php echo ($list[0]['power']); ?>" class="form-control">
+        <input type="text" name="power" id="power" value="<?php echo ($list[0]['power']); ?>" class="form-control">
         </div>
       
       </div>
@@ -238,10 +242,6 @@ function checkUser(){
         </div>
     </div>
 
-
-    
-  
-</body></html>
 
       
 

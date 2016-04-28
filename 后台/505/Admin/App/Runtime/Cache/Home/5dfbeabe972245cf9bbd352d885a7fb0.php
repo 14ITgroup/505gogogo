@@ -125,10 +125,10 @@
     <li><a href="#" data-target=".dashboard-menu" class="nav-header" data-toggle="collapse"><i class="fa fa-fw fa-dashboard"></i>505后台<i class="fa fa-collapse"></i></a></li>
     <li><ul class="dashboard-menu nav nav-list collapse in">
             <li><a href="<?php echo U('/Home/index/');?>"><span class="fa fa-caret-right"></span>后台首页</a></li>
-            <li ><a href="/Adminusers.html"><span class="fa fa-caret-right"></span>最新业务</a></li>
+            <li><a href="<?php echo U('/Home/index/order');?>"><span class="fa fa-caret-right"></span>最新业务</a></li>
             <li ><a href="<?php echo U('/Home/index/notice');?>"><span class="fa fa-caret-right"></span>公告管理</a></li>
-            <li ><a href="media.html"><span class="fa fa-caret-right"></span>消息</a></li>
-            <li ><a href="calendar.html"><span class="fa fa-caret-right"></span>日历</a></li>
+            <li ><a href="#"><span class="fa fa-caret-right"></span>消息</a></li>
+            <li ><a href="#"><span class="fa fa-caret-right"></span>日历</a></li>
     </ul></li>
 
     <li data-popover="true" data-content="Items in this group require a <strong><a href='http://portnine.com/bootstrap-themes/aircraft' target='blank'>premium license</a><strong>." rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i>商品管理<i class="fa fa-collapse"></i></a></li>
@@ -139,7 +139,7 @@
             <li ><a href="premium-blog-item.html"><span class="fa fa-caret-right"></span>商品编辑 </a></li>
     </ul></li>
 
-        <li><a href="#" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-briefcase"></i>用户管理  <span class="label label-info">+3</span></a></li>
+        <li><a href="#" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-briefcase"></i>用户管理<span class="label label-info">+3</span></a></li>
         <li><ul class="accounts-menu nav nav-list collapse">
             <li ><a href="<?php echo U('/Home/index/users');?>"><span class="fa fa-caret-right"></span>用户列表</a></li>
             <li ><a href="<?php echo U('/Home/index/user');?>"><span class="fa fa-caret-right"></span>用户检索</a></li>
@@ -149,10 +149,10 @@
         <li><a href="#" data-target=".legal-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-legal"></i>管理员管理<i class="fa fa-collapse"></i></a></li>
         <li><ul class="legal-menu nav nav-list collapse">
             <li ><a href="<?php echo U('/Home/index/admins');?>"><span class="fa fa-caret-right"></span>管理员列表</a></li>
-            <li ><a href="<?php echo U('/Home/index/admin');?>"><span class="fa fa-caret-right"></span>管理员检索</a></li>
+            <li ><a href="<?php echo U('/Home/index/addadmin');?>"><span class="fa fa-caret-right"></span>新增管理员</a></li>
     </ul></li>
 
-        <li><a href="help.html" class="nav-header"><i class="fa fa-fw fa-question-circle"></i>帮助</a></li>
+        <li><a href="#" class="nav-header"><i class="fa fa-fw fa-question-circle"></i>帮助</a></li>
             </ul>
     </div>
 
@@ -165,9 +165,7 @@
         <div class="main-content">
             
 <div class="btn-toolbar list-toolbar">
-    <button class="btn btn-primary"><i class="fa fa-plus"></i> 发布公告</button>
-<!--     <button class="btn btn-default">Import</button>
-    <button class="btn btn-default">Export</button> -->
+    <a href="<?php echo U("Home/Index/noticeedit");?>" class="btn btn-primary"><i class="fa fa-plus"></i> 发布公告</a>
   <div class="btn-group">
   </div>
 </div>
@@ -176,7 +174,6 @@
     <tr>
       <th>#</th>
       <th>标题</th>
-      <th>发布管理员</th>
       <th>发布时间</th>
       <th style="width: 3.5em;"></th>
     </tr>
@@ -185,9 +182,8 @@
     
     <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
         <td><?php echo ($i); ?></td>
-        <td><?php echo ($vo["name"]); ?></td>
-        <td><?php echo ($vo["password"]); ?></td>
-        <td><?php echo ($vo["power"]); ?></td>
+        <td><?php echo ($vo["title"]); ?></td>
+        <td><?php echo ($vo["addtime"]); ?></td>
         <td>
         <a href="<?php echo U("Home/Index/noticeedit?id=$vo[id]");?>"><i class="fa fa-pencil"></i></a>
       <a href="<?php echo U("Home/Index/delete?id=$vo[id]");?>" role="button" data-toggle="modal"><i class="fa fa-trash-o"></i></a> 
@@ -207,7 +203,6 @@
   <li><a href="#">&raquo;</a></li>
 </ul>
 
-</body></html>
 
       
 

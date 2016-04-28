@@ -160,57 +160,67 @@
      
        
     <div class="content">
-      <div class="main-content">
+        <div class="main-content">
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>用户名</th>
-      <th>帐号</th>
-      <th>状态</th>
-      <th style="width: 3.5em;"></th>
-    </tr>
-  </thead>
-  <tbody>
-       <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-        <td><?php echo ($i); ?></td>
-        <td><?php echo ($vo["name"]); ?></td>
-        <td><?php echo ($vo["account"]); ?></td>
-        <td><?php echo ($vo["state"]); ?></td>
-        <td>
-        <a href="<?php echo U("Home/Index/user?id=$vo[id]");?>"><i class="fa fa-pencil"></i></a>
-      <a href="<?php echo U("Home/Index/delete?id=$vo[id]");?>" role="button" data-toggle="modal"><i class="fa fa-trash-o"></i></a> 
-      </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-md-4">
+    <br>
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane active in" id="home">
+      <form id="tab" method='post'>
+        <div class="form-group">
+        <label>用户名</label>
+        <input type="text" name="name" id="name" value="<?php echo ($list[0]["name"]); ?>" class="form-control">
+        </div>
+        <div class="form-group">
+        <label>用户帐号</label>
+        <input type="text" name="account" id="account" value="<?php echo ($list[0]["account"]); ?>" class="form-control">
+        </div>
+        <div class="form-group">
+        <label>密码</label>
+        <input type="text" name="password"  id="password" value="<?php echo ($list[0]["password"]); ?>" class="form-control">
+        </div>
+        <div class="form-group">
+        <label>Email</label>
+        <input type="text" name="email" id="email" value="<?php echo ($list[0]["email"]); ?>" class="form-control">
+        </div>
+         <div class="form-group">
+        <label>联系方式</label>
+        <input type="text" name="phonenumber" id="phonenumber" value="<?php echo ($list[0]["phonenumber"]); ?>" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>地址</label>
+          <textarea name="address" id="address" rows="3" class="form-control"><?php echo ($list[0]["address"]); ?></textarea>
+        </div>        
+       
+      </div>
+    </div>
 
-<ul class="pagination">
-  <li><a href="#">&laquo;</a></li>
-  <li><a href="#">1</a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">4</a></li>
-  <li><a href="#">5</a></li>
-  <li><a href="#">&raquo;</a></li>
-</ul>
+    <div class="btn-toolbar list-toolbar">
+      <button class="btn btn-primary" name="save"><i class="fa fa-save"></i> 保存</button>
+      <button class="btn btn-danger" name="freeze">冻结</button>
+    </div> 
+    </form>
+  </div>
+</div>
 
 <div class="modal small fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="myModalLabel">Delete Confirmation</h3>
-        </div>
-        <div class="modal-body">
-            <p class="error-text"><i class="fa fa-warning modal-icon"></i>Are you sure you want to delete the user?<br>This cannot be undone.</p>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
-            <button class="btn btn-danger" data-dismiss="modal">Delete</button>
-        </div>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Delete Confirmation</h3>
+      </div>
+      <div class="modal-body">
+        
+        <p class="error-text"><i class="fa fa-warning modal-icon"></i>Are you sure you want to delete the user?</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        <button class="btn btn-danger" data-dismiss="modal">Delete</button>
       </div>
     </div>
+  </div>
 </div>
 
         </div>

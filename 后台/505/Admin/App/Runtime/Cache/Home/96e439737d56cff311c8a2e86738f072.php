@@ -127,8 +127,8 @@
             <li><a href="<?php echo U('/Home/index/');?>"><span class="fa fa-caret-right"></span>后台首页</a></li>
             <li><a href="<?php echo U('/Home/index/order');?>"><span class="fa fa-caret-right"></span>最新业务</a></li>
             <li ><a href="<?php echo U('/Home/index/notice');?>"><span class="fa fa-caret-right"></span>公告管理</a></li>
-            <li ><a href="#"><span class="fa fa-caret-right"></span>消息</a></li>
-            <li ><a href="#"><span class="fa fa-caret-right"></span>日历</a></li>
+            <li ><a href="media.html"><span class="fa fa-caret-right"></span>消息</a></li>
+            <li ><a href="calendar.html"><span class="fa fa-caret-right"></span>日历</a></li>
     </ul></li>
 
     <li data-popover="true" data-content="Items in this group require a <strong><a href='http://portnine.com/bootstrap-themes/aircraft' target='blank'>premium license</a><strong>." rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i>商品管理<i class="fa fa-collapse"></i></a></li>
@@ -142,7 +142,8 @@
         <li><a href="#" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-briefcase"></i>用户管理<span class="label label-info">+3</span></a></li>
         <li><ul class="accounts-menu nav nav-list collapse">
             <li ><a href="<?php echo U('/Home/index/users');?>"><span class="fa fa-caret-right"></span>用户列表</a></li>
-            <li ><a href="<?php echo U('/Home/index/userselect');?>"><span class="fa fa-caret-right"></span>用户检索</a></li>
+            <li ><a href="<?php echo U('/Home/index/user');?>"><span class="fa fa-caret-right"></span>用户检索</a></li>
+            <li ><a href="<?php echo U('/Home/index/user');?>"><span class="fa fa-caret-right"></span>用户冻结 </a></li>
     </ul></li>
 
         <li><a href="#" data-target=".legal-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-legal"></i>管理员管理<i class="fa fa-collapse"></i></a></li>
@@ -151,7 +152,7 @@
             <li ><a href="<?php echo U('/Home/index/addadmin');?>"><span class="fa fa-caret-right"></span>新增管理员</a></li>
     </ul></li>
 
-        <li><a href="#" class="nav-header"><i class="fa fa-fw fa-question-circle"></i>帮助</a></li>
+        <li><a href="help.html" class="nav-header"><i class="fa fa-fw fa-question-circle"></i>帮助</a></li>
             </ul>
     </div>
 
@@ -161,29 +162,40 @@
        
     <div class="content">
       <div class="main-content">
+            
+<div class="panel panel-default">
+<div class="panel-heading no-collapse">Not Collapsible<span class="label label-warning">+10</span></div>
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>订单</th>
+                  <th>商品</th>
+                  <th>下单时间</th>
+                </tr>
+              </thead>
+              <tbody>
+                    <?php if(is_array($order)): $i = 0; $__LIST__ = $order;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$order): $mod = ($i % 2 );++$i;?><tr>
+                            <td><?php echo ($i); ?></td>
+                            <td><?php echo ($key); ?>.<?php echo ($order["userid"]); ?></td>
+                            <td>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>用户名</th>
-      <th>帐号</th>
-      <th>状态</th>
-      <th style="width: 3.5em;"></th>
-    </tr>
-  </thead>
-  <tbody>
-       <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-        <td><?php echo ($i); ?></td>
-        <td><?php echo ($vo["name"]); ?></td>
-        <td><?php echo ($vo["account"]); ?></td>
-        <td><?php echo ($vo["state"]); ?></td>
-        <td>
-        <a href="<?php echo U("Home/Index/user?id=$vo[id]");?>"><i class="fa fa-pencil"></i></a>
-      <a href="<?php echo U("Home/Index/delete?id=$vo[id]");?>" role="button" data-toggle="modal"><i class="fa fa-trash-o"></i></a> 
-      </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-  </tbody>
-</table>
+                            <?php echo ($users[]["account"]); ?>
+
+                            </td>
+                            <td><?php echo ($vo["power"]); ?></td>
+                            <td>
+                          <a href="<?php echo U("Home/Index/admin?id=$vo[id]");?>"><i class="fa fa-pencil"></i></a>
+                          <a href="<?php echo U("Home/Index/delete?id=$vo[id]");?>" role="button" data-toggle="modal"><i class="fa fa-trash-o"></i></a> 
+                          </td>
+                          </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+              </tbody>
+            </table>
+        </div>
+        </div>
+
+
+
 
 <ul class="pagination">
   <li><a href="#">&laquo;</a></li>
@@ -215,7 +227,6 @@
 
         </div>
     </div>
-
 
       
 

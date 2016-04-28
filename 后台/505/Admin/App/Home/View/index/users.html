@@ -1,14 +1,7 @@
 
     <div class="content">
       <div class="main-content">
-            
-<div class="btn-toolbar list-toolbar">
-    <button class="btn btn-primary"><i class="fa fa-plus"></i> New User</button>
-    <button class="btn btn-default">Import</button>
-    <button class="btn btn-default">Export</button>
-  <div class="btn-group">
-  </div>
-</div>
+
 <table class="table">
   <thead>
     <tr>
@@ -25,9 +18,9 @@
         <td>{$i}</td>
         <td>{$vo.name}</td>
         <td>{$vo.account}</td>
-        <td>{$vo.power}</td>
+        <td>{$vo.state}</td>
         <td>
-        <a href="{:U("Home/Index/noticeedit?id=$vo[id]")}"><i class="fa fa-pencil"></i></a>
+        <a href="{:U("Home/Index/user?id=$vo[id]")}"><i class="fa fa-pencil"></i></a>
       <a href="{:U("Home/Index/delete?id=$vo[id]")}" role="button" data-toggle="modal"><i class="fa fa-trash-o"></i></a> 
       </tr>
     </volist>
@@ -65,5 +58,3 @@
         </div>
     </div>
 
-
-</body></html>

@@ -8,7 +8,7 @@ function checkUser(){
      return false;
    }
    if(account == ""  ){
-     alert("用户名不能为空");
+     alert("帐号不能为空");
      return false;
    }
    if(password == ""  ){
@@ -30,19 +30,17 @@ function checkUser(){
       <form id="tab" method='post' onsubmit = "return checkUser();" >
         <div class="form-group">
         <label>用户名</label>
-        <input type="text" name="name" value="{$list[0]['name']}" class="form-control">
+        <input type="text" name="name" id="name" value="{$list[0]['name']}" class="form-control">
         </div>
         <div class="form-group">
         <label>帐号</label>
-        <input type="text" name="account" value="{$list[0]['account']}" class="form-control">
+        <input type="text" name="account" id="account" value="{$list[0]['account']}" class="form-control">
         </div>
         <div class="form-group">
         <label>密码</label>
-        <input type="text" name="password" value="{$list[0]['password']}" class="form-control">
+        <input type="text" name="password" id="password" value="{$list[0]['password']}" class="form-control">
         </div>
         <div class="form-group">
-        <label>权限</label>
-        <input type="text" name="power" value="{$list[0]['power']}" class="form-control">
         </div>
       
       </div>
@@ -76,7 +74,3 @@ function checkUser(){
         </div>
     </div>
 
-
-    
-  
-</body></html>
