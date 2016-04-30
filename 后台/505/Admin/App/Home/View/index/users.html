@@ -1,7 +1,4 @@
 
-    <div class="content">
-      <div class="main-content">
-
 <table class="table">
   <thead>
     <tr>
@@ -21,7 +18,7 @@
         <td>{$vo.state}</td>
         <td>
         <a href="{:U("Home/Index/user?id=$vo[id]")}"><i class="fa fa-pencil"></i></a>
-      <a href="{:U("Home/Index/delete?id=$vo[id]")}" role="button" data-toggle="modal"><i class="fa fa-trash-o"></i></a> 
+      <a href="{:U("Home/Index/deleteuser?id=$vo[id]")}" role="button" data-toggle="modal"><i class="fa fa-trash-o"></i></a> 
       </tr>
     </volist>
   </tbody>

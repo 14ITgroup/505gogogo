@@ -156,16 +156,14 @@
     </div>
 
 
+    <div class="content">
+        <div class="main-content">
             
      
        
-    <div class="content">
-      <div class="main-content">
             
 <div class="btn-toolbar list-toolbar">
-    <a href="<?php echo U("Home/Index/addadmin");?>" class="btn btn-primary"><i class="fa fa-plus"></i> New User</a>
-    <button class="btn btn-default">Import</button>
-    <button class="btn btn-default">Export</button>
+    <a href="<?php echo U("Home/Index/addadmin");?>" class="btn btn-primary"><i class="fa fa-plus"></i> 新增 管理员</a>
   <div class="btn-group">
   </div>
 </div>
@@ -225,7 +223,7 @@
 
       
 
-
+       
 
 
 
