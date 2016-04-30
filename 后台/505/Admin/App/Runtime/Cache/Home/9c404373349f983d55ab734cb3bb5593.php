@@ -142,7 +142,8 @@
         <li><a href="#" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-briefcase"></i>用户管理<span class="label label-info">+3</span></a></li>
         <li><ul class="accounts-menu nav nav-list collapse">
             <li ><a href="<?php echo U('/Home/index/users');?>"><span class="fa fa-caret-right"></span>用户列表</a></li>
-            <li ><a href="<?php echo U('/Home/index/userselect');?>"><span class="fa fa-caret-right"></span>用户检索</a></li>
+            <li ><a href="<?php echo U('/Home/index/user');?>"><span class="fa fa-caret-right"></span>用户检索</a></li>
+            <li ><a href="<?php echo U('/Home/index/user');?>"><span class="fa fa-caret-right"></span>用户冻结 </a></li>
     </ul></li>
 
         <li><a href="#" data-target=".legal-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-legal"></i>管理员管理<i class="fa fa-collapse"></i></a></li>
@@ -156,11 +157,12 @@
     </div>
 
 
-    <div class="content">
-        <div class="main-content">
             
      
        
+    <div class="content">
+        <div class="main-content">
+            
 <div class="row">
   <div class="col-md-4">
     <br>
@@ -179,7 +181,6 @@
     </div>
     <div class="btn-toolbar list-toolbar">
         <button class="btn btn-primary"><i class="fa fa-save" ></i>保存</button>
-       <a class="btn btn-primary" href="javascript:history.go(-1);">返回</a>
     </form>
     </div>
   </div>
@@ -209,7 +210,7 @@
 
       
 
-       
+
 
 
 

@@ -200,6 +200,9 @@ function checkUser(){
         <label>密码</label>
         <input type="text" name="password" id="password" value="<?php echo ($list[0]['password']); ?>" class="form-control">
         </div>
+        <div class="form-group">
+        </div>
+      
       </div>
 
     <div class="btn-toolbar list-toolbar">
@@ -234,7 +237,7 @@ function checkUser(){
 
       
 
- <a href="javascript:history.go(-1);">返回</a>
+
 
 
 

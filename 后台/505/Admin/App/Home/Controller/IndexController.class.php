@@ -149,7 +149,7 @@ class IndexController extends Controller
 			}
 		}
     }
-    public function addadmin()
+     public function addadmin()
     {
     	$this->display();
 			if (IS_POST) {
@@ -188,63 +188,20 @@ class IndexController extends Controller
 		$this->assign("goods", $goods);
 		$this->display();
 	}
-	public function userselect()
-    {
-		$this->display();
-		if (IS_POST) {
-			echo "saddas";
-			$name=$_POST["name"];
-			$account=$_POST["account"];
-			if($name&&$account)
-				$users = M('users')->where("name=".$name."and account=".$account);
-			else if($name)
-				$users = M('users')->where("name=".$name);
-			else if($account)
-				$users = M('users')->where("name=".$name);
-			else
-				echo "用户不存在";
-			$this->assign("list", $users);
-		}
-    }
 
 
-	///删除admin///
+	///删除demo///
 	public function delete() {
 		$id = I('request.id');
 		$admin = M('admins');
 		$result = $admin->delete($id);
 		if ($result) {
 			echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
-			echo "<script>alert('删除成功');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+			echo '<script type="text/javascript">alert("删除成功")</script>';
+			$this->success();
 		} else {
 			echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
 			echo '<script type="text/javascript">alert("删除失败")</script>';
 		}
 	}
-	public function deleteuser() {
-		$id = I('request.id');
-		$user = M('users');
-		$result = $user->delete($id);
-		if ($result) {
-			echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
-			echo "<script>alert('删除成功');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
-		} else {
-			echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
-			echo '<script type="text/javascript">alert("删除失败")</script>';
-		}
-	}
-	public function deletenotice() {
-		$id = I('request.id');
-		$notice = M('notice');
-		$result = $notice->delete($id);
-		if ($result) {
-			echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
-			echo "<script>alert('删除成功');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
-		} else {
-			echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
-			echo '<script type="text/javascript">alert("删除失败")</script>';
-		}
-	}
-	
-
 }

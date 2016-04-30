@@ -142,7 +142,8 @@
         <li><a href="#" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-briefcase"></i>用户管理<span class="label label-info">+3</span></a></li>
         <li><ul class="accounts-menu nav nav-list collapse">
             <li ><a href="<?php echo U('/Home/index/users');?>"><span class="fa fa-caret-right"></span>用户列表</a></li>
-            <li ><a href="<?php echo U('/Home/index/userselect');?>"><span class="fa fa-caret-right"></span>用户检索</a></li>
+            <li ><a href="<?php echo U('/Home/index/user');?>"><span class="fa fa-caret-right"></span>用户检索</a></li>
+            <li ><a href="<?php echo U('/Home/index/user');?>"><span class="fa fa-caret-right"></span>用户冻结 </a></li>
     </ul></li>
 
         <li><a href="#" data-target=".legal-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-legal"></i>管理员管理<i class="fa fa-collapse"></i></a></li>
@@ -156,11 +157,12 @@
     </div>
 
 
-    <div class="content">
-        <div class="main-content">
             
      
        
+   <div class="content">
+
+        <div class="main-content">
             
 <div class="btn-toolbar list-toolbar">
     <a href="<?php echo U("Home/Index/noticeedit");?>" class="btn btn-primary"><i class="fa fa-plus"></i> 发布公告</a>
@@ -184,7 +186,7 @@
         <td><?php echo ($vo["addtime"]); ?></td>
         <td>
         <a href="<?php echo U("Home/Index/noticeedit?id=$vo[id]");?>"><i class="fa fa-pencil"></i></a>
-      <a href="<?php echo U("Home/Index/deletenotice?id=$vo[id]");?>" role="button" data-toggle="modal"><i class="fa fa-trash-o"></i></a> 
+      <a href="<?php echo U("Home/Index/delete?id=$vo[id]");?>" role="button" data-toggle="modal"><i class="fa fa-trash-o"></i></a> 
       </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
 
@@ -204,7 +206,7 @@
 
       
 
-       
+
 
 
 

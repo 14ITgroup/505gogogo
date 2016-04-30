@@ -156,11 +156,11 @@
     </div>
 
 
-    <div class="content">
-        <div class="main-content">
             
      
        
+    <div class="content">
+        <div class="main-content">
 
 <div class="row">
   <div class="col-md-4">
@@ -197,9 +197,8 @@
     </div>
 
     <div class="btn-toolbar list-toolbar">
-      <button class="btn btn-primary" name="save"><i class="fa fa-save"></i> 保存</button>      
-       <a class="btn btn-primary" href="javascript:history.go(-1);">返回</a>
-       <button class="btn btn-danger" name="freeze">冻结</button>
+      <button class="btn btn-primary" name="save"><i class="fa fa-save"></i> 保存</button>
+      <button class="btn btn-danger" name="freeze">冻结</button>
     </div> 
     </form>
   </div>
@@ -230,7 +229,7 @@
 
       
 
-       
+
 
 
 

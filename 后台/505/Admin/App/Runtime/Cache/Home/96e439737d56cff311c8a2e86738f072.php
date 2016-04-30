@@ -127,8 +127,8 @@
             <li><a href="<?php echo U('/Home/index/');?>"><span class="fa fa-caret-right"></span>后台首页</a></li>
             <li><a href="<?php echo U('/Home/index/order');?>"><span class="fa fa-caret-right"></span>最新业务</a></li>
             <li ><a href="<?php echo U('/Home/index/notice');?>"><span class="fa fa-caret-right"></span>公告管理</a></li>
-            <li ><a href="#"><span class="fa fa-caret-right"></span>消息</a></li>
-            <li ><a href="#"><span class="fa fa-caret-right"></span>日历</a></li>
+            <li ><a href="media.html"><span class="fa fa-caret-right"></span>消息</a></li>
+            <li ><a href="calendar.html"><span class="fa fa-caret-right"></span>日历</a></li>
     </ul></li>
 
     <li data-popover="true" data-content="Items in this group require a <strong><a href='http://portnine.com/bootstrap-themes/aircraft' target='blank'>premium license</a><strong>." rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i>商品管理<i class="fa fa-collapse"></i></a></li>
@@ -142,7 +142,8 @@
         <li><a href="#" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-briefcase"></i>用户管理<span class="label label-info">+3</span></a></li>
         <li><ul class="accounts-menu nav nav-list collapse">
             <li ><a href="<?php echo U('/Home/index/users');?>"><span class="fa fa-caret-right"></span>用户列表</a></li>
-            <li ><a href="<?php echo U('/Home/index/userselect');?>"><span class="fa fa-caret-right"></span>用户检索</a></li>
+            <li ><a href="<?php echo U('/Home/index/user');?>"><span class="fa fa-caret-right"></span>用户检索</a></li>
+            <li ><a href="<?php echo U('/Home/index/user');?>"><span class="fa fa-caret-right"></span>用户冻结 </a></li>
     </ul></li>
 
         <li><a href="#" data-target=".legal-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-legal"></i>管理员管理<i class="fa fa-collapse"></i></a></li>
@@ -151,7 +152,7 @@
             <li ><a href="<?php echo U('/Home/index/addadmin');?>"><span class="fa fa-caret-right"></span>新增管理员</a></li>
     </ul></li>
 
-        <li><a href="#" class="nav-header"><i class="fa fa-fw fa-question-circle"></i>帮助</a></li>
+        <li><a href="help.html" class="nav-header"><i class="fa fa-fw fa-question-circle"></i>帮助</a></li>
             </ul>
     </div>
 
@@ -229,7 +230,7 @@
 
       
 
- <a href="javascript:history.go(-1);">返回</a>
+
 
 
 

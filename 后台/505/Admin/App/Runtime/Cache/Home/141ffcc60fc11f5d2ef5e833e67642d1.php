@@ -156,11 +156,12 @@
     </div>
 
 
-    <div class="content">
-        <div class="main-content">
             
      
        
+    <div class="content">
+      <div class="main-content">
+
 <table class="table">
   <thead>
     <tr>
@@ -179,7 +180,7 @@
         <td><?php echo ($vo["state"]); ?></td>
         <td>
         <a href="<?php echo U("Home/Index/user?id=$vo[id]");?>"><i class="fa fa-pencil"></i></a>
-      <a href="<?php echo U("Home/Index/deleteuser?id=$vo[id]");?>" role="button" data-toggle="modal"><i class="fa fa-trash-o"></i></a> 
+      <a href="<?php echo U("Home/Index/delete?id=$vo[id]");?>" role="button" data-toggle="modal"><i class="fa fa-trash-o"></i></a> 
       </tr><?php endforeach; endif; else: echo "" ;endif; ?>
   </tbody>
 </table>
@@ -218,7 +219,7 @@
 
       
 
-       
+
 
 
 
