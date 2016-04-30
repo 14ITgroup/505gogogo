@@ -156,6 +156,8 @@
     </div>
 
 
+    <div class="content">
+        <div class="main-content">
             
      
        <script> 
@@ -185,8 +187,6 @@ function checkUser(){
 }
 </script>
 
-    <div class="content">
-        <div class="main-content">
 <div class="row">
   <div class="col-md-4">
     <br>
@@ -214,6 +214,7 @@ function checkUser(){
 
     <div class="btn-toolbar list-toolbar">
       <button class="btn btn-primary"><i class="fa fa-save" ></i> 保存</button>
+       <a class="btn btn-primary" href="javascript:history.go(-1);">返回</a>
       <a href="<?php echo U("Home/Index/delete?id=$id");?>" data-toggle="modal" class="btn btn-danger">删除</a>
     </div>
     </form>
@@ -245,7 +246,7 @@ function checkUser(){
 
       
 
-
+       
 
 
 
