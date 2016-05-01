@@ -85,22 +85,47 @@ class IndexController extends Controller
 	// }
 
 	public function homepage(){
+		$da=M("goods");
+		//滚动部分
+		$rolllist=$da->limit(3)->select();
+		$this->assign("rolllist", $rolllist);
 		if(isset($_GET['classify'])){//判断用户是否点击分类导航
 			$classifyname = I('request.classify');
 			$temp=M("goodsclassify");
 			$classifyid=$temp->where('classifyname="%s"',$classifyname)->getField('id');
 
-			$da=D("GoodsView");
 			$all=$da->where('classifyid="%d"',$classifyid)->select();
 			// $all=$da->where("classifyid=1")->select();
 			$this->assign("list", $all);
 			$this->display();
 		}
-		else{//如果是直接加载首页的话
-			$da = D("GoodsView");
-			$all=$da->select();
+		else if(isset($_GET['search'])){//判断用户是否搜索相关商品
+			$keyword=I('request.search');
+			$all=$da->query("select * from goods where name like '%".$keyword."%'");
 			$this->assign("list", $all);
 			$this->display();
 		}
+		else{//如果是直接加载首页的话
+			$all=$da->select();
+			$this->assign("list", $all);
+
+			$this->display();
+		}
+	}
+
+	public function people(){
+		if(isset($_SESSION['useraccount'])){
+			$this->display();
+		}else{
+			$this->error('请登录');
+		}	
+	}
+
+	public function chart(){
+		$this->display();
+	}
+
+	public function pay(){
+		$this->display();
 	}
 }

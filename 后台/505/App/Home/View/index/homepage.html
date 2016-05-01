@@ -23,25 +23,19 @@
     <header>
         <nav class="top-nav">
             <a href="#" class="add"><img src="__PUBLIC__/images/add.png" alt="添加"></a>
-            <input type="text" placeholder="初夏好物...">
-            <a href="#"><img src="__PUBLIC__/images/search.png" alt="搜索"></a>
+            <input id="content" type="text" placeholder="初夏好物...">
+            <a href="#" onclick="jump();"><img src="__PUBLIC__/images/search.png" alt="搜索"></a>
         </nav>
     </header>
     <section class="focus-wrap">
         <div class="flicker-example" data-block-text="false">
             <ul>
-                <li data-background="__PUBLIC__/images/field.jpg">
-                    <div class="flick-title">测试图片1</div>
-                    <div class="flick-sub-text">这里是一些简单的介绍文本</div>
-                </li>
-                <li data-background="__PUBLIC__/images/forest.jpg">
-                    <div class="flick-title">测试图片2</div>
-                    <div class="flick-sub-text">这里是一些简单的介绍文本</div>
-                </li>
-                <li data-background="__PUBLIC__/images/frozen-water.jpg">
-                    <div class="flick-title">测试图片3</div>
-                    <div class="flick-sub-text">这里是一些简单的介绍文本</div>
-                </li>
+                <volist name="rolllist" id="good">
+                    <li data-background="__PUBLIC__/{$good.image}">
+                        <div class="flick-title">{$good.name}</div>
+                        <div class="flick-sub-text">￥{$good.price}</div>
+                    </li>
+                </volist>
             </ul>
         </div>
     </section>
@@ -92,9 +86,9 @@
                 </a>
             </li>
             <li>
-                <a href="homepage.html?classify=折扣">
-                    <img src="__PUBLIC__/images/count.png" alt="折扣">
-                    <p>折扣</p>
+                <a href="homepage.html?classify=家电">
+                    <img src="__PUBLIC__/images/count.png" alt="家电">
+                    <p>家电</p>
                 </a>
             </li>
         </ul>
@@ -106,10 +100,10 @@
             <volist name="list" id="good">
                 <li>
                     <a href="#"><img src="__PUBLIC__/{$good.image}" alt=""></a>
-                    <a href="#"><span>HOT</span>{$good.name}/{$good.color}/{$good.size}</a>
+                    <a href="#"><span>HOT</span>{$good.name}</a>
                     <!-- 这里要不要绑good.detail -->
                     <!-- <p>销量1w 包邮</p> -->
-                    <p>{$good.detail}</p>
+                    <!-- <p>{$good.detail}</p> -->
                     <strong>￥<span>{$good.price}</span></strong>
                 </li>
             </volist>
@@ -126,7 +120,7 @@
                         <img src="__PUBLIC__/images/shop-car.png" alt="购物车">
                         <p>购物车</p>
                     </a></li>
-                <li><a href="peaple.html">
+                <li><a href="people.html">
                         <img src="__PUBLIC__/images/mine.png" alt="个人">
                         <p>个人</p>
                     </a></li>
@@ -141,6 +135,12 @@
     $(document).ready(function() {
         $('.flicker-example').flicker();
     });
+    </script>
+    <script type="text/javascript">
+        function jump(){
+            var content=document.getElementById('content').value.trim();
+             window.location.href="homepage?search="+content;
+        }
     </script>
 </body>
 
