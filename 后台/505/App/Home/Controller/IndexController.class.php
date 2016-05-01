@@ -115,10 +115,47 @@ class IndexController extends Controller
 
 	public function people(){
 		if(isset($_SESSION['useraccount'])){
+			//获取当前用户账号，来找出此用户的id
+			//getField()方法只返回该字段第一行的值
+			$users=M('users');
+			$userid=$users->where("account=%s",$_SESSION['useraccount'])->getField('id');
+			//使用订单模型
+			$da=D('OrdersView');
+			if(isset($_GET['state'])){
+				$state=I('request.state');
+				$all=$da->where("userid=%d and state=%d",$userid,$state)->select();
+			}else{
+				$all=$da->where("userid=%d",$userid)->select();
+			}	
+			$this->assign("list",$all);
 			$this->display();
 		}else{
 			$this->error('请登录');
 		}	
+	}
+
+	public function details(){
+		if(isset($_GET['goodsid'])){
+			$goodsid=I('request.goodsid');
+			$da=D('GoodsView');
+			$da2=M('goods');
+			$good=$da2->where("goods.id=%d",$goodsid)->select();
+			
+			$color=$da->seecolor($goodsid);
+			//设置第一项为默认选中
+			$color[0]["checked"]="checked";
+			$size=$da->seesize($goodsid);
+			$size[0]["checked"]="checked";
+			$this->assign("colors",$color);
+			$this->assign("sizes",$size);
+			$this->assign("good",$good);
+			$this->display();
+		}else if(isset($_GET['add'])){
+			$goodsid=I('request.add');
+
+		}else{
+			$this->error('请稍后','homepage',0);
+		}
 	}
 
 	public function chart(){
@@ -126,6 +163,27 @@ class IndexController extends Controller
 	}
 
 	public function pay(){
+		if(isset($_SESSION['useraccount'])){
+			$user=M('users');
+			$single=$user->where("account=%s",$_SESSION['useraccount'])->select();
+			$this->assign("single",$single);
+			if(isset($_GET['fromdetail'])){
+				//支付详情页中的商品
+			}else{
+				//支付购物车中全部内容
+			}
+		}else{
+			$this->error('请登录','login',3);
+		}
 		$this->display();
+	}
+
+	public function goodsajax() {
+		$name = I('post.name');
+		$color = I('post.color');
+		$size = I('post.size');
+		$go = D('GoodsView')->where('name="' . $name . '" and color="' . $color . '" and size="' . $size . '"')->find();
+		$data = $go["goodsleft"];
+		$this->ajaxReturn($data);
 	}
 }

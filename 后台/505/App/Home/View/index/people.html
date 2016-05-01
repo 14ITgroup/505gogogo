@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>个人页面</title>
+    <import type="css" file="css.style" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <section class="mine-info">
+        <a href="#"><img src="__PUBLIC__/images/setting.png" alt="setting"></a>
+        <img src="__PUBLIC__/images/me.jpg" alt="me">
+        <p>{$_SESSION['useraccount']}</p>
+    </section>
+    <section class="tab-choice">
+        <ul>
+            <li>
+                <a href="people.html">
+                    <img src="__PUBLIC__/images/dingdan.png" alt="订单">
+                    <p>订单</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="__PUBLIC__/images/heart-like.png" alt="收藏">
+                    <p>收藏</p>
+                </a>
+            </li>
+            <li>
+                <a href="people.html?state=1">
+                    <img src="__PUBLIC__/images/car.png" alt="待发货">
+                    <p>待发货</p>
+                </a>
+            </li>
+            <li>
+                <a href="people.html?state=2">
+                    <img src="__PUBLIC__/images/take.png" alt="运送中">
+                    <p>运送中</p>
+                </a>
+            </li>
+            <li>
+                <a href="people.html?state=3">
+                    <img src="__PUBLIC__/images/comment.png" alt="已完成">
+                    <p>已完成</p>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <section class="shopping-list-container">
+        <ul class="shopping-list">
+            <volist name="list" id="order">
+                <li>
+                    <img src="__PUBLIC__/{$order.image}" alt="things">
+                    <div>
+                        <p>商品名称/颜色/规格<br />{$order.name}--{$order.color}--{$order.size}
+                        </p>
+                        <p>产品数量</p>
+                        <b>X{$order.goodsnum}</b>
+                        <strong>￥<span>{$order.totalprice}</span></strong>
+                    </div>
+                </li>
+            </volist>
+        </ul>
+    </section>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">
+                        <img src="__PUBLIC__/images/home-pressed.png" alt="主页">
+                        <p>主页</p>
+                    </a></li>
+                <li><a href="chart.html">
+                        <img src="__PUBLIC__/images/shop-car.png" alt="购物车">
+                        <p>购物车</p>
+                    </a></li>
+                <li><a href="people.html">
+                        <img src="__PUBLIC__/images/mine.png" alt="个人">
+                        <p>个人</p>
+                    </a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

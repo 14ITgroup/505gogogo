@@ -40,6 +40,10 @@
 			alert("两次输入的密码不一致");
 			return false;
 		}
+		if(password1.length<6||password1.length>20){
+			alert("密码的长度为6-20位");
+			return false;
+		}
 		var regEmail=/^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/;
 		if(!regEmail.test(email)){
 			alert("邮箱格式不正确");
