@@ -85,6 +85,22 @@ class IndexController extends Controller
 	// }
 
 	public function homepage(){
-		$this->display();
+		if(isset($_GET['classify'])){//判断用户是否点击分类导航
+			$classifyname = I('request.classify');
+			$temp=M("goodsclassify");
+			$classifyid=$temp->where('classifyname="%s"',$classifyname)->getField('id');
+
+			$da=D("GoodsView");
+			$all=$da->where('classifyid="%d"',$classifyid)->select();
+			// $all=$da->where("classifyid=1")->select();
+			$this->assign("list", $all);
+			$this->display();
+		}
+		else{//如果是直接加载首页的话
+			$da = D("GoodsView");
+			$all=$da->select();
+			$this->assign("list", $all);
+			$this->display();
+		}
 	}
 }

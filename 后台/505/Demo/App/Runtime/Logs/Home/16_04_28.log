@@ -1,0 +1,26 @@
+[ 2016-04-28T21:06:11+08:00 ] ::1 /505/demo/index.php/home/Index/datatest.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.019540s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013309s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.015911s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.016020s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068464s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068564s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.012787s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012899s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `goodstype` [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `goodsclassify` [ RunTime:0.0072s ]
+SQL: SELECT goods.id AS id,goods.classifyid AS classifyid,goods.name AS name,goods.image AS image,goods.price AS price,goods.addtime AS addtime,goodstype.id AS type_id,goodstype.color AS color,goodstype.size AS size,goodstype.detail AS detail,goodstype.goodsleft AS goodsleft,goodsclassify.classifyname AS classifyname FROM goods goods  JOIN goodstype goodstype ON goods.id=goodstype.goodsid  JOIN goodsclassify goodsclassify ON goods.classifyid=goodsclassify.id  [ RunTime:0.0036s ]
+SQL: SELECT goodstype.goodsid AS goodsid,goodstype.color AS color FROM goodstype goodstype WHERE ( goodsid=2 ) GROUP BY goodstype.color  [ RunTime:0.0030s ]
+SQL: SELECT goodstype.goodsid AS goodsid,goodstype.size AS size FROM goodstype goodstype WHERE ( goodsid=2 ) GROUP BY goodstype.size  [ RunTime:0.0025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011996s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012036s ]
+
