@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
 
+	/*购物车中右滑编辑删除*/
 	var dragEdit = $("section.chart-list li");
 	var hideEdit = $("section.hideEdit");
 	var hideEditBtn = $("section.hideEdit a");
@@ -38,4 +39,14 @@ jQuery(document).ready(function($) {
 			}
 		}
 	});
+
+
+	/*商品详情页 尺寸及颜色选择*/
+	var goodsChoice = $(".details-categories label");
+	$(".details-categories label").on("click", function(){
+		for(var i=0; i<$(goodsChoice).length; i++) {
+			$(goodsChoice).removeClass('checked');
+		}
+		$(this).addClass('checked');
+	})
 });
