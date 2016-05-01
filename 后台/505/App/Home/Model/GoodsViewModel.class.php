@@ -11,8 +11,8 @@ use Think\Model\ViewModel;
 //delcolor/delsize:参数$goodid,$colorname/$sizename,给商品id为goodid删除一个名字为colorname/sizename的颜色/尺寸分类。只剩一个分类的时候改为null；返回值
 class GoodsViewModel extends ViewModel {
 	public $viewFields = array(
-		'goods' => array('id', 'classifyid', 'name', 'image', 'price', 'addtime'),
-		'goodstype' => array('id' => 'type_id', 'color', 'size', 'detail', 'goodsleft', '_on' => 'goods.id=goodstype.goodsid'),
+		'goods' => array('id', 'classifyid', 'name', 'image', 'price', 'addtime', 'detail'),
+		'goodstype' => array('id' => 'type_id', 'color', 'size', 'goodsleft', '_on' => 'goods.id=goodstype.goodsid'),
 
 		'goodsclassify' => array('classifyname', '_on' => 'goods.classifyid=goodsclassify.id'),
 	);
