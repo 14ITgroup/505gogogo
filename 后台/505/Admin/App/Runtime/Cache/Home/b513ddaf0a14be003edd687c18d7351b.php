@@ -156,6 +156,8 @@
     </div>
 
 
+    <div class="content">
+        <div class="main-content">
             
      
        <script> 
@@ -180,8 +182,6 @@ function checkUser(){
 }
 </script>
 
-    <div class="content">
-        <div class="main-content">
 <div class="row">
   <div class="col-md-4">
     <br>
@@ -207,35 +207,11 @@ function checkUser(){
     </div>
     </form>
   </div>
-</div>
-
-<div class="modal small fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">Delete Confirmation</h3>
-      </div>
-      <div class="modal-body">
-        
-        <p class="error-text"><i class="fa fa-warning modal-icon"></i>Are you sure you want to delete the user?</p>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
-        <button class="btn btn-danger" data-dismiss="modal">Delete</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-        </div>
-    </div>
-
-
       
 
- <a href="javascript:history.go(-1);">返回</a>
-
+       
+        </div>
+    </div>
 
 
     <script src="/505/Admin/Public/lib/bootstrap/js/bootstrap.js"></script>

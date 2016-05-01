@@ -190,32 +190,13 @@
 
  <a href="<?php echo U("Home/Index/user?id=$list[0].id");?>" value="<?php echo ($list[0]["name"]); ?>"></a>
 
-<div class="modal small fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="myModalLabel">Delete Confirmation</h3>
-        </div>
-        <div class="modal-body">
-            <p class="error-text"><i class="fa fa-warning modal-icon"></i>Are you sure you want to delete the user?<br>This cannot be undone.</p>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
-            <button class="btn btn-danger" data-dismiss="modal">Delete</button>
-        </div>
-      </div>
-    </div>
-</div>
-
-        </div>
-    </div>
 
 
       
 
        
-
+        </div>
+    </div>
 
 
     <script src="/505/Admin/Public/lib/bootstrap/js/bootstrap.js"></script>

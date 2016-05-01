@@ -184,7 +184,7 @@
         <td><?php echo ($vo["addtime"]); ?></td>
         <td>
         <a href="<?php echo U("Home/Index/noticeedit?id=$vo[id]");?>"><i class="fa fa-pencil"></i></a>
-      <a href="<?php echo U("Home/Index/deletenotice?id=$vo[id]");?>" role="button" data-toggle="modal"><i class="fa fa-trash-o"></i></a> 
+      <a href="<?php echo U("Home/Index/deletenotice?id=$vo[id]");?>" role="button" data-toggle="modal" onclick="del();"><i class="fa fa-trash-o"></i></a> 
       </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
 
@@ -201,11 +201,24 @@
   <li><a href="#">&raquo;</a></li>
 </ul>
 
-
+<script type="text/javascript">
+      function del()
+      {
+          if(confirm("确定要删除吗？"))
+          {
+              return true;
+          }
+          else
+          {
+              return false;
+          }
+      }
+</script>
       
 
        
-
+        </div>
+    </div>
 
 
     <script src="/505/Admin/Public/lib/bootstrap/js/bootstrap.js"></script>

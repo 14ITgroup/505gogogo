@@ -160,76 +160,37 @@
         <div class="main-content">
             
      
-       <script> 
-function checkUser(){
-   var name = document.getElementById("name").value;
-   var account = document.getElementById("account").value;
-   var password = document.getElementById("password").value;
-   var power = document.getElementById("power").value;
-   if(name == ""  ){
-     alert("用户名不能为空");
-     return false;
-   }
-   if(account == ""  ){
-     alert("用户名不能为空");
-     return false;
-   }
-   if(password == ""  ){
-    alert("密码不能为空");
-     return false;
-   }
-   if(power!="0"&&power!="1")
-    alert("权限格式不正确");
-    retuen false;
-   else{
-   return true;
-   }
-}
-</script>
-
+       
 <div class="row">
   <div class="col-md-4">
     <br>
     <div id="myTabContent" class="tab-content">
-      <div class="tab-pane active in" id="home" >
-      <form id="tab" method='post' onsubmit = "return checkUser();" >
+      <div class="tab-pane active in" id="home">
+      <form id="tab" method="post">
         <div class="form-group">
-        <label>用户名</label>
-        <input type="text" name="name" id="name" value="<?php echo ($list[0]['name']); ?>" class="form-control">
+        <label>标题</label>
+        <input type="text" name="title" value="<?php echo ($list[0]["title"]); ?>" class="form-control">
         </div>
         <div class="form-group">
-        <label>帐号</label>
-        <input type="text" name="account" id="account" value="<?php echo ($list[0]['account']); ?>" class="form-control">
-        </div>
-        <div class="form-group">
-        <label>密码</label>
-        <input type="text" name="password" id="password" value="<?php echo ($list[0]['password']); ?>" class="form-control">
-        </div>
-        <div class="form-group">
-        <label>权限</label>
-        <input type="text" name="power" id="power" value="<?php echo ($list[0]['power']); ?>" class="form-control">
-        </div>
-      
+          <label>内容</label>
+          <textarea rows="15" name="content" class="form-control"><?php echo ($list[0]["content"]); ?></textarea>
+        </div>     
       </div>
-
-    <div class="btn-toolbar list-toolbar">
-      <button class="btn btn-primary"><i class="fa fa-save" ></i> 保存</button>
-       <a class="btn btn-primary" href="javascript:history.go(-1);">返回</a>
-      <a href="<?php echo U("Home/Index/delete?id=$id");?>" data-toggle="modal" class="btn btn-danger">删除</a>
     </div>
+    <div class="btn-toolbar list-toolbar">
+        <button class="btn btn-primary"><i class="fa fa-save" ></i>保存</button>
+       <a class="btn btn-primary" href="javascript:history.go(-1);">返回</a>
     </form>
+    </div>
   </div>
 </div>
-
-
-        </div>
-    </div>
 
 
       
 
        
-
+        </div>
+    </div>
 
 
     <script src="/505/Admin/Public/lib/bootstrap/js/bootstrap.js"></script>

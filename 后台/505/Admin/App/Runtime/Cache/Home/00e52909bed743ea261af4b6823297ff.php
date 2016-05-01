@@ -279,11 +279,12 @@
             </table>
           </div>
 </div>
-
+</div>
       
 
        
-
+        </div>
+    </div>
 
 
     <script src="/505/Admin/Public/lib/bootstrap/js/bootstrap.js"></script>
