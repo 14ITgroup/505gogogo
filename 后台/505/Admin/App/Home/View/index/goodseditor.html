@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>商品修改</title>
+    <load href="__PUBLIC__/umeditor1_2_2-utf8-php/themes/default/css/umeditor.css" />
+    <load href="__PUBLIC__/umeditor1_2_2-utf8-php/third-party/jquery.min.js" />
+    <load href="__PUBLIC__/umeditor1_2_2-utf8-php/umeditor.config.js" />
+    <load href="__PUBLIC__/umeditor1_2_2-utf8-php/umeditor.min.js" />
+    <load href="__PUBLIC__/umeditor1_2_2-utf8-php/lang/zh-cn/zh-cn.js" />
+    <link rel="stylesheet" href="__PUBLIC__/css/jquery.fileupload.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/jquery.fileupload-ui.css">
+    <script src="__PUBLIC__/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/js/vendor/jquery.ui.widget.js"></script>
+    <script src="__PUBLIC__/js/jquery.fileupload.js"></script>
+    <script src="__PUBLIC__/js/jquery.iframe-transport.js"></script>
+</head>
+
+<body class=" theme-blue">
+    <!-- Demo page code -->
+    <script type="text/javascript">
+    $(function() {
+        var match = document.cookie.match(new RegExp('color=([^;]+)'));
+        if (match) var color = match[1];
+        if (color) {
+            $('body').removeClass(function(index, css) {
+                return (css.match(/\btheme-\S+/g) || []).join(' ')
+            })
+            $('body').addClass('theme-' + color);
+        }
+
+        $('[data-popover="true"]').popover({
+            html: true
+        });
+
+    });
+    </script>
+    <style type="text/css">
+    #line-chart {
+        height: 300px;
+        width: 800px;
+        margin: 0px auto;
+        margin-top: 1em;
+    }
+    
+    .navbar-default .navbar-brand,
+    .navbar-default .navbar-brand:hover {
+        color: #fff;
+    }
+    </style>
+    <script type="text/javascript">
+    $(function() {
+        var uls = $('.sidebar-nav > ul > *').clone();
+        uls.addClass('visible-xs');
+        $('#main-menu').append(uls.clone());
+    });
+    </script>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+    <!--[if IE 7 ]> <body class="ie ie7 "> <![endif]-->
+    <!--[if IE 8 ]> <body class="ie ie8 "> <![endif]-->
+    <!--[if IE 9 ]> <body class="ie ie9 "> <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <!--<![endif]-->
+    <div class="header">
+        <h1 class="page-title">商品</h1>
+        <ul class="breadcrumb">
+            <li><a href="index.html">主页</a> </li>
+            <li><a href="users.html">商品管理</a> </li>
+            <li class="active">商品修改</li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#home" data-toggle="tab">商品</a></li>
+            <li><a href="#profile" data-toggle="tab">分类修改</a></li>
+            <li><a href="#editor" data-toggle="tab">库存管理</a></li>
+        </ul>
+        <form id="form1" enctype="multipart/form-data" method="post">
+            <input type="hidden" id="goodsid" value="{$goodsid}" />
+            <div class="row">
+                <div class="col-md-4">
+                    <br>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane active in" id="home">
+                            <div class="form-group">
+                                <label>商品图片</label>
+                                <br>
+                                <img name="photo" src="/505/Public/images/recommend1.png">
+                            </div>
+                            <div class="form-group">
+                                <label>商品名</label>
+                                <input type="text" name="goodsname" value="{$name}" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>商品价格</label>
+                                <input type="text" name="goodsprice" value="{$price}" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>商品分类</label>
+                                <select name="goodsclassify" class="form-control">
+                                    <volist name="classify" id="mode2">
+                                        <option {$mode2.se} value="{$mode2.id}">{$mode2.classifyname}</option>
+                                    </volist>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>商品介绍</label>
+                                <textarea name="detail" id="myEditor" style="width:1000px;height:480px;" value="">{$detail}</textarea>
+                                <script type="text/javascript">
+                                //实例化编辑器
+                                var um = UM.getEditor('myEditor');
+                                editor.render("myEditor");
+                                </script>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile">
+                            <div class="adco">
+                                <label>颜色分类</label>
+                                <input type="text" class="form-control" id="txtcolor" name="txtcolor">
+                                <button class="btn btn-primary" id="addcolor" name="addcolor" onclick="form1.action='__SELF__';form1.submit();">增加</button>
+                            </div>
+                            <div class="deco">
+                                <label>颜色分类</label>
+                                <select id="goodscolor" name="goodscolor" class="form-control">
+                                    <volist name="colorlist" id="vo1">
+                                        <option {$vo1.ch}>{$vo1.color}</option>
+                                    </volist>
+                                </select>
+                                <button class="btn btn-primary" id="decolor" name="decolor" onclick="form1.action='__SELF__';form1.submit();">删除</button>
+                            </div>
+                            <div class="adsi">
+                                <label>尺寸分类</label>
+                                <input type="text" class="form-control" id="txtsize" name="txtsize">
+                                <button class="btn btn-primary" id="addsize" name="addsize" onclick="form1.action='__SELF__';form1.submit();">增加</button>
+                            </div>
+                            <div class="desi">
+                                <label>尺寸分类</label>
+                                <select id="goodssize" name="goodssize" class="form-control">
+                                    <volist name="sizelist" id="vo2">
+                                        <option {$vo2.ch}>{$vo2.size}</option>
+                                    </volist>
+                                </select>
+                                <button class="btn btn-primary" id="desize" name="desize" onclick="form1.action='__SELF__';form1.submit();">删除</button>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="editor">
+                            <label>颜色</label>
+                            <select id="colorleft" name="color">
+                                <volist name="colorl" id="vo1">
+                                    <option {$vo1.ch}>{$vo1.color}</option>
+                                </volist>
+                            </select>
+                            <label>尺寸</label>
+                            <select id="sizeleft" name="size">
+                                <volist name="sizel" id="vo2">
+                                    <option {$vo2.ch}>{$vo2.size}</option>
+                                </volist>
+                            </select>
+                            <label>剩余货量</label>
+                            <input type="text" id="leftnum" name="left"></input>
+                            <button class="btn btn-primary" id="desize" name="desize">修改</button>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="btn-toolbar list-toolbar">
+                        <button class="btn btn-primary" name="save" onclick="form1.action='__SELF__';form1.submit();"><i class="fa fa-save"></i> 保存</button>
+                        <a href="#myModal" data-toggle="modal" class="btn btn-danger">删除</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal small fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="myModalLabel">删除确认</h3>
+                        </div>
+                        <div class="modal-body">
+                            <p class="error-text"><i class="fa fa-warning modal-icon"></i>确定要删除这个商品？</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">取消</button>
+                            <button class="btn btn-danger" name="delete" onclick="form1.action='__SELF__';form1.submit();" data-dismiss="modal">删除</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <script src="lib/bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript">
+        $("[rel=tooltip]").tooltip();
+        $(function() {
+            $('.demo-cancel-click').click(function() {
+                return false;
+            });
+        });
+
+        function updateGoods() {
+            var name = $("#goodsname").text();
+            var size = $("#colorleft").val();
+            var color = $("$sizeleft").val();
+            var data = {
+                name: name,
+                size: size,
+                color: color
+            };
+            var leftNum = $("#leftnum");
+            $.ajax({
+                    url: '{:U("index.php/home/index/goodsajax")}',
+                    type: 'POST',
+                    data: data
+                })
+                .done(function(dataget) {
+                    console.log("success");
+                    console.log(dataget)
+                    $(leftNum).text(dataget);
+                })
+                .fail(function() {
+                    console.log("error");
+                })
+                .always(function() {
+                    console.log("complete");
+                });
+        }
+        </script>
+</body>
+
+</html>

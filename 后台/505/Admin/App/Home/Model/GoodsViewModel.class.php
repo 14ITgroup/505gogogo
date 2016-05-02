@@ -77,6 +77,20 @@ class GoodsViewModel extends ViewModel {
 		}
 	}
 
+	public function updategood($goodid, $data) {
+		$good = M('goods');
+		$good->name = $data['name'];
+		$good->image = $data['image'];
+		$good->price = $data['price'];
+		$good->classifyid = $data['classifyid'];
+		$good->detail = $data['detail'];
+		$result = $good->where("id=%d", $goodid)->save($data);
+		if ($result) {
+			return ture;
+		} else {
+			return false;
+		}
+	}
 	/**
 	 * 删除商品
 	 *

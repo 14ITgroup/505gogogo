@@ -54,6 +54,7 @@ class GoodsViewModel extends ViewModel {
 			$good->name = $gooddata['name'];
 			$good->image = $gooddata['image'];
 			$good->price = $gooddata['price'];
+			$good->detail = $gooddata['detail'];
 			$good->addtime = date('Y-m-d H:i:s') . "";
 			$result = $good->add();
 			if ($result) {
@@ -72,6 +73,21 @@ class GoodsViewModel extends ViewModel {
 				return false;
 			}
 
+		} else {
+			return false;
+		}
+	}
+
+	public function updategood($goodid, $data) {
+		$good = M('goods');
+		$good->name = $data['name'];
+		$good->image = $data['image'];
+		$good->price = $data['price'];
+		$good->classifyid = $data['classifyid'];
+		$good->detail = $data['detail'];
+		$result = $good->where("id=%d", $goodid)->save($data);
+		if ($result) {
+			return ture;
 		} else {
 			return false;
 		}
@@ -172,7 +188,7 @@ class GoodsViewModel extends ViewModel {
 		} else if ($da == 1) {
 			$da = D('ColorView')->where('color="%s" and goodsid=%d', $colorname, $goodid)->group('color')->select();
 			$da = count($da);
-			if ($da == '0') {
+			if ($da == 0) {
 				return false;
 			} else {
 				$ds = M('goodstype');
@@ -194,7 +210,7 @@ class GoodsViewModel extends ViewModel {
 		} else if ($da == 1) {
 			$da = D('SizeView')->where('size="%s" and goodsid=%d', $sizename, $goodid)->group('size')->select();
 			$da = count($da);
-			if ($da == '0') {
+			if ($da == 0) {
 				return false;
 			} else {
 				$ds = M('goodstype');
