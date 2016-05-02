@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html lang="en"><head>
     <meta charset="utf-8">
-    <title>WebShop Admin</title>
+    <title>Bootstrap Admin</title>
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -93,20 +93,25 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="" href="index.html"><span class="navbar-brand"><span class="fa fa-paper-plane"></span> 电商商城后台管理</span></a></div>
+          <a class="" href="index.html"><span class="navbar-brand"><span class="fa fa-paper-plane"></span> Aircraft</span></a></div>
 
         <div class="navbar-collapse collapse" style="height: 1px;">
           <ul id="main-menu" class="nav navbar-nav navbar-right">
             <li class="dropdown hidden-xs">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="glyphicon glyphicon-user padding-right-small" style="position:relative;top: 3px;"></span> <?php echo ($name); ?>
+                    <span class="glyphicon glyphicon-user padding-right-small" style="position:relative;top: 3px;"></span> Jack Smith
                     <i class="fa fa-caret-down"></i>
                 </a>
+
               <ul class="dropdown-menu">
-                <li><a href="<?php echo U('/Home/index/order');?>">订单</a></li>        
-                <li><a href="<?php echo U('/Home/index/users');?>">用户</a></li>
+                <li><a href="./">My Account</a></li>
                 <li class="divider"></li>
-                <li><a tabindex="-1" href="<?php echo U('/Home/index/login');?>">退出</a></li>
+                <li class="dropdown-header">Admin Panel</li>
+                <li><a href="./">Users</a></li>
+                <li><a href="./">Security</a></li>
+                <li><a tabindex="-1" href="./">Payments</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="sign-in.html">Logout</a></li>
               </ul>
             </li>
           </ul>
@@ -122,9 +127,11 @@
             <li><a href="<?php echo U('/Home/index/');?>"><span class="fa fa-caret-right"></span>后台首页</a></li>
             <li><a href="<?php echo U('/Home/index/order');?>"><span class="fa fa-caret-right"></span>最新业务</a></li>
             <li ><a href="<?php echo U('/Home/index/notice');?>"><span class="fa fa-caret-right"></span>公告管理</a></li>
+            <li ><a href="#"><span class="fa fa-caret-right"></span>消息</a></li>
+            <li ><a href="#"><span class="fa fa-caret-right"></span>日历</a></li>
     </ul></li>
 
-    <li data-popover="true" rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i>商品管理<i class="fa fa-collapse"></i></a></li>
+    <li data-popover="true" data-content="Items in this group require a <strong><a href='http://portnine.com/bootstrap-themes/aircraft' target='blank'>premium license</a><strong>." rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i>商品管理<i class="fa fa-collapse"></i></a></li>
         <li><ul class="premium-menu nav nav-list collapse">
                 <li class="visible-xs visible-sm"><a href="#">- Premium features require a license -</a>
             <li ><a href="premium-profile.html"><span class="fa fa-caret-right"></span>最新商品</a></li>
@@ -153,7 +160,7 @@
         <div class="main-content">
             
      
-        <a class="btn btn-primary" href="javascript:history.go(-1);">返回</a>
+       
 <table class="table">
   <thead>
     <tr>
@@ -177,12 +184,27 @@
   </tbody>
 </table>
 
+<ul class="pagination">
+  <li><a href="#">&laquo;</a></li>
+  <li><a href="#">1</a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
+
 <script type="text/javascript">
       function del()
       {
-        if (!confirm("确认要删除？")) {
-            window.event.returnValue = false;
-        }
+          if(confirm("确定要删除吗？"))
+          {
+              return true;
+          }
+          else
+          {
+              return false;
+          }
       }
 </script>
       

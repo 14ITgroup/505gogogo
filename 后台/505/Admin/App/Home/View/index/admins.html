@@ -1,3 +1,5 @@
+
+            
 <div class="btn-toolbar list-toolbar">
     <a href="{:U("Home/Index/addadmin")}" class="btn btn-primary"><i class="fa fa-plus"></i> 新增 管理员</a>
   <div class="btn-group">
@@ -28,12 +30,25 @@
   </tbody>
 </table>
 
-
+<ul class="pagination">
+  <li><a href="#">&laquo;</a></li>
+  <li><a href="#">1</a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
 <script type="text/javascript">
       function del()
       {
-        if (!confirm("确认要删除？")) {
-            window.event.returnValue = false;
-        }
+          if(confirm("确定要删除吗？"))
+          {
+              return true;
+          }
+          else
+          {
+              return false;
+          }
       }
 </script>

@@ -93,7 +93,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="" href="index.html"><span class="navbar-brand"><span class="fa fa-paper-plane"></span> 电商商城后台管理</span></a></div>
+          <a class="" href="index.html"><span class="navbar-brand"><span class="fa fa-paper-plane"></span> Aircraft</span></a></div>
 
         <div class="navbar-collapse collapse" style="height: 1px;">
           <ul id="main-menu" class="nav navbar-nav navbar-right">
@@ -104,11 +104,14 @@
                 </a>
 
               <ul class="dropdown-menu">
-                <li><a href="<?php echo U('/Home/index/order');?>">订单</a></li>
-                
-                <li><a href="<?php echo U('/Home/index/users');?>">用户</a></li>
+                <li><a href="./">My Account</a></li>
                 <li class="divider"></li>
-                <li><a tabindex="-1" href="<?php echo U('/Home/index/login');?>">退出</a></li>
+                <li class="dropdown-header">Admin Panel</li>
+                <li><a href="./">Users</a></li>
+                <li><a href="./">Security</a></li>
+                <li><a tabindex="-1" href="./">Payments</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="sign-in.html">Logout</a></li>
               </ul>
             </li>
           </ul>
@@ -219,11 +222,14 @@ function checkUser(){
 </div>
 
 
+        </div>
+    </div>
+
+
       
 
        
-        </div>
-    </div>
+
 
 
     <script src="/505/Admin/Public/lib/bootstrap/js/bootstrap.js"></script>

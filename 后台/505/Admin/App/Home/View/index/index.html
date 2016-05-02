@@ -1,60 +1,120 @@
-﻿<div class="row">
+﻿    
+  <div class="row">
     <div class="col-sm-6 col-md-6">
         <div class="panel panel-default">
-            <div class="panel-heading no-collapse">最新用户<span class="label label-warning">10</span></div>
+            <div class="panel-heading no-collapse">Not Collapsible<span class="label label-warning">+10</span></div>
             <table class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>用户名</th>
-                  <th>帐号</th>
-                  <th>状态</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
                 </tr>
               </thead>
               <tbody>
-                 <volist name="list" id="vo" offset='0' length='10'>
-                    <tr>
-                      <td>{$vo.name}</td>
-                      <td>{$vo.account}</td>
-                      <td>{$vo.state}</td>
-                    </tr>
-                  </volist>
+                <tr>
+                  <td>Mark</td>
+                  <td>Tompson</td>
+                  <td>the_mark7</td>
+                </tr>
+                <tr>
+                  <td>Ashley</td>
+                  <td>Jacobs</td>
+                  <td>ash11927</td>
+                </tr>
+                <tr>
+                  <td>Audrey</td>
+                  <td>Ann</td>
+                  <td>audann84</td>
+                </tr>
+                <tr>
+                  <td>John</td>
+                  <td>Robinson</td>
+                  <td>jr5527</td>
+                </tr>
+                <tr>
+                  <td>Aaron</td>
+                  <td>Butler</td>
+                  <td>aaron_butler</td>
+                </tr>
+                <tr>
+                  <td>Chris</td>
+                  <td>Albert</td>
+                  <td>cab79</td>
+                </tr>
               </tbody>
             </table>
         </div>
+
 </div>
+
 <div class="row">
     <div class="col-sm-6 col-md-6">
         <div class="panel panel-default"> 
             <div class="panel-heading no-collapse">
                 <span class="panel-icon pull-right">
-                </span>未处理业务
+                    <a href="#" class="demo-cancel-click" rel="tooltip" title="Click to refresh"><i class="fa fa-refresh"></i></a>
+                </span>
+
+                Needed to Close
             </div>
             <table class="table list">
-             <thead>
-                <tr>
-                  <th>#</th>
-                  <th>订单</th>
-                  <th>商品</th>
-                  <th>订货数量</th>
-                  <th>剩余数量</th>
-                  <th>下单时间</th>
-                  <th>状态</th>             
-                </tr>
-              </thead>
               <tbody>
-                  <volist name="order" id="order">
-                        <tr>
-                          <td>{$i}</td>
-                          <td>{$order.order_id}</td>
-                          <td>{$order.goods_name}</td>
-                          <td>{$order.goodsnum}</td>
-                          <td>{$order.goodsleft}</td>
-                          <td>{$order.addtime}</td>
-                          <td>{$order.order_state}</td>
-                        </tr>
-                  </volist>     
+                  <tr>
+                      <td>
+                          <a href="#"><p class="title">Care Hospital</p></a>
+                          <p class="info">Sales Rating: 86%</p>
+                      </td>
+                      <td>
+                          <p>Date: 7/19/2012</p>
+                          <a href="#">View Transaction</a>
+                      </td>
+                      <td>
+                          <p class="text-danger h3 pull-right" style="margin-top: 12px;">$20,500</p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <a href="#"><p class="title">Custom Eyesight</p></a>
+                          <p class="info">Sales Rating: 58%</p>
+                      </td>
+                      <td>
+                          <p>Date: 7/19/2012</p>
+                          <a href="#">View Transaction</a>
+                      </td>
+                      <td>
+                          <p class="text-danger h3 pull-right" style="margin-top: 12px;">$12,600</p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <a href="#"><p class="title">Clear Dental</p></a>
+                          <p class="info">Sales Rating: 76%</p>
+                      </td>
+                      <td>
+                          <p>Date: 7/19/2012</p>
+                          <a href="#">View Transaction</a>
+                      </td>
+                      <td>
+                          <p class="text-danger h3 pull-right" style="margin-top: 12px;">$2,500</p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <a href="#"><p class="title">Safe Insurance</p></a>
+                          <p class="info">Sales Rating: 82%</p>
+                      </td>
+                      <td>
+                          <p>Date: 7/19/2012</p>
+                          <a href="#">View Transaction</a>
+                      </td>
+                      <td>
+                          <p class="text-danger h3 pull-right" style="margin-top: 12px;">$22,400</p>
+                      </td>
+                  </tr>
+                    
               </tbody>
             </table>
           </div>
-        </div>
-      </div>
+</div>
+</div>

@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html lang="en"><head>
     <meta charset="utf-8">
-    <title>WebShop Admin</title>
+    <title>Bootstrap Admin</title>
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -93,20 +93,25 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="" href="index.html"><span class="navbar-brand"><span class="fa fa-paper-plane"></span> 电商商城后台管理</span></a></div>
+          <a class="" href="index.html"><span class="navbar-brand"><span class="fa fa-paper-plane"></span> Aircraft</span></a></div>
 
         <div class="navbar-collapse collapse" style="height: 1px;">
           <ul id="main-menu" class="nav navbar-nav navbar-right">
             <li class="dropdown hidden-xs">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="glyphicon glyphicon-user padding-right-small" style="position:relative;top: 3px;"></span> <?php echo ($name); ?>
+                    <span class="glyphicon glyphicon-user padding-right-small" style="position:relative;top: 3px;"></span> Jack Smith
                     <i class="fa fa-caret-down"></i>
                 </a>
+
               <ul class="dropdown-menu">
-                <li><a href="<?php echo U('/Home/index/order');?>">订单</a></li>        
-                <li><a href="<?php echo U('/Home/index/users');?>">用户</a></li>
+                <li><a href="./">My Account</a></li>
                 <li class="divider"></li>
-                <li><a tabindex="-1" href="<?php echo U('/Home/index/login');?>">退出</a></li>
+                <li class="dropdown-header">Admin Panel</li>
+                <li><a href="./">Users</a></li>
+                <li><a href="./">Security</a></li>
+                <li><a tabindex="-1" href="./">Payments</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="sign-in.html">Logout</a></li>
               </ul>
             </li>
           </ul>
@@ -122,9 +127,11 @@
             <li><a href="<?php echo U('/Home/index/');?>"><span class="fa fa-caret-right"></span>后台首页</a></li>
             <li><a href="<?php echo U('/Home/index/order');?>"><span class="fa fa-caret-right"></span>最新业务</a></li>
             <li ><a href="<?php echo U('/Home/index/notice');?>"><span class="fa fa-caret-right"></span>公告管理</a></li>
+            <li ><a href="#"><span class="fa fa-caret-right"></span>消息</a></li>
+            <li ><a href="#"><span class="fa fa-caret-right"></span>日历</a></li>
     </ul></li>
 
-    <li data-popover="true" rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i>商品管理<i class="fa fa-collapse"></i></a></li>
+    <li data-popover="true" data-content="Items in this group require a <strong><a href='http://portnine.com/bootstrap-themes/aircraft' target='blank'>premium license</a><strong>." rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i>商品管理<i class="fa fa-collapse"></i></a></li>
         <li><ul class="premium-menu nav nav-list collapse">
                 <li class="visible-xs visible-sm"><a href="#">- Premium features require a license -</a>
             <li ><a href="premium-profile.html"><span class="fa fa-caret-right"></span>最新商品</a></li>
@@ -153,62 +160,126 @@
         <div class="main-content">
             
      
-       ﻿<div class="row">
+       ﻿    
+  <div class="row">
     <div class="col-sm-6 col-md-6">
         <div class="panel panel-default">
-            <div class="panel-heading no-collapse">最新用户<span class="label label-warning">10</span></div>
+            <div class="panel-heading no-collapse">Not Collapsible<span class="label label-warning">+10</span></div>
             <table class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>用户名</th>
-                  <th>帐号</th>
-                  <th>状态</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
                 </tr>
               </thead>
               <tbody>
-                 <?php if(is_array($list)): $i = 0; $__LIST__ = array_slice($list,0,10,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                      <td><?php echo ($vo["name"]); ?></td>
-                      <td><?php echo ($vo["account"]); ?></td>
-                      <td><?php echo ($vo["state"]); ?></td>
-                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                <tr>
+                  <td>Mark</td>
+                  <td>Tompson</td>
+                  <td>the_mark7</td>
+                </tr>
+                <tr>
+                  <td>Ashley</td>
+                  <td>Jacobs</td>
+                  <td>ash11927</td>
+                </tr>
+                <tr>
+                  <td>Audrey</td>
+                  <td>Ann</td>
+                  <td>audann84</td>
+                </tr>
+                <tr>
+                  <td>John</td>
+                  <td>Robinson</td>
+                  <td>jr5527</td>
+                </tr>
+                <tr>
+                  <td>Aaron</td>
+                  <td>Butler</td>
+                  <td>aaron_butler</td>
+                </tr>
+                <tr>
+                  <td>Chris</td>
+                  <td>Albert</td>
+                  <td>cab79</td>
+                </tr>
               </tbody>
             </table>
         </div>
+
 </div>
+
 <div class="row">
     <div class="col-sm-6 col-md-6">
         <div class="panel panel-default"> 
             <div class="panel-heading no-collapse">
                 <span class="panel-icon pull-right">
-                </span>未处理业务
+                    <a href="#" class="demo-cancel-click" rel="tooltip" title="Click to refresh"><i class="fa fa-refresh"></i></a>
+                </span>
+
+                Needed to Close
             </div>
             <table class="table list">
-             <thead>
-                <tr>
-                  <th>#</th>
-                  <th>订单</th>
-                  <th>商品</th>
-                  <th>订货数量</th>
-                  <th>剩余数量</th>
-                  <th>下单时间</th>
-                  <th>状态</th>             
-                </tr>
-              </thead>
               <tbody>
-                  <?php if(is_array($order)): $i = 0; $__LIST__ = $order;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$order): $mod = ($i % 2 );++$i;?><tr>
-                          <td><?php echo ($i); ?></td>
-                          <td><?php echo ($order["order_id"]); ?></td>
-                          <td><?php echo ($order["goods_name"]); ?></td>
-                          <td><?php echo ($order["goodsnum"]); ?></td>
-                          <td><?php echo ($order["goodsleft"]); ?></td>
-                          <td><?php echo ($order["addtime"]); ?></td>
-                          <td><?php echo ($order["order_state"]); ?></td>
-                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>     
+                  <tr>
+                      <td>
+                          <a href="#"><p class="title">Care Hospital</p></a>
+                          <p class="info">Sales Rating: 86%</p>
+                      </td>
+                      <td>
+                          <p>Date: 7/19/2012</p>
+                          <a href="#">View Transaction</a>
+                      </td>
+                      <td>
+                          <p class="text-danger h3 pull-right" style="margin-top: 12px;">$20,500</p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <a href="#"><p class="title">Custom Eyesight</p></a>
+                          <p class="info">Sales Rating: 58%</p>
+                      </td>
+                      <td>
+                          <p>Date: 7/19/2012</p>
+                          <a href="#">View Transaction</a>
+                      </td>
+                      <td>
+                          <p class="text-danger h3 pull-right" style="margin-top: 12px;">$12,600</p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <a href="#"><p class="title">Clear Dental</p></a>
+                          <p class="info">Sales Rating: 76%</p>
+                      </td>
+                      <td>
+                          <p>Date: 7/19/2012</p>
+                          <a href="#">View Transaction</a>
+                      </td>
+                      <td>
+                          <p class="text-danger h3 pull-right" style="margin-top: 12px;">$2,500</p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <a href="#"><p class="title">Safe Insurance</p></a>
+                          <p class="info">Sales Rating: 82%</p>
+                      </td>
+                      <td>
+                          <p>Date: 7/19/2012</p>
+                          <a href="#">View Transaction</a>
+                      </td>
+                      <td>
+                          <p class="text-danger h3 pull-right" style="margin-top: 12px;">$22,400</p>
+                      </td>
+                  </tr>
+                    
               </tbody>
             </table>
           </div>
-        </div>
-      </div>
+</div>
+</div>
       
 
        

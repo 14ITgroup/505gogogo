@@ -81,7 +81,7 @@
 
     <div class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
-          <a class="" href="index.html"><span class="navbar-brand"><span class="fa fa-paper-plane"></span> 电商商城后台管理</span></a></div>
+          <a class="" href="index.html"><span class="navbar-brand"><span class="fa fa-paper-plane"></span> Aircraft</span></a></div>
 
         <div class="navbar-collapse collapse" style="height: 1px;">
 
@@ -97,7 +97,7 @@
         <div class="panel-body">
             <form id="log" method='post' onsubmit = "return checkUser();">
                 <div class="form-group">
-                    <label>帐号</label>
+                    <label>用户名</label>
                     <input type="text" name="adminaccount" id="adminaccount" class="form-control span12">
                 </div>
                 <div class="form-group">
