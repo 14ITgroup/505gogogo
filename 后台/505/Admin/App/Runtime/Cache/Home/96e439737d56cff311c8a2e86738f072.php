@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html lang="en"><head>
     <meta charset="utf-8">
-    <title>Bootstrap Admin</title>
+    <title>WebShop Admin</title>
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -93,25 +93,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="" href="index.html"><span class="navbar-brand"><span class="fa fa-paper-plane"></span> Aircraft</span></a></div>
+          <a class="" href="index.html"><span class="navbar-brand"><span class="fa fa-paper-plane"></span> 电商商城后台管理</span></a></div>
 
         <div class="navbar-collapse collapse" style="height: 1px;">
           <ul id="main-menu" class="nav navbar-nav navbar-right">
             <li class="dropdown hidden-xs">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="glyphicon glyphicon-user padding-right-small" style="position:relative;top: 3px;"></span> Jack Smith
+                    <span class="glyphicon glyphicon-user padding-right-small" style="position:relative;top: 3px;"></span> <?php echo ($name); ?>
                     <i class="fa fa-caret-down"></i>
                 </a>
-
               <ul class="dropdown-menu">
-                <li><a href="./">My Account</a></li>
+                <li><a href="<?php echo U('/Home/index/order');?>">订单</a></li>        
+                <li><a href="<?php echo U('/Home/index/users');?>">用户</a></li>
                 <li class="divider"></li>
-                <li class="dropdown-header">Admin Panel</li>
-                <li><a href="./">Users</a></li>
-                <li><a href="./">Security</a></li>
-                <li><a tabindex="-1" href="./">Payments</a></li>
-                <li class="divider"></li>
-                <li><a tabindex="-1" href="sign-in.html">Logout</a></li>
+                <li><a tabindex="-1" href="<?php echo U('/Home/index/login');?>">退出</a></li>
               </ul>
             </li>
           </ul>
@@ -127,11 +122,9 @@
             <li><a href="<?php echo U('/Home/index/');?>"><span class="fa fa-caret-right"></span>后台首页</a></li>
             <li><a href="<?php echo U('/Home/index/order');?>"><span class="fa fa-caret-right"></span>最新业务</a></li>
             <li ><a href="<?php echo U('/Home/index/notice');?>"><span class="fa fa-caret-right"></span>公告管理</a></li>
-            <li ><a href="#"><span class="fa fa-caret-right"></span>消息</a></li>
-            <li ><a href="#"><span class="fa fa-caret-right"></span>日历</a></li>
     </ul></li>
 
-    <li data-popover="true" data-content="Items in this group require a <strong><a href='http://portnine.com/bootstrap-themes/aircraft' target='blank'>premium license</a><strong>." rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i>商品管理<i class="fa fa-collapse"></i></a></li>
+    <li data-popover="true" rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i>商品管理<i class="fa fa-collapse"></i></a></li>
         <li><ul class="premium-menu nav nav-list collapse">
                 <li class="visible-xs visible-sm"><a href="#">- Premium features require a license -</a>
             <li ><a href="premium-profile.html"><span class="fa fa-caret-right"></span>最新商品</a></li>
@@ -160,51 +153,38 @@
         <div class="main-content">
             
      
-       
-            
-<div class="panel panel-default">
-<div class="panel-heading no-collapse">Not Collapsible<span class="label label-warning">+10</span></div>
+       <div class="panel panel-default">
+<div class="panel-heading no-collapse">最新业务<span class="label label-warning">+10</span></div>
             <table class="table table-bordered table-striped">
               <thead>
                 <tr>
                   <th>#</th>
                   <th>订单</th>
                   <th>商品</th>
+                  <th>订货数量</th>
+                  <th>剩余数量</th>
                   <th>下单时间</th>
+                  <th>状态</th>             
+                  <th style="width: 3.5em;"></th>
                 </tr>
               </thead>
               <tbody>
                     <?php if(is_array($order)): $i = 0; $__LIST__ = $order;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$order): $mod = ($i % 2 );++$i;?><tr>
                             <td><?php echo ($i); ?></td>
-                            <td><?php echo ($key); ?>.<?php echo ($order["userid"]); ?></td>
+                            <td><?php echo ($order["order_id"]); ?></td>
+                            <td><?php echo ($order["goods_name"]); ?></td>
+                            <td><?php echo ($order["goodsnum"]); ?></td>
+                            <td><?php echo ($order["goodsleft"]); ?></td>
+                            <td><?php echo ($order["addtime"]); ?></td>
+                            <td><?php echo ($order["order_state"]); ?></td>
                             <td>
-
-                            <?php echo ($users[]["account"]); ?>
-
-                            </td>
-                            <td><?php echo ($vo["power"]); ?></td>
-                            <td>
-                          <a href="<?php echo U("Home/Index/admin?id=$vo[id]");?>"><i class="fa fa-pencil"></i></a>
-                          <a href="<?php echo U("Home/Index/delete?id=$vo[id]");?>" role="button" data-toggle="modal"><i class="fa fa-trash-o"></i></a> 
+                          <a href="<?php echo U("Home/Index/handleorder?id=$order[order_id]");?>">发货</a>
                           </td>
                           </tr><?php endforeach; endif; else: echo "" ;endif; ?>
               </tbody>
             </table>
         </div>
         </div>
-
-
-
-
-<ul class="pagination">
-  <li><a href="#">&laquo;</a></li>
-  <li><a href="#">1</a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">4</a></li>
-  <li><a href="#">5</a></li>
-  <li><a href="#">&raquo;</a></li>
-</ul>
 
 <div class="modal small fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
