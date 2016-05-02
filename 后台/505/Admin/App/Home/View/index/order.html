@@ -1,30 +1,30 @@
-
-            
 <div class="panel panel-default">
-<div class="panel-heading no-collapse">Not Collapsible<span class="label label-warning">+10</span></div>
+<div class="panel-heading no-collapse">最新业务<span class="label label-warning">+10</span></div>
             <table class="table table-bordered table-striped">
               <thead>
                 <tr>
                   <th>#</th>
                   <th>订单</th>
                   <th>商品</th>
+                  <th>订货数量</th>
+                  <th>剩余数量</th>
                   <th>下单时间</th>
+                  <th>状态</th>             
+                  <th style="width: 3.5em;"></th>
                 </tr>
               </thead>
               <tbody>
                     <volist name="order" id="order">
                           <tr>
                             <td>{$i}</td>
-                            <td>{$key}.{$order.userid}</td>
+                            <td>{$order.order_id}</td>
+                            <td>{$order.goods_name}</td>
+                            <td>{$order.goodsnum}</td>
+                            <td>{$order.goodsleft}</td>
+                            <td>{$order.addtime}</td>
+                            <td>{$order.order_state}</td>
                             <td>
-
-                            {$users[].account}
-
-                            </td>
-                            <td>{$vo.power}</td>
-                            <td>
-                          <a href="{:U("Home/Index/admin?id=$vo[id]")}"><i class="fa fa-pencil"></i></a>
-                          <a href="{:U("Home/Index/delete?id=$vo[id]")}" role="button" data-toggle="modal"><i class="fa fa-trash-o"></i></a> 
+                          <a href="{:U("Home/Index/handleorder?id=$order[order_id]")}">发货</a>
                           </td>
                           </tr>
                     </volist>
@@ -32,19 +32,6 @@
             </table>
         </div>
         </div>
-
-
-
-
-<ul class="pagination">
-  <li><a href="#">&laquo;</a></li>
-  <li><a href="#">1</a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">4</a></li>
-  <li><a href="#">5</a></li>
-  <li><a href="#">&raquo;</a></li>
-</ul>
 
 <div class="modal small fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
