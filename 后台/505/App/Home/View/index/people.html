@@ -22,32 +22,35 @@
         <p>{$_SESSION['useraccount']}</p>
     </section>
     <section class="tab-choice">
-        <input type="hidden" id='state' value="{$state}" />
-        <js href="/505/Public/js/jquery-v1.10.2.min.js" />
-
         <ul>
             <li>
                 <a href="people.html">
                     <img src="__PUBLIC__/images/dingdan.png" alt="订单">
-                    <p class="reds">订单</p>
+                    <p>订单</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="__PUBLIC__/images/heart-like.png" alt="收藏">
+                    <p>收藏</p>
                 </a>
             </li>
             <li>
                 <a href="people.html?state=1">
                     <img src="__PUBLIC__/images/car.png" alt="待发货">
-                    <p class="red">待发货</p>
+                    <p>待发货</p>
                 </a>
             </li>
             <li>
                 <a href="people.html?state=2">
                     <img src="__PUBLIC__/images/take.png" alt="运送中">
-                    <p class="red">运送中</p>
+                    <p>运送中</p>
                 </a>
             </li>
             <li>
                 <a href="people.html?state=3">
                     <img src="__PUBLIC__/images/comment.png" alt="已完成">
-                    <p class="red">已完成</p>
+                    <p>已完成</p>
                 </a>
             </li>
         </ul>
@@ -86,27 +89,6 @@
             </ul>
         </nav>
     </footer>
-            <script type="text/javascript">
-        function red1(){
-            var st= $("#state").attr("value");
-            var redp=$("p.red ");
-            if(st!=""){
-                for(var i = 0; i < $(redp).length; i++){
-                    console.log($(redp)[i]);
-                    var temp1 = i+1;
-                    var temp2 =Number(st);
-                    if(temp1==temp2){
-                        
-                        $($(redp)[i]).css("color","#ce4845");
-                        //console.log($(redp)[i]);
-                    }console.log($(redp)[i]);
-                }console.log("hello"+st);
-            }
-            else
-            $("p.reds").css("color","#ce4845");
-        }
-        red1();
-        </script>
 </body>
 
 </html>

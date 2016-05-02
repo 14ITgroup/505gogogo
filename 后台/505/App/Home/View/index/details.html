@@ -50,7 +50,8 @@
     </section>
     <section class="details-pay-btn">
         <volist name="good" id="single">
-            <a href="" id='cart' >加入购物车</a><a href="pay.html?fromdetail={$single.id}" onclick="buynow();" id='buynow'>立即购买</a>
+            <a href="detail.html?add={$single.id}" onclick="add();">加入购物车</a>
+            <a href="pay.html?fromdetail={$single.id}">立即购买</a>
         </volist>  
     </section>
     <footer>
@@ -73,9 +74,9 @@
     </footer>
     <js href="/505/Public/js/jquery-v1.10.2.min.js" />
     <script type="text/javascript">
-        $("#cart").click(function(){
-            addCart();
-        });
+        function add(){
+            alert('添加成功');
+        }
     </script>
     <script type="text/javascript">
     updateGoods();	//首次获取库存数量
@@ -125,37 +126,6 @@
 	    .always(function() {
 	    	console.log("complete");
 	    });
-    }
-
-    function addCart() {
-        var name = $(".details-name").text();
-        var size = $(".categ label.checked").text();
-        var color = $(".color-choice label.checked").text();
-        var data = {
-            name: name,
-            size: size,
-            color: color
-        };
-        $.ajax({
-            url: '{:U("index.php/home/index/goodsajax2")}',
-            type: 'POST',
-            data: data
-        })
-        .done(function(dataget) {
-            console.log("success");
-            console.log(dataget);
-            alert(dataget);
-        })
-        .fail(function() {
-            console.log("error");
-        })
-        .always(function() {
-            console.log("complete");
-        });
-    }
-
-    function buynow(){
-        
     }
     </script>
 </body>

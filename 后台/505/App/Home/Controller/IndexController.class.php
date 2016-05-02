@@ -123,12 +123,10 @@ class IndexController extends Controller
 			$da=D('OrdersView');
 			if(isset($_GET['state'])){
 				$state=I('request.state');
-				$this->assign("state",$state);
 				$all=$da->where("userid=%d and state=%d",$userid,$state)->select();
 			}else{
 				$all=$da->where("userid=%d",$userid)->select();
-			}
-
+			}	
 			$this->assign("list",$all);
 			$this->display();
 		}else{
@@ -155,35 +153,12 @@ class IndexController extends Controller
 		}else if(isset($_GET['add'])){
 			$goodsid=I('request.add');
 
-
 		}else{
 			$this->error('请稍后','homepage',0);
 		}
 	}
 
 	public function chart(){
-		if(isset($_SESSION['useraccount'])){
-			if(isset($_GET['delete'])){
-				$carts=M('cart');
-				$delete=$carts->where("id=%d",$_GET['delete'])->delete();
-			}
-				$user=M('users');
-				$userid=$user->where("account=%s",$_SESSION['useraccount'])->getField('id');
-
-				$carts=D('CartsView');
-				$goods=$carts->where("userid=%d",$userid)->select();
-				$this->assign("carts",$goods);
-
-				//计算出总钱数
-				$singleprice=$carts->where("userid=%d",$userid)->field('price')->select();
-				$allmoney=0;
-				foreach ($singleprice as $value) {
-					$allmoney=$allmoney+$value['price']+0;
-				}
-				$this->assign("allprice",$allmoney);
-		}else{
-			$this->error('请登录','login',3);
-		}
 		$this->display();
 	}
 
@@ -191,30 +166,11 @@ class IndexController extends Controller
 		if(isset($_SESSION['useraccount'])){
 			$user=M('users');
 			$single=$user->where("account=%s",$_SESSION['useraccount'])->select();
-			$userid=$user->where("account=%s",$_SESSION['useraccount'])->getField('id');
 			$this->assign("single",$single);
 			if(isset($_GET['fromdetail'])){
-				$goodsid=$_GET['fromdetail'];
-				$good=M('goods');
-				$order=$good->where("id=%d",$goodsid)->select();
-				$allmoney=$good->where("id=%d",$goodsid)->getField('price');
-				$this->assign("carts",$order);
-				$this->assign("allprice",$allmoney);
+				//支付详情页中的商品
 			}else{
 				//支付购物车中全部内容
-				$carts=D('CartsView');
-				$goods=$carts->where("userid=%d",$userid)->select();
-				$this->assign("carts",$goods);
-
-				//计算出总钱数
-				$singleprice=$carts->where("userid=%d",$userid)->field('price')->select();
-				//dump($singleprice);
-				$allmoney=0;
-				foreach ($singleprice as $value) {
-					$allmoney=$allmoney+$value['price']+0;
-				}
-				//$allmoney=array_sum($singleprice);
-				$this->assign("allprice",$allmoney);
 			}
 		}else{
 			$this->error('请登录','login',3);
@@ -226,67 +182,8 @@ class IndexController extends Controller
 		$name = I('post.name');
 		$color = I('post.color');
 		$size = I('post.size');
-		if($color!=""){
-			if($size!=""){
-				$go = D('GoodsView')->where('name="' . $name . '" and color="' . $color . '" and size="' . $size . '"')->find();
-			}
-			else{
-				$go = D('GoodsView')->where('name="' . $name . '" and color="' . $color . '"')->find();
-			}
-		}
-		else{
-			if($size!=""){
-				$go = D('GoodsView')->where('name="' . $name . '" and size="' . $size . '"')->find();
-			}
-			else{
-				$go = D('GoodsView')->where('name="' . $name . '"')->find();
-			}
-		}
+		$go = D('GoodsView')->where('name="' . $name . '" and color="' . $color . '" and size="' . $size . '"')->find();
 		$data = $go["goodsleft"];
-		$this->ajaxReturn($data);//{"data":"$go["goodsleft"]"}
-	}
-
-	public function goodsajax2(){
-		$name = I('post.name');
-		$color = I('post.color');
-		$size = I('post.size');
-		if($color!=""){
-			if($size!=""){
-				$go = D('GoodsView')->where('name="' . $name . '" and color="' . $color . '" and size="' . $size . '"')->find();
-			}
-			else{
-				$go = D('GoodsView')->where('name="' . $name . '" and color="' . $color . '"')->find();
-			}
-		}
-		else{
-			if($size!=""){
-				$go = D('GoodsView')->where('name="' . $name . '" and size="' . $size . '"')->find();
-			}
-			else{
-				$go = D('GoodsView')->where('name="' . $name . '"')->find();
-			}
-		}
-		if(isset($_SESSION['useraccount'])){
-			$user=M('users');
-			$userid=$user->where("account=%s",$_SESSION['useraccount'])->getField('id');
-			$base=M('cart');
-			$base->userid=$userid;
-			$base->goodstypeid=$go['type_id'];
-			$base->goodsnum=1;
-			$info=$base->add();
-			if($info){
-				$data="成功将商品名：".$name." 颜色：".$color." 尺寸：".$size."  1件加入到购物车";
-				$this->ajaxReturn($data,'json');
-			}
-			else{
-				$data="加入失败，请稍后再试";
-				$this->ajaxReturn($data,'json');
-			}
-
-		}else {
-			$data="请先登录再加入购物车";
-			$this->ajaxReturn($data,'json');
-		}
-
+		$this->ajaxReturn($data);
 	}
 }
