@@ -79,8 +79,8 @@
     <div class="header">
         <h1 class="page-title">商品</h1>
         <ul class="breadcrumb">
-            <li><a href="index.html">主页</a> </li>
-            <li><a href="users.html">商品管理</a> </li>
+            <li><a href="{:U("Home/Index/")}">主页</a> </li>
+            <li><a href="{:U("Home/Index/goodslist")}">商品管理</a> </li>
             <li class="active">商品添加</li>
         </ul>
     </div>
@@ -266,7 +266,7 @@
             };
             var leftNum = $("#leftnum");
             $.ajax({
-                    url: '{:U("home/index/goodsajax")}',
+                    url: '{:U("Home/Index/goodsajax")}',
                     type: 'POST',
                     data: data
                 })

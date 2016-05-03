@@ -74,13 +74,13 @@
     <div class="header">
         <h1 class="page-title">商品列表</h1>
         <ul class="breadcrumb">
-            <li><a href="index.html">主页</a> </li>
+            <li><a href="{:U("Home/Index/")}">主页</a> </li>
             <li class="active">商品</li>
         </ul>
     </div>
     <div class="main-content">
         <div class="btn-toolbar list-toolbar">
-            <a href="{:U("home/index/goodsadd")}"><button class="btn btn-primary" ><i class="fa fa-plus"></i>新添加商品</button></a>
+            <a href="{:U("Home/Index/goodsadd")}"><button class="btn btn-primary" ><i class="fa fa-plus"></i>新添加商品</button></a>
             <div class="btn-group">
             </div>
         </div>
@@ -102,7 +102,7 @@
                         <td>{$vo.price}</td>
                         <td>{$vo.addtime}</td>
                         <td>
-                            <a href="{:U("home/index/goodseditor?id=$vo[id]")}"><i class="fa fa-pencil"></i></a>
+                            <a href="{:U("Home/Index/goodseditor?id=$vo[id]")}"><i class="fa fa-pencil"></i></a>
                             <a href="#myModal" role="button" data-toggle="modal"><i class="fa fa-trash-o"></i></a>
                         </td>
                     </tr>

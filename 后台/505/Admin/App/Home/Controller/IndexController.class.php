@@ -10,7 +10,7 @@ class IndexController extends Controller {
 			//判断session['adminaccount']是否为空，是的话跳转到登陆界面
 			if (!isset($_SESSION['adminaccount'])) {
 				echo "<script>alert('用户未登录或登陆超时');</script>";
-				$this->redirect("/Home/index/login");
+				$this->redirect("/Home/Index/login");
 			} else {
 				//显示登录的管理员帐号
 				$adminaccount = $_SESSION['adminaccount'];
@@ -260,11 +260,11 @@ class IndexController extends Controller {
 			$name = $_POST['name'];
 			$account = $_POST['account'];
 			if ($name && $account) {
-				$this->redirect("Home/index/users?name=" . $name . "&account=" . $account);
+				$this->redirect("Home/Index/users?name=" . $name . "&account=" . $account);
 			} else if ($name) {
-				$this->redirect("Home/index/users?name=" . $name);
+				$this->redirect("Home/Index/users?name=" . $name);
 			} else if ($account) {
-				$this->redirect("Home/index/users?account=" . $account);
+				$this->redirect("Home/Index/users?account=" . $account);
 			}
 		}
 	}
@@ -289,7 +289,7 @@ class IndexController extends Controller {
 					$_SESSION['adminaccount'] = $adminaccount;
 					echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
 					echo "<script>alert('登陆成功');</script>";
-					$this->redirect("/Home/index");
+					$this->redirect("/Home/Index");
 				} else {
 					echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
 					echo "<script>alert('登录失败');location.href='" . $_SERVER["HTTP_REFERER"] . "';</script>";
@@ -441,7 +441,7 @@ class IndexController extends Controller {
 			$data["detail"] = I("post.detail");
 			$result = $mode->updategood($goodsid, $data);
 			if ($result) {
-				$this->success("保存成功", U("home/index/goodslist"));
+				$this->success("保存成功", U("Home/Index/goodslist"));
 			} else {
 				$this->error("保存失败");
 
@@ -450,7 +450,7 @@ class IndexController extends Controller {
 		if (isset($_POST['delete'])) {
 			$result = $mode->delgood($goodsid);
 			if ($result) {
-				$this->success("删除成功", U("home/index/goodslist"));
+				$this->success("删除成功", U("Home/Index/goodslist"));
 			} else {
 				$this->error("删除失败");
 
@@ -473,7 +473,7 @@ class IndexController extends Controller {
 			$data["detail"] = I("post.detail");
 			$result = $mode->addgood($data);
 			if ($result) {
-				$this->success("保存成功", U("home/index/goodslist"));
+				$this->success("保存成功", U("Home/Index/goodslist"));
 			} else {
 				$this->error("保存失败");
 
