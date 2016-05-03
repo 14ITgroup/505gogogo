@@ -46,19 +46,23 @@ class GoodsViewModel extends ViewModel {
 	 *
 	 **/
 	public function addgood($gooddata) {
-		$good = M('goods')->where('name=%s', $gooddata['name'])->select();
+		$good = M('goods')->where('name="%s"', $gooddata['name'])->select();
+		//echo "<script>alert('" . $gooddata['name'] . "'')</script>";
 		$good = count($good);
 		if ($good == 0) {
 			$good = M('goods');
-			$good->classifyid = $gooddata['classifyid'];
-			$good->name = $gooddata['name'];
-			$good->image = $gooddata['image'];
-			$good->price = $gooddata['price'];
-			$good->addtime = date('Y-m-d H:i:s') . "";
-			$result = $good->add();
+			//$good->name = $gooddata['name'];
+			//$good->classifyid = $gooddata['classifyid'] + 0;
+			//$good->image = $gooddata['image'];
+			//$good->price = $gooddata['price'];
+			//$good->detail = $gooddata['detail'];
+			//$good->addtime = date('Y-m-d H:i:s') . "";
+			$gooddata["classifyid"] += 0;
+			$gooddata["addtime"] = date('Y-m-d H:i:s') . "";
+			$result = $good->add($gooddata);
 			if ($result) {
-				$good = M('goods')->where('name=%s', $gooddata['name'])->select();
-				$type = M('goodtype');
+				$good = M('goods')->where('name="%s"', $gooddata['name'])->find();
+				$type = M('goodstype');
 				$type->goodsid = $good['id'];
 				$type->goodsleft = 0;
 				$result = $type->add();

@@ -1,5 +1,6 @@
 <?php
 namespace Home\Controller;
+use Think\Controller;
 
 class IndexController extends Controller {
 	// 自动运行方法,判断是否登录
@@ -459,6 +460,81 @@ class IndexController extends Controller {
 			}
 		}
 
+	}
+
+	//商品添加
+	public function goodsadd() {
+		$mode = D('GoodsView');
+		$mode2 = M('goodsclassify')->limit(8)->select();
+		$this->assign('classify', $mode2);
+		$this->display();
+		if (IS_POST) {
+			$data['name'] = I("post.goodsname");
+			$data["price"] = I("post.goodsprice");
+			$data["classifyid"] = I("post.goodsclassify");
+			$data["image"] = I("post.pp");
+			$data["detail"] = I("post.detail");
+			$result = $mode->addgood($data);
+			if ($result) {
+				$this->success("保存成功", U("home/index/goodslist"));
+			} else {
+				$this->error("保存失败");
+
+			}
+		}
+	}
+
+	//商品页需要的ajax接口
+	public function goodsajax() {
+		$name = I('post.name');
+		$color = I('post.color');
+		$size = I('post.size');
+		if ($color != "") {
+			if ($size != "") {
+				$go = D('GoodsView')->where('name="' . $name . '" and color="' . $color . '" and size="' . $size . '"')->find();
+			} else {
+				$go = D('GoodsView')->where('name="' . $name . '" and color="' . $color . '"')->find();
+			}
+		} else {
+			if ($size != "") {
+				$go = D('GoodsView')->where('name="' . $name . '" and size="' . $size . '"')->find();
+			} else {
+				$go = D('GoodsView')->where('name="' . $name . '"')->find();
+			}
+		}
+		$data = $go["goodsleft"];
+		$this->ajaxReturn($data); //{"data":"$go["goodsleft"]"}
+	}
+
+	public function goodsajax2() {
+		$name = I('post.name');
+		$color = I('post.color');
+		$size = I('post.size');
+		$left = I('post.left');
+		$left = $left + 0;
+		if ($color != "") {
+			if ($size != "") {
+				$go = D('GoodsView')->where('name="' . $name . '" and color="' . $color . '" and size="' . $size . '"')->find();
+			} else {
+				$go = D('GoodsView')->where('name="' . $name . '" and color="' . $color . '"')->find();
+			}
+		} else {
+			if ($size != "") {
+				$go = D('GoodsView')->where('name="' . $name . '" and size="' . $size . '"')->find();
+			} else {
+				$go = D('GoodsView')->where('name="' . $name . '"')->find();
+			}
+		}
+		$data = $go["type_id"] + 0;
+		$result = M("goodstype");
+		$result = $result->where('id=%d', $data)->setField('goodsleft', $left);
+		if ($result) {
+			$data = "修改成功";
+		} else {
+			$data = "修改失败";
+		}
+
+		$this->ajaxReturn($data); //{"data":"$go["goodsleft"]"}
 	}
 
 }

@@ -232,16 +232,11 @@
         <ul class="breadcrumb">
             <li><a href="index.html">主页</a> </li>
             <li><a href="users.html">商品管理</a> </li>
-            <li class="active">商品修改</li>
+            <li class="active">商品添加</li>
         </ul>
     </div>
     <div class="main-content">
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#home" data-toggle="tab">商品</a></li>
-            <li><a href="#profile" data-toggle="tab">分类修改</a></li>
-            <li><a href="#editor" data-toggle="tab">库存管理</a></li>
-        </ul>
-        <form id="form1" enctype="multipart/form-data" method="post">
+        <form id="form1" action="" enctype="multipart/form-data" method="post">
             <input type="hidden" id="goodsid" value="<?php echo ($goodsid); ?>" />
             <div class="row">
                 <div class="col-md-4">
@@ -251,25 +246,26 @@
                             <div class="form-group">
                                 <label>商品图片</label>
                                 <br>
-                                <img name="photo" src="/505/Public/images/recommend1.png">
+                                <img name="photo" id="image" src="/505/Public/images/recommend1.png" />
+                                <input type="hidden" id="temp" name="pp" />
                             </div>
                             <div class="form-group">
                                 <label>商品名</label>
-                                <input type="text" id="goodsname" name="goodsname" value="<?php echo ($name); ?>" class="form-control">
+                                <input type="text" id="goodsname" name="goodsname" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>商品价格</label>
-                                <input type="text" name="goodsprice" value="<?php echo ($price); ?>" class="form-control">
+                                <input type="text" id="goodsprice" name="goodsprice" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>商品分类</label>
-                                <select name="goodsclassify" class="form-control">
-                                    <?php if(is_array($classify)): $i = 0; $__LIST__ = $classify;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$mode2): $mod = ($i % 2 );++$i;?><option <?php echo ($mode2["se"]); ?> value="<?php echo ($mode2["id"]); ?>"><?php echo ($mode2["classifyname"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                                <select name="goodsclassify" id="goodsclassify" class="form-control">
+                                    <?php if(is_array($classify)): $i = 0; $__LIST__ = $classify;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$mode2): $mod = ($i % 2 );++$i;?><option value="<?php echo ($mode2["id"]); ?>"><?php echo ($mode2["classifyname"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label>商品介绍</label>
-                                <textarea name="detail" id="myEditor" style="width:1000px;height:480px;" value=""><?php echo ($detail); ?></textarea>
+                                <textarea name="detail" id="myEditor" style="width:1000px;height:480px;" value=""></textarea>
                                 <script type="text/javascript">
                                 //实例化编辑器
                                 var um = UM.getEditor('myEditor');
@@ -277,51 +273,8 @@
                                 </script>
                             </div>
                             <div class="btn-toolbar list-toolbar">
-                                <button class="btn btn-primary" name="save" onclick="form1.action='/505/admin/index.php/home/index/goodseditor/id/lib/bootstrap/js/bootstrap.js';form1.submit();"><i class="fa fa-save"></i> 保存</button>
-                                <a href="#myModal" data-toggle="modal" class="btn btn-danger">删除</a>
+                                <button class="btn btn-primary"  id="save" name="save"><i class="fa fa-save"></i> 保存</button>
                             </div>
-                        </div>
-                        <div class="tab-pane fade" id="profile">
-                            <div class="adco">
-                                <label>颜色分类</label>
-                                <input type="text" class="form-control" id="txtcolor" name="txtcolor">
-                                <button class="btn btn-primary" id="addcolor" name="addcolor" onclick="form1.action='/505/admin/index.php/home/index/goodseditor/id/lib/bootstrap/js/bootstrap.js';form1.submit();">增加</button>
-                            </div>
-                            <div class="deco">
-                                <label>颜色分类</label>
-                                <select id="goodscolor" name="goodscolor" class="form-control">
-                                    <?php if(is_array($colorlist)): $i = 0; $__LIST__ = $colorlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo1): $mod = ($i % 2 );++$i;?><option <?php echo ($vo1["ch"]); ?>><?php echo ($vo1["color"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-                                </select>
-                                <button class="btn btn-primary" id="decolor" name="decolor" onclick="form1.action='/505/admin/index.php/home/index/goodseditor/id/lib/bootstrap/js/bootstrap.js';form1.submit();">删除</button>
-                            </div>
-                            <div class="adsi">
-                                <label>尺寸分类</label>
-                                <input type="text" class="form-control" id="txtsize" name="txtsize">
-                                <button class="btn btn-primary" id="addsize" name="addsize" onclick="form1.action='/505/admin/index.php/home/index/goodseditor/id/lib/bootstrap/js/bootstrap.js';form1.submit();">增加</button>
-                            </div>
-                            <div class="desi">
-                                <label>尺寸分类</label>
-                                <select id="goodssize" name="goodssize" class="form-control">
-                                    <?php if(is_array($sizelist)): $i = 0; $__LIST__ = $sizelist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo2): $mod = ($i % 2 );++$i;?><option <?php echo ($vo2["ch"]); ?>><?php echo ($vo2["size"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-                                </select>
-                                <button class="btn btn-primary" id="desize" name="desize" onclick="form1.action='/505/admin/index.php/home/index/goodseditor/id/lib/bootstrap/js/bootstrap.js';form1.submit();">删除</button>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="editor">
-                            <label>颜色</label>
-                            <select id="colorleft" name="color">
-                                <?php if(is_array($colorl)): $i = 0; $__LIST__ = $colorl;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo1): $mod = ($i % 2 );++$i;?><option <?php echo ($vo1["ch"]); ?>><?php echo ($vo1["color"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-                            </select>
-                            <label>尺寸</label>
-                            <select id="sizeleft" name="size">
-                                <?php if(is_array($sizel)): $i = 0; $__LIST__ = $sizel;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo2): $mod = ($i % 2 );++$i;?><option <?php echo ($vo2["ch"]); ?>><?php echo ($vo2["size"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-                            </select>
-                            <label>剩余货量</label>
-                            <input type="text" id="leftnum" name="left"></input>
-                            <button class="btn btn-primary" onclick="addgoods();" id="addgo" name="addgo">修改</button>
-                            <br>
-                            <br>
-                            <br>
                         </div>
                     </div>
                 </div>
@@ -338,7 +291,7 @@
                         </div>
                         <div class="modal-footer">
                             <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">取消</button>
-                            <button class="btn btn-danger" name="delete" onclick="form1.action='/505/admin/index.php/home/index/goodseditor/id/lib/bootstrap/js/bootstrap.js';form1.submit();" data-dismiss="modal">删除</button>
+                            <button class="btn btn-danger" name="delete" onclick="form1.action='/505/admin/index.php/home/index/goodsadd.html';form1.submit();" data-dismiss="modal">删除</button>
                         </div>
                     </div>
                 </div>
@@ -346,6 +299,13 @@
         </form>
         <script src="lib/bootstrap/js/bootstrap.js"></script>
         <script type="text/javascript" src="/505/Public/js/jquery-v1.10.2.min.js"></script>
+        <script type="text/javascript">
+        $("#save").click(function() {
+            var image = $('#image')[0].src;
+            $("#temp").attr("value",image);
+            $('#form1').submit();
+        })
+        </script>
         <script type="text/javascript">
         updateGoods();
         $("#colorleft").on("click", function() {
@@ -358,11 +318,13 @@
 
         function updateGoods() {
             var name = $("#goodsname").val();
-            var size = $("#sizeleft").val();
-            var color = $("#colorleft").val();
+            var image = $('#image')[0].src;
+            var price = $("#goodsprice").val();
+            var classifyid = $("#goodsclassify").val();
+            var detail = $('#myEditor').val();
             var data = {
                 name: name,
-                size: size,
+
                 color: color
             };
             var leftNum = $("#leftnum");
@@ -375,40 +337,6 @@
                     console.log("success");
                     console.log(dataget)
                     $(leftNum).attr('value', dataget);
-                })
-                .fail(function() {
-                    console.log("error");
-                })
-                .always(function() {
-                    console.log("complete");
-                });
-        }
-        </script>
-        <script type="text/javascript">
-
-
-
-
-        function addgoods() {
-            var name = $("#goodsname").val();
-            var size = $("#sizeleft").val();
-            var color = $("#colorleft").val();
-            var leftNum = $("#leftnum").val();
-            var data = {
-                name: name,
-                size: size,
-                color: color,
-                left: leftNum
-            };
-            $.ajax({
-                    url: '<?php echo U("home/index/goodsajax2");?>',
-                    type: 'POST',
-                    data: data
-                })
-                .done(function(dataget) {
-                    console.log("success");
-                    console.log(dataget)
-                    alert(dataget);
                 })
                 .fail(function() {
                     console.log("error");

@@ -77,16 +77,11 @@
         <ul class="breadcrumb">
             <li><a href="index.html">主页</a> </li>
             <li><a href="users.html">商品管理</a> </li>
-            <li class="active">商品修改</li>
+            <li class="active">商品添加</li>
         </ul>
     </div>
     <div class="main-content">
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#home" data-toggle="tab">商品</a></li>
-            <li><a href="#profile" data-toggle="tab">分类修改</a></li>
-            <li><a href="#editor" data-toggle="tab">库存管理</a></li>
-        </ul>
-        <form id="form1" enctype="multipart/form-data" method="post">
+        <form id="form1" action="" enctype="multipart/form-data" method="post">
             <input type="hidden" id="goodsid" value="{$goodsid}" />
             <div class="row">
                 <div class="col-md-4">
@@ -96,27 +91,28 @@
                             <div class="form-group">
                                 <label>商品图片</label>
                                 <br>
-                                <img name="photo" src="/505/Public/images/recommend1.png">
+                                <img name="photo" id="image" src="/505/Public/images/recommend1.png" />
+                                <input type="hidden" id="temp" name="pp" />
                             </div>
                             <div class="form-group">
                                 <label>商品名</label>
-                                <input type="text" id="goodsname" name="goodsname" value="{$name}" class="form-control">
+                                <input type="text" id="goodsname" name="goodsname" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>商品价格</label>
-                                <input type="text" name="goodsprice" value="{$price}" class="form-control">
+                                <input type="text" id="goodsprice" name="goodsprice" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>商品分类</label>
-                                <select name="goodsclassify" class="form-control">
+                                <select name="goodsclassify" id="goodsclassify" class="form-control">
                                     <volist name="classify" id="mode2">
-                                        <option {$mode2.se} value="{$mode2.id}">{$mode2.classifyname}</option>
+                                        <option value="{$mode2.id}">{$mode2.classifyname}</option>
                                     </volist>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label>商品介绍</label>
-                                <textarea name="detail" id="myEditor" style="width:1000px;height:480px;" value="">{$detail}</textarea>
+                                <textarea name="detail" id="myEditor" style="width:1000px;height:480px;" value=""></textarea>
                                 <script type="text/javascript">
                                 //实例化编辑器
                                 var um = UM.getEditor('myEditor');
@@ -124,59 +120,8 @@
                                 </script>
                             </div>
                             <div class="btn-toolbar list-toolbar">
-                                <button class="btn btn-primary" name="save" onclick="form1.action='__SELF__';form1.submit();"><i class="fa fa-save"></i> 保存</button>
-                                <a href="#myModal" data-toggle="modal" class="btn btn-danger">删除</a>
+                                <button class="btn btn-primary"  id="save" name="save"><i class="fa fa-save"></i> 保存</button>
                             </div>
-                        </div>
-                        <div class="tab-pane fade" id="profile">
-                            <div class="adco">
-                                <label>颜色分类</label>
-                                <input type="text" class="form-control" id="txtcolor" name="txtcolor">
-                                <button class="btn btn-primary" id="addcolor" name="addcolor" onclick="form1.action='__SELF__';form1.submit();">增加</button>
-                            </div>
-                            <div class="deco">
-                                <label>颜色分类</label>
-                                <select id="goodscolor" name="goodscolor" class="form-control">
-                                    <volist name="colorlist" id="vo1">
-                                        <option {$vo1.ch}>{$vo1.color}</option>
-                                    </volist>
-                                </select>
-                                <button class="btn btn-primary" id="decolor" name="decolor" onclick="form1.action='__SELF__';form1.submit();">删除</button>
-                            </div>
-                            <div class="adsi">
-                                <label>尺寸分类</label>
-                                <input type="text" class="form-control" id="txtsize" name="txtsize">
-                                <button class="btn btn-primary" id="addsize" name="addsize" onclick="form1.action='__SELF__';form1.submit();">增加</button>
-                            </div>
-                            <div class="desi">
-                                <label>尺寸分类</label>
-                                <select id="goodssize" name="goodssize" class="form-control">
-                                    <volist name="sizelist" id="vo2">
-                                        <option {$vo2.ch}>{$vo2.size}</option>
-                                    </volist>
-                                </select>
-                                <button class="btn btn-primary" id="desize" name="desize" onclick="form1.action='__SELF__';form1.submit();">删除</button>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="editor">
-                            <label>颜色</label>
-                            <select id="colorleft" name="color">
-                                <volist name="colorl" id="vo1">
-                                    <option {$vo1.ch}>{$vo1.color}</option>
-                                </volist>
-                            </select>
-                            <label>尺寸</label>
-                            <select id="sizeleft" name="size">
-                                <volist name="sizel" id="vo2">
-                                    <option {$vo2.ch}>{$vo2.size}</option>
-                                </volist>
-                            </select>
-                            <label>剩余货量</label>
-                            <input type="text" id="leftnum" name="left"></input>
-                            <button class="btn btn-primary" onclick="addgoods();" id="addgo" name="addgo">修改</button>
-                            <br>
-                            <br>
-                            <br>
                         </div>
                     </div>
                 </div>
@@ -202,6 +147,13 @@
         <script src="lib/bootstrap/js/bootstrap.js"></script>
         <js href="/505/Public/js/jquery-v1.10.2.min.js" />
         <script type="text/javascript">
+        $("#save").click(function() {
+            var image = $('#image')[0].src;
+            $("#temp").attr("value",image);
+            $('#form1').submit();
+        })
+        </script>
+        <script type="text/javascript">
         updateGoods();
         $("#colorleft").on("click", function() {
             updateGoods();
@@ -213,11 +165,13 @@
 
         function updateGoods() {
             var name = $("#goodsname").val();
-            var size = $("#sizeleft").val();
-            var color = $("#colorleft").val();
+            var image = $('#image')[0].src;
+            var price = $("#goodsprice").val();
+            var classifyid = $("#goodsclassify").val();
+            var detail = $('#myEditor').val();
             var data = {
                 name: name,
-                size: size,
+
                 color: color
             };
             var leftNum = $("#leftnum");
@@ -230,40 +184,6 @@
                     console.log("success");
                     console.log(dataget)
                     $(leftNum).attr('value', dataget);
-                })
-                .fail(function() {
-                    console.log("error");
-                })
-                .always(function() {
-                    console.log("complete");
-                });
-        }
-        </script>
-        <script type="text/javascript">
-
-
-
-
-        function addgoods() {
-            var name = $("#goodsname").val();
-            var size = $("#sizeleft").val();
-            var color = $("#colorleft").val();
-            var leftNum = $("#leftnum").val();
-            var data = {
-                name: name,
-                size: size,
-                color: color,
-                left: leftNum
-            };
-            $.ajax({
-                    url: '{:U("home/index/goodsajax2")}',
-                    type: 'POST',
-                    data: data
-                })
-                .done(function(dataget) {
-                    console.log("success");
-                    console.log(dataget)
-                    alert(dataget);
                 })
                 .fail(function() {
                     console.log("error");

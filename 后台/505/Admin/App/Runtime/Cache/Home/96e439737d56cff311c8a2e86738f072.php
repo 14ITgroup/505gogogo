@@ -127,8 +127,8 @@
     <li data-popover="true" rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i>商品管理<i class="fa fa-collapse"></i></a></li>
         <li><ul class="premium-menu nav nav-list collapse">
                 <li class="visible-xs visible-sm"><a href="#">- Premium features require a license -</a>
-            <li ><a href="premium-profile.html"><span class="fa fa-caret-right"></span>最新商品</a></li>
-            <li ><a href="premium-blog.html"><span class="fa fa-caret-right"></span>商品检索 </a></li>
+            <li ><a href="<?php echo U('/Home/index/goodslist');?>"><span class="fa fa-caret-right"></span>最新商品</a></li>
+            <li ><a href=""><span class="fa fa-caret-right"></span>商品检索 </a></li>
             <li ><a href="premium-blog-item.html"><span class="fa fa-caret-right"></span>商品编辑 </a></li>
     </ul></li>
 

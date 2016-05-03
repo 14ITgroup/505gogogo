@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html lang="en"><head>
     <meta charset="utf-8">
-    <title>Bootstrap Admin</title>
+    <title>WebShop Admin</title>
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -93,25 +93,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="" href="index.html"><span class="navbar-brand"><span class="fa fa-paper-plane"></span> Aircraft</span></a></div>
+          <a class="" href="index.html"><span class="navbar-brand"><span class="fa fa-paper-plane"></span> 电商商城后台管理</span></a></div>
 
         <div class="navbar-collapse collapse" style="height: 1px;">
           <ul id="main-menu" class="nav navbar-nav navbar-right">
             <li class="dropdown hidden-xs">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="glyphicon glyphicon-user padding-right-small" style="position:relative;top: 3px;"></span> Jack Smith
+                    <span class="glyphicon glyphicon-user padding-right-small" style="position:relative;top: 3px;"></span> <?php echo ($name); ?>
                     <i class="fa fa-caret-down"></i>
                 </a>
-
               <ul class="dropdown-menu">
-                <li><a href="./">My Account</a></li>
+                <li><a href="<?php echo U('/Home/index/order');?>">订单</a></li>        
+                <li><a href="<?php echo U('/Home/index/users');?>">用户</a></li>
                 <li class="divider"></li>
-                <li class="dropdown-header">Admin Panel</li>
-                <li><a href="./">Users</a></li>
-                <li><a href="./">Security</a></li>
-                <li><a tabindex="-1" href="./">Payments</a></li>
-                <li class="divider"></li>
-                <li><a tabindex="-1" href="sign-in.html">Logout</a></li>
+                <li><a tabindex="-1" href="<?php echo U('/Home/index/login');?>">退出</a></li>
               </ul>
             </li>
           </ul>
@@ -127,15 +122,13 @@
             <li><a href="<?php echo U('/Home/index/');?>"><span class="fa fa-caret-right"></span>后台首页</a></li>
             <li><a href="<?php echo U('/Home/index/order');?>"><span class="fa fa-caret-right"></span>最新业务</a></li>
             <li ><a href="<?php echo U('/Home/index/notice');?>"><span class="fa fa-caret-right"></span>公告管理</a></li>
-            <li ><a href="#"><span class="fa fa-caret-right"></span>消息</a></li>
-            <li ><a href="#"><span class="fa fa-caret-right"></span>日历</a></li>
     </ul></li>
 
-    <li data-popover="true" data-content="Items in this group require a <strong><a href='http://portnine.com/bootstrap-themes/aircraft' target='blank'>premium license</a><strong>." rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i>商品管理<i class="fa fa-collapse"></i></a></li>
+    <li data-popover="true" rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i>商品管理<i class="fa fa-collapse"></i></a></li>
         <li><ul class="premium-menu nav nav-list collapse">
                 <li class="visible-xs visible-sm"><a href="#">- Premium features require a license -</a>
             <li ><a href="<?php echo U('/Home/index/goodslist');?>"><span class="fa fa-caret-right"></span>最新商品</a></li>
-            <li ><a href="premium-blog.html"><span class="fa fa-caret-right"></span>商品检索 </a></li>
+            <li ><a href=""><span class="fa fa-caret-right"></span>商品检索 </a></li>
             <li ><a href="premium-blog-item.html"><span class="fa fa-caret-right"></span>商品编辑 </a></li>
     </ul></li>
 
@@ -242,7 +235,7 @@
     </div>
     <div class="main-content">
         <div class="btn-toolbar list-toolbar">
-            <button class="btn btn-primary"><i class="fa fa-plus"></i>新添加商品</button>
+            <a href="<?php echo U("home/index/goodsadd");?>"><button class="btn btn-primary" ><i class="fa fa-plus"></i>新添加商品</button></a>
             <div class="btn-group">
             </div>
         </div>
@@ -269,15 +262,6 @@
                     </tr><?php endforeach; endif; else: echo "" ;endif; ?>
             </tbody>
         </table>
-        <ul class="pagination">
-            <li><a href="#">&laquo;</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">&raquo;</a></li>
-        </ul>
         <div class="modal small fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">

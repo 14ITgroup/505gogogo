@@ -128,7 +128,7 @@
         <li><ul class="premium-menu nav nav-list collapse">
                 <li class="visible-xs visible-sm"><a href="#">- Premium features require a license -</a>
             <li ><a href="<?php echo U('/Home/index/goodslist');?>"><span class="fa fa-caret-right"></span>最新商品</a></li>
-            <li ><a href="premium-blog.html"><span class="fa fa-caret-right"></span>商品检索 </a></li>
+            <li ><a href=""><span class="fa fa-caret-right"></span>商品检索 </a></li>
             <li ><a href="premium-blog-item.html"><span class="fa fa-caret-right"></span>商品编辑 </a></li>
     </ul></li>
 
