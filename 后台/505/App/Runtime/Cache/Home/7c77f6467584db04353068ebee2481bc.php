@@ -23,25 +23,17 @@
     <header>
         <nav class="top-nav">
             <a href="#" class="add"><img src="/505/Public/images/add.png" alt="添加"></a>
-            <input type="text" placeholder="初夏好物...">
-            <a href="#"><img src="/505/Public/images/search.png" alt="搜索"></a>
+            <input id="content" type="text" placeholder="初夏好物...">
+            <a href="#" onclick="jump();"><img src="/505/Public/images/search.png" alt="搜索"></a>
         </nav>
     </header>
     <section class="focus-wrap">
         <div class="flicker-example" data-block-text="false">
             <ul>
-                <li data-background="/505/Public/images/field.jpg">
-                    <div class="flick-title">测试图片1</div>
-                    <div class="flick-sub-text">这里是一些简单的介绍文本</div>
-                </li>
-                <li data-background="/505/Public/images/forest.jpg">
-                    <div class="flick-title">测试图片2</div>
-                    <div class="flick-sub-text">这里是一些简单的介绍文本</div>
-                </li>
-                <li data-background="/505/Public/images/frozen-water.jpg">
-                    <div class="flick-title">测试图片3</div>
-                    <div class="flick-sub-text">这里是一些简单的介绍文本</div>
-                </li>
+                <?php if(is_array($rolllist)): $i = 0; $__LIST__ = $rolllist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$good): $mod = ($i % 2 );++$i;?><li data-background="<?php echo ($good["image"]); ?>">
+                        <div class="flick-title"><?php echo ($good["name"]); ?></div>
+                        <div class="flick-sub-text">￥<?php echo ($good["price"]); ?></div>
+                    </li><?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
         </div>
     </section>
@@ -92,9 +84,9 @@
                 </a>
             </li>
             <li>
-                <a href="homepage.html?classify=折扣">
-                    <img src="/505/Public/images/count.png" alt="折扣">
-                    <p>折扣</p>
+                <a href="homepage.html?classify=家电">
+                    <img src="/505/Public/images/count.png" alt="家电">
+                    <p>家电</p>
                 </a>
             </li>
         </ul>
@@ -104,11 +96,11 @@
         
         <ul class="reco-list">
             <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$good): $mod = ($i % 2 );++$i;?><li>
-                    <a href="#"><img src="/505/Public/<?php echo ($good["image"]); ?>" alt=""></a>
-                    <a href="#"><span>HOT</span><?php echo ($good["name"]); ?>/<?php echo ($good["color"]); ?>/<?php echo ($good["size"]); ?></a>
+                    <a href="details.html?goodsid=<?php echo ($good["id"]); ?>"><img src="<?php echo ($good["image"]); ?>" alt=""></a>
+                    <a href="#"><span>HOT</span><?php echo ($good["name"]); ?></a>
                     <!-- 这里要不要绑good.detail -->
                     <!-- <p>销量1w 包邮</p> -->
-                    <p><?php echo ($good["detail"]); ?></p>
+                    <!-- <p><?php echo ($good["detail"]); ?></p> -->
                     <strong>￥<span><?php echo ($good["price"]); ?></span></strong>
                 </li><?php endforeach; endif; else: echo "" ;endif; ?>
         </ul>
@@ -124,7 +116,7 @@
                         <img src="/505/Public/images/shop-car.png" alt="购物车">
                         <p>购物车</p>
                     </a></li>
-                <li><a href="peaple.html">
+                <li><a href="people.html">
                         <img src="/505/Public/images/mine.png" alt="个人">
                         <p>个人</p>
                     </a></li>
@@ -139,6 +131,12 @@
     $(document).ready(function() {
         $('.flicker-example').flicker();
     });
+    </script>
+    <script type="text/javascript">
+        function jump(){
+            var content=document.getElementById('content').value.trim();
+             window.location.href="homepage?search="+content;
+        }
     </script>
 </body>
 

@@ -436,7 +436,7 @@ class IndexController extends Controller {
 			$data["name"] = I("post.goodsname");
 			$data["price"] = I("post.goodsprice");
 			$data["classifyid"] = I("post.goodsclassify");
-			$data["image"] = I("post.photo");
+			$data["image"] = I("post.pp");
 			$data["detail"] = I("post.detail");
 			$result = $mode->updategood($goodsid, $data);
 			if ($result) {

@@ -31,7 +31,7 @@
         <div class="flicker-example" data-block-text="false">
             <ul>
                 <volist name="rolllist" id="good">
-                    <li data-background="__PUBLIC__/{$good.image}">
+                    <li data-background="{$good.image}">
                         <div class="flick-title">{$good.name}</div>
                         <div class="flick-sub-text">￥{$good.price}</div>
                     </li>
@@ -99,7 +99,7 @@
         <ul class="reco-list">
             <volist name="list" id="good">
                 <li>
-                    <a href="details.html?goodsid={$good.id}"><img src="__PUBLIC__/{$good.image}" alt=""></a>
+                    <a href="details.html?goodsid={$good.id}"><img src="{$good.image}" alt=""></a>
                     <a href="#"><span>HOT</span>{$good.name}</a>
                     <!-- 这里要不要绑good.detail -->
                     <!-- <p>销量1w 包邮</p> -->

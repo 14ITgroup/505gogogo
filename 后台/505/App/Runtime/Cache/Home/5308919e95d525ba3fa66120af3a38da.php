@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +9,7 @@
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
     <title>商品详情页</title>
-    <import type="css" file="css.style" /> 
+    <link rel="stylesheet" type="text/css" href="/505/Public/css/style.css" /> 
     <!--[if lt IE 9]>
     <script type="text/javascript" src="js/html5shiv.min.js"></script>
     <![endif]-->
@@ -19,59 +19,51 @@
     <section class="details-head">
         <h3>商品详情</h3>
     </section>
-    <volist name="good" id="single">
-        <section class="details-banner">
-            <img src="{$single.image}" alt="banner">
+    <?php if(is_array($good)): $i = 0; $__LIST__ = $good;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$single): $mod = ($i % 2 );++$i;?><section class="details-banner">
+            <img src="<?php echo ($single["image"]); ?>" alt="banner">
         </section>
         <section class="details-info">
-            <h3 class="details-name">{$single.name}</h3>
+            <h3 class="details-name"><?php echo ($single["name"]); ?></h3>
         </section>
         <section class="details-price">
             <i>¥</i>
-            <span>{$single.price}</span>
-            <p>一口价<span>{$single.price}</span></p>
-        </section>
-    </volist>
+            <span><?php echo ($single["price"]); ?></span>
+            <p>一口价<span><?php echo ($single["price"]); ?></span></p>
+        </section><?php endforeach; endif; else: echo "" ;endif; ?>
     
     <section class="details-categories">
         <h3 class="goods-left">库存: <span>100</span></h3>
         <h3>尺码</h3>
         <div class="categ">
-            <volist name="sizes" id="size">
-                <label data-value="20509:28315" class='{$size.checked}'>{$size.size}</label>
-            </volist>
+            <?php if(is_array($sizes)): $i = 0; $__LIST__ = $sizes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$size): $mod = ($i % 2 );++$i;?><label data-value="20509:28315" class='<?php echo ($size["checked"]); ?>'><?php echo ($size["size"]); ?></label><?php endforeach; endif; else: echo "" ;endif; ?>
         </div>
         <h3>颜色分类</h3>
         <div class="color-choice">
-            <volist name="colors" id="color">
-                <label data-value="20509:28315" class='{$color.checked}'>{$color.color}</label>
-            </volist>
+            <?php if(is_array($colors)): $i = 0; $__LIST__ = $colors;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$color): $mod = ($i % 2 );++$i;?><label data-value="20509:28315" class='<?php echo ($color["checked"]); ?>'><?php echo ($color["color"]); ?></label><?php endforeach; endif; else: echo "" ;endif; ?>
         </div>
     </section>
     <section class="details-pay-btn">
-        <volist name="good" id="single">
-            <a href="" id='cart' >加入购物车</a><a href="pay.html?fromdetail={$single.id}" onclick="buynow();" id='buynow'>立即购买</a>
-        </volist>  
+        <?php if(is_array($good)): $i = 0; $__LIST__ = $good;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$single): $mod = ($i % 2 );++$i;?><a href="" id='cart' >加入购物车</a><a href="pay.html?fromdetail=<?php echo ($single["id"]); ?>" onclick="buynow();" id='buynow'>立即购买</a><?php endforeach; endif; else: echo "" ;endif; ?>  
     </section>
     <footer>
         <nav>
             <ul>
                 <li><a href="homepage.html">
-                        <img src="__PUBLIC__/images/home-pressed.png" alt="主页">
+                        <img src="/505/Public/images/home-pressed.png" alt="主页">
                         <p>主页</p>
                     </a></li>
                 <li><a href="chart.html">
-                        <img src="__PUBLIC__/images/shop-car.png" alt="购物车">
+                        <img src="/505/Public/images/shop-car.png" alt="购物车">
                         <p>购物车</p>
                     </a></li>
                 <li><a href="people.html">
-                        <img src="__PUBLIC__/images/mine.png" alt="个人">
+                        <img src="/505/Public/images/mine.png" alt="个人">
                         <p>个人</p>
                     </a></li>
             </ul>
         </nav>
     </footer>
-    <js href="/505/Public/js/jquery-v1.10.2.min.js" />
+    <script type="text/javascript" src="/505/Public/js/jquery-v1.10.2.min.js"></script>
     <script type="text/javascript">
         $("#cart").click(function(){
             addCart();
@@ -110,7 +102,7 @@
 	    };
 	    var leftNum = $(".goods-left span");
     	$.ajax({
-	    	url: '{:U("index.php/home/index/goodsajax")}',
+	    	url: '<?php echo U("index.php/home/index/goodsajax");?>',
 	    	type: 'POST',
 	    	data: data
 	    })
@@ -137,7 +129,7 @@
             color: color
         };
         $.ajax({
-            url: '{:U("index.php/home/index/goodsajax2")}',
+            url: '<?php echo U("index.php/home/index/goodsajax2");?>',
             type: 'POST',
             data: data
         })

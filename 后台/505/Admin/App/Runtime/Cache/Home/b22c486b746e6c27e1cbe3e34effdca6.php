@@ -128,8 +128,6 @@
         <li><ul class="premium-menu nav nav-list collapse">
                 <li class="visible-xs visible-sm"><a href="#">- Premium features require a license -</a>
             <li ><a href="<?php echo U('/Home/index/goodslist');?>"><span class="fa fa-caret-right"></span>最新商品</a></li>
-            <li ><a href=""><span class="fa fa-caret-right"></span>商品检索 </a></li>
-            <li ><a href="premium-blog-item.html"><span class="fa fa-caret-right"></span>商品编辑 </a></li>
     </ul></li>
 
         <li><a href="#" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-briefcase"></i>用户管理<span class="label label-info">+3</span></a></li>
@@ -251,7 +249,8 @@
                             <div class="form-group">
                                 <label>商品图片</label>
                                 <br>
-                                <img name="photo" src="/505/Public/images/recommend1.png">
+                                <img name="photo" id="image" src="/505/Public/images/recommend1.png">
+                                <input type="hidden" id="temp" name="pp" />
                             </div>
                             <div class="form-group">
                                 <label>商品名</label>
@@ -277,7 +276,7 @@
                                 </script>
                             </div>
                             <div class="btn-toolbar list-toolbar">
-                                <button class="btn btn-primary" name="save" onclick="form1.action='/505/admin/index.php/home/index/goodseditor/id/lib/bootstrap/js/bootstrap.js';form1.submit();"><i class="fa fa-save"></i> 保存</button>
+                                <button class="btn btn-primary"  id="save" name="save"><i class="fa fa-save"></i> 保存</button>
                                 <a href="#myModal" data-toggle="modal" class="btn btn-danger">删除</a>
                             </div>
                         </div>
@@ -346,6 +345,13 @@
         </form>
         <script src="lib/bootstrap/js/bootstrap.js"></script>
         <script type="text/javascript" src="/505/Public/js/jquery-v1.10.2.min.js"></script>
+        <script type="text/javascript">
+        $("#save").click(function() {
+            var image = $('#image')[0].src;
+            $("#temp").attr("value",image);
+            $('#form1').submit();
+        })
+        </script>
         <script type="text/javascript">
         updateGoods();
         $("#colorleft").on("click", function() {
