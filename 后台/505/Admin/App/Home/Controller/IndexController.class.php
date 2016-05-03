@@ -377,6 +377,7 @@ class IndexController extends Controller {
 		$this->assign('price', $data[0]["price"]);
 		$this->assign('detail', $data[0]["detail"]);
 		$this->assign('name', $data[0]["name"]);
+		$this->assign('im', $data[0]["image"]);
 		$this->assign('goodsid', $goodsid);
 		$this->assign('colorlist', $vo1);
 		$this->assign('colorl', $vo1);

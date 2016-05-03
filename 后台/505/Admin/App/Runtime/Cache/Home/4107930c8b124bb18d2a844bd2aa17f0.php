@@ -128,8 +128,6 @@
         <li><ul class="premium-menu nav nav-list collapse">
                 <li class="visible-xs visible-sm"><a href="#">- Premium features require a license -</a>
             <li ><a href="<?php echo U('/Home/index/goodslist');?>"><span class="fa fa-caret-right"></span>最新商品</a></li>
-            <li ><a href=""><span class="fa fa-caret-right"></span>商品检索 </a></li>
-            <li ><a href="premium-blog-item.html"><span class="fa fa-caret-right"></span>商品编辑 </a></li>
     </ul></li>
 
         <li><a href="#" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-briefcase"></i>用户管理<span class="label label-info">+3</span></a></li>
@@ -170,6 +168,10 @@
     <script src="/505/admin/Public/js/vendor/jquery.ui.widget.js"></script>
     <script src="/505/admin/Public/js/jquery.fileupload.js"></script>
     <script src="/505/admin/Public/js/jquery.iframe-transport.js"></script>
+        <!--引入CSS-->
+    <link rel="stylesheet" type="text/css" href="/505/admin/Public/webuploader-0.1.5/webuploader.css">
+    <!--引入JS-->
+    <script type="text/javascript" src="/505/admin/Public/webuploader-0.1.5/webuploader.js"></script>
 </head>
 
 <body class=" theme-blue">
@@ -246,7 +248,9 @@
                             <div class="form-group">
                                 <label>商品图片</label>
                                 <br>
-                                <img name="photo" id="image" src="/505/Public/images/recommend1.png" />
+                                <img src="" id="firstphopo">
+                                <div id="fileList" class="uploader-list"></div>
+                                <div id="filePicker">选择图片</div>
                                 <input type="hidden" id="temp" name="pp" />
                             </div>
                             <div class="form-group">
@@ -273,7 +277,7 @@
                                 </script>
                             </div>
                             <div class="btn-toolbar list-toolbar">
-                                <button class="btn btn-primary"  id="save" name="save"><i class="fa fa-save"></i> 保存</button>
+                                <button class="btn btn-primary" id="save" name="save"><i class="fa fa-save"></i> 保存</button>
                             </div>
                         </div>
                     </div>
@@ -302,9 +306,93 @@
         <script type="text/javascript">
         $("#save").click(function() {
             var image = $('#image')[0].src;
-            $("#temp").attr("value",image);
+            $("#temp").attr("value", image);
             $('#form1').submit();
         })
+        </script>
+        <script type="text/javascript">
+        jQuery(function() {
+            var $ = jQuery,
+                $list = $('#fileList'),
+                // 优化retina, 在retina下这个值是2
+                ratio = window.devicePixelRatio || 1,
+
+                // 缩略图大小
+                thumbnailWidth = 100 * ratio,
+                thumbnailHeight = 100 * ratio,
+
+                // Web Uploader实例
+                uploader;
+
+            // 初始化Web Uploader
+            uploader = WebUploader.create({
+
+                // 自动上传。
+                auto: true,
+
+                // swf文件路径
+                swf: '/505/admin/Public/webuploader-0.1.5/Uploader.swf',
+
+                // 文件接收服务端。
+                server: '/505/admin/Public/webuploader-0.1.5/fileupload.php',
+
+                // 选择文件的按钮。可选。
+                // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+                pick: '#filePicker',
+
+                // 只允许选择文件，可选。
+                accept: {
+                    title: 'Images',
+                    extensions: 'gif,jpg,jpeg,bmp,png',
+                    mimeTypes: 'image/*'
+                }
+            });
+
+            // 当有文件添加进来的时候
+
+
+            // 文件上传过程中创建进度条实时显示。
+            uploader.on('uploadProgress', function(file, percentage) {
+                var $li = $('#' + file.id),
+                    $percent = $li.find('.progress span');
+
+                // 避免重复创建
+                if (!$percent.length) {
+                    $percent = $('<p class="progress"><span></span></p>')
+                        .appendTo($li)
+                        .find('span');
+                }
+
+                $percent.css('width', percentage * 100 + '%');
+            });
+
+            // 文件上传成功，给item添加成功class, 用样式标记上传成功。
+            uploader.on('uploadSuccess', function(file, ret) {
+                $('#' + file.id).addClass('upload-state-done');
+                var url = ret.url;
+                url = url.replace('\\', "/")
+                $('#firstphopo').attr("src", "/505/admin/Public/webuploader-0.1.5/" + url);
+                $('#temp').attr('value', "/505/admin/Public/webuploader-0.1.5/" + url);
+            });
+
+            // 文件上传失败，现实上传出错。
+            uploader.on('uploadError', function(file) {
+                var $li = $('#' + file.id),
+                    $error = $li.find('div.error');
+
+                // 避免重复创建
+                if (!$error.length) {
+                    $error = $('<div class="error"></div>').appendTo($li);
+                }
+
+                $error.text('上传失败');
+            });
+
+            // 完成上传完了，成功或者失败，先删除进度条。
+            uploader.on('uploadComplete', function(file) {
+                $('#' + file.id).find('.progress').remove();
+            });
+        });
         </script>
         <script type="text/javascript">
         updateGoods();
