@@ -134,7 +134,6 @@ class IndexController extends Controller {
 	}
 	//管理员信息
 	public function admin() {
-		$this->display();
 		$adminaccount = $_SESSION['adminaccount'];
 		$admin = M('admins')->where("account=" . $adminaccount)->select();
 		$power = $admin[0]['power'];
@@ -145,13 +144,13 @@ class IndexController extends Controller {
 			$vo = $admin->where('id=' . $id)->select();
 			$this->assign("list", $vo);
 			$this->assign("id", $id);
+			$this->display();
 			if (IS_POST) {
 				$admin = M('admins');
 				$admin->id = $id;
 				$admin->name = $_POST['name'];
 				$admin->account = $_POST['account'];
 				$admin->password = $_POST['password'];
-				$admin->power = $_POST['power'] + 0;
 				$result = $admin->save();
 				if ($result) {
 					echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
@@ -197,14 +196,11 @@ class IndexController extends Controller {
 						echo '<script type="text/javascript">alert("新增失败")</script>';
 					}
 				}
-				//输出重复项目
+				//输出重复信息
 				else {
 					echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
-					echo '<script type="text/javascript">alert("新增失败")</script>';
+					echo '<script type="text/javascript">alert("' . $is . '")</script>';
 				}
-			} else {
-				echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
-				echo '<script type="text/javascript">alert("' . $is . '")</script>';
 			}
 		} else {
 			echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
