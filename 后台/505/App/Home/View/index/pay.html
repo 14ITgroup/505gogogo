@@ -45,6 +45,11 @@
                     <li>
                         <img src="{$cart.image}" alt="things">
                         <div>
+                            <input type="hidden" id="name" name="name" value="{$cart.name}" />
+                            <input type="hidden" id="color" name="color" value="{$cart.color}" />
+                            <input type="hidden" id="size" name="size" value="{$cart.size}" />
+                            <input type="hidden" id="goodsnum" name="goodsnum" value="{$cart.goodsnum}" />
+                            <input type="hidden" id="price" name="price" value="{$cart.price}" />
                             <p>商品名称/颜色/规格<br />{$cart.name}--{$cart.color}--{$cart.size}
                             </p>
                             <p>产品数量</p>
@@ -52,12 +57,12 @@
                             <strong>￥<span>{$cart.price}</span></strong>
                         </div>
                     </li>
-            </volist> 
+                </volist> 
             </ul>
         </section>
     </section>
     <section class="pay-confirm">
-    	<a href="homepage.html" onclick="success();">支付</a>
+    	<a href="people.html" onclick="paying();">支付</a>
     	<p>总计: <span>￥{$allprice}</span></p>
     	<div style="clear: both;"></div>
     </section>
@@ -81,8 +86,50 @@
     </footer>
 </body>
 <script type="text/javascript">
-    function success(){
-        alert('支付成功');
+    function paying(){
+        var name = $(".shopping-list li div #name");
+        var color = $(".shopping-list li div #color");
+        var size = $(".shopping-list li div #size");
+        var goodsnum = $(".shopping-list li div #goodsnum");
+        var price = $(".shopping-list li div #price");
+
+        var length=name.length+0;
+
+        var names = new Array(length);
+        var colors = new Array(length);
+        var sizes = new Array(length);
+        var goodsnums = new Array(length);
+        var prices = new Array(length);
+        for(i=0;i<length;i++){
+            names[i]=name[i].value;
+            colors[i]=color[i].value;
+            sizes[i]=size[i].value;
+            goodsnums[i]=goodsnum[i].value;
+            prices[i]=price[i].value;
+        }
+        var data = {
+            names: names,
+            sizes: sizes,
+            colors: colors,
+            goodsnums: goodsnums,
+            prices: prices
+        };
+        $.ajax({
+            url: '{:U("index.php/home/index/buildorderajax")}',
+            type: 'POST',
+            data: data
+        })
+        .done(function(dataget) {
+            console.log("success");
+            console.log(dataget);
+            alert(dataget);
+        })
+        .fail(function() {
+            console.log("error");
+        })
+        .always(function() {
+            console.log("complete");
+        });
     }
 </script>
 </html>
