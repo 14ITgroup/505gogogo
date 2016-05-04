@@ -43,7 +43,7 @@
         </div>
     </section>
     <section class="details-pay-btn">
-        <?php if(is_array($good)): $i = 0; $__LIST__ = $good;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$single): $mod = ($i % 2 );++$i;?><a href="" id='cart' >加入购物车</a><a href="pay.html?fromdetail=<?php echo ($single["id"]); ?>" onclick="buynow();" id='buynow'>立即购买</a><?php endforeach; endif; else: echo "" ;endif; ?>  
+        <?php if(is_array($good)): $i = 0; $__LIST__ = $good;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$single): $mod = ($i % 2 );++$i;?><a href="" id='cart' >加入购物车</a><a href="javascript:void(0)" onclick="buynow();" id='buynow'>立即购买</a><?php endforeach; endif; else: echo "" ;endif; ?>  
     </section>
     <footer>
         <nav>
@@ -147,7 +147,13 @@
     }
 
     function buynow(){
-        
+        var name = $(".details-name").text();
+        var size = $(".categ label.checked").text();
+        var color = $(".color-choice label.checked").text();
+        url="pay.html?name="+name;
+        url+="&size="+size;
+        url+="&color="+color;
+        window.location.href=url;
     }
     </script>
 </body>
