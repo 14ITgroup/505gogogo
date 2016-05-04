@@ -310,46 +310,86 @@ class IndexController extends Controller
 	}
 
 	public function buildorderajax(){
-		$names = I('post.names');
-		$colors = I('post.colors');
-		$sizes = I('post.sizes');
-		$goodsnums = I('post.goodsnums');
-		$prices = I('post.prices');
-		$good=D('GoodsView');
-		$type=M('goodstype');
-		$order=M('orders');
-		for($i=0;$i<$names.length;$i++){
-			$name=$names[i];
-			$color=$colors[i];
-			$size=$sizes[i];
-			$goodsnum=$goodsnums[i];
-			$prices=$prices[i];
-			if($good->where('name="' . $name . '" and color="' . $color . '" and size="' . $size . '"')->getField('goodsleft')-$goodsnum>0){//如果库存大于0 执行库存减去goodsnum的操作和生成订单的操作
-				
-				//库存减少
-				$goodsid=$good->where('name="' . $name . '" and color="' . $color . '" and size="' . $size . '"')->getField('id');
-				$data['goodsleft'] = $good->where('name="' . $name . '" and color="' . $color . '" and size="' . $size . '"')->getField('goodsleft')-$goodsleft;
-				$typeid=$good->where('name="' . $name . '" and color="' . $color . '" and size="' . $size . '"')->getField('id');
-				$result1=$type->where('id="' . $goodsid . '" and color="' . $color . '" and size="' . $size . '"')->save($data);
+		//这个数组检测无误
+		$typeids = I('post.typeids');
+		//这个bug找了好久
+		//原来是array_count_value()和array_unique()函数获得的数组下标并不是有序渐进的
+		//而是类似Array ( [1] => 2 [31] => 1 ) Array ( [0] => 1 [2] => 31 ) 
+		//所以我们要调整为从0开始递增1的数组
 
-				//生成订单
-				$user=M('users');
-				$userid=$user->where("account=%s",$_SESSION['useraccount'])->getField('id');
-				$create['userid']=$userid;
-				$create['goodstypeid']=$typeid;
-				$create['goodsnum']=$goodsnum;
-				$create['totalprice']=$price;
-				$create['addtime']=date('y-m-d H:i:s',time());
-				$result2=$order->add($create);
-				if($result2){
-					$inf="成功支付商品：".$name." 颜色：".$color." 尺寸：".$size;
-					$this->ajaxReturn($inf,'json');
-				}
-				else{
-					$inf="支付失败，请稍候再试";
-					$this->ajaxReturn($inf,'json');
+		//对数组中的所有值进行计数
+		$uniquecount=array_count_values($typeids);
+		//去除数组中的重复元素
+		$unique=array_unique($typeids);
+
+		$realuniquecount=array();
+		for($i=0,$j=0;$i<count($uniquecount);){
+			if($uniquecount[$j]!=0){
+				$realuniquecount[$i]=$uniquecount[$j];
+				$i++;
+			}
+			$j++;
+		}
+
+		$realunique=array();
+		for($i=0,$j=0;$i<count($unique);){
+			if($unique[$j]!=0){
+				$realunique[$i]=$unique[$j];
+				$i++;
+			}
+			$j++;
+		}
+		//修改之后的意思才是$unique[i]对应的值出现的次数是$uniquecount[i]
+		if(isset($_SESSION['useraccount'])){//判断用户登录
+			$user=M('users');
+			$userid=$user->where("account=%s",$_SESSION['useraccount'])->getField('id');
+
+			$good=D('GoodsView');
+			$type=M('goodstype');
+			$order=M('orders');
+			$cart=M('cart');
+
+			$length=sizeof($realunique);
+			// echo '<script type="text/javascript"> alert("文件上传失败！\n\n错误原因：'.$realuniquecount[1].'")</script>';
+			// $inf="提示信息:\n";
+			for($i=0;$i<$length;$i++){
+				//判断库存是否满足用户需求
+				$goodsleft=$good->where("goodstype.id=%d",$realunique[$i])->getField('goodsleft');
+				//获取单价
+				$singleprice=$good->where("goodstype.id=%d",$realunique[$i])->getField('price');
+				if($goodsleft-$uniquecount[$i]>0){//如果库存足够，执行库存减去goodsnum的操作和生成订单的操作
+				
+					//库存减少，现有量减去用户购买量
+					$data['goodsleft'] = $goodsleft-$realuniquecount[$i];
+					$result1=$type->where("id=%d",$realunique[$i])->save($data);
+
+					//生成订单
+					$create['userid']=$userid;
+					$create['goodstypeid']=$realunique[$i];
+					$create['goodsnum']=$realuniquecount[$i];
+					$create['totalprice']=$singleprice*$realuniquecount[$i];
+					$create['addtime']=date('y-m-d H:i:s',time());
+					$result2=$order->add($create);
+					$result=$result1*$result2;
+
+					$name=$good->where("goodstype.id=%d",$realunique[$i])->getField('name');
+					$color=$good->where("goodstype.id=%d",$realunique[$i])->getField('color');
+					$size=$good->where("goodstype.id=%d",$realunique[$i])->getField('size');
+					if($result){
+						echo '<script type="text/javascript"> alert("成功支付商品:'.$name.' 颜色:'.$color.' 尺寸:'.$size.'")</script>';
+						//去除购物车中的该项
+						$cart->where("goodstypeid=%d",$realunique[$i])->delete();
+					}
+				}else{//如果库存不足
+					$name=$good->where("goodstype.id=%d",$realunique[$i])->getField('name');
+					$color=$good->where("goodstype.id=%d",$realunique[$i])->getField('color');
+					$size=$good->where("goodstype.id=%d",$realunique[$i])->getField('size');
+					echo '<script type="text/javascript"> alert("非常抱歉,商品:'.$name.' 颜色:'.$color.' 尺寸:'.$size.' 库存不足")</script>';
 				}
 			}
+			//$this->ajaxReturn($inf,'json');
+		}else{
+			$this->error('请登录','login',1);
 		}
 	}
 }

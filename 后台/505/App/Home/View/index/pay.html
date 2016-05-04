@@ -45,7 +45,7 @@
                     <li>
                         <img src="{$cart.image}" alt="things">
                         <div>
-                            <input type="hidden" class="gi" id="goodsid" name="goodsid" value="{$cart.type_id}">
+                            <input type="hidden" id="typeid" name="typeid" value="{$cart.type_id}">
                             <input type="hidden" id="name" name="name" value="{$cart.name}" />
                             <input type="hidden" id="color" name="color" value="{$cart.color}" />
                             <input type="hidden" id="size" name="size" value="{$cart.size}" />
@@ -63,7 +63,7 @@
         </section>
     </section>
     <section class="pay-confirm">
-    	<a href="#" onclick="paying();">支付</a>
+    	<a href="" onclick="paying();">支付</a>
     	<p>总计: <span>￥{$allprice}</span></p>
     	<div style="clear: both;"></div>
     </section>
@@ -89,45 +89,23 @@
     <js href="/505/Public/js/jquery-v1.10.2.min.js" />
 <script type="text/javascript">
     function paying(){
-        var name = $(".shopping-list li div #name");
-        var color = $(".shopping-list li div #color");
-        var size = $(".shopping-list li div #size");
-        var goodsnum = $(".shopping-list li div #goodsnum");
-        var price = $(".shopping-list li div #price");
-        //var type_id=$(".gi");
-        var length=name.length+0;
+        //获取typeid序列
+        var typeid=$(".shopping-list li div #typeid");
+        var length=typeid.length+0;
+        var typeids=new Array(length);
 
-        var names = new Array(length);
-        var colors = new Array(length);
-        var sizes = new Array(length);
-        var goodsnums = new Array(length);
-        var prices = new Array(length);
         for(i=0;i<length;i++){
-            names[i]=name[i].value;
-            colors[i]=color[i].value;
-            sizes[i]=size[i].value;
-            goodsnums[i]=goodsnum[i].value;
-            prices[i]=price[i].value;
+            typeids[i]=typeid[i].value;
+            // alert(typeids[i]);
         }
-        //var ids=new Array();
-        //for(var i =0;i<$(type_id).length;i++){
-        //    ids[i]=$($(type_id)[i]).value;
-        //}
-        //alert(ids);
-        //alert("111");
-        //var data={
-        //    id:ids,
-        //}
         var data = {
-            names: names,
-            sizes: sizes,
-            colors: colors,
-           goodsnums: goodsnums,
-            prices: prices
+           typeids:typeids
         };
         $.ajax({
             url: '{:U("index.php/home/index/buildorderajax")}',
             type: 'POST',
+            //false和true对应两种传值方式，默认为false
+            //traditional :false,
             data: data
         })
         .done(function(dataget) {
