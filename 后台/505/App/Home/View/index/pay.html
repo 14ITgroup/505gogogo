@@ -110,8 +110,12 @@
         })
         .done(function(dataget) {
             console.log("success");
-            console.log(dataget);
             //alert(dataget);
+            console.log(dataget);
+            $.each(dataget, function(){     
+                alert(this);
+                console.log(this);     
+            }); 
         })
         .fail(function() {
             console.log("error");

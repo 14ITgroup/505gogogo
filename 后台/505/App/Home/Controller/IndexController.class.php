@@ -352,6 +352,7 @@ class IndexController extends Controller
 			$length=sizeof($realunique);
 			// echo '<script type="text/javascript"> alert("文件上传失败！\n\n错误原因：'.$realuniquecount[1].'")</script>';
 			// $inf="提示信息:\n";
+
 			for($i=0;$i<$length;$i++){
 				//判断库存是否满足用户需求
 				$goodsleft=$good->where("goodstype.id=%d",$realunique[$i])->getField('goodsleft');
@@ -376,18 +377,21 @@ class IndexController extends Controller
 					$color=$good->where("goodstype.id=%d",$realunique[$i])->getField('color');
 					$size=$good->where("goodstype.id=%d",$realunique[$i])->getField('size');
 					if($result){
-						echo '<script type="text/javascript"> alert("成功支付商品:'.$name.' 颜色:'.$color.' 尺寸:'.$size.'")</script>';
+						//echo '<script type="text/javascript"> alert("成功支付商品:'.$name.' 颜色:'.$color.' 尺寸:'.$size.'")</script>';
 						//去除购物车中的该项
+						$ret[$i]="成功支付商品:'.$name.' 颜色:'.$color.' 尺寸:'.$size.'";
 						$cart->where("goodstypeid=%d",$realunique[$i])->delete();
 					}
 				}else{//如果库存不足
 					$name=$good->where("goodstype.id=%d",$realunique[$i])->getField('name');
 					$color=$good->where("goodstype.id=%d",$realunique[$i])->getField('color');
 					$size=$good->where("goodstype.id=%d",$realunique[$i])->getField('size');
-					echo '<script type="text/javascript"> alert("非常抱歉,商品:'.$name.' 颜色:'.$color.' 尺寸:'.$size.' 库存不足")</script>';
+					//echo '<script type="text/javascript"> alert("非常抱歉,商品:'.$name.' 颜色:'.$color.' 尺寸:'.$size.' 库存不足")</script>';
+					$ret[$i]="非常抱歉,商品:'.$name.' 颜色:'.$color.' 尺寸:'.$size.' 库存不足";
 				}
+							
 			}
-			//$this->ajaxReturn($inf,'json');
+			$this->ajaxReturn($ret);
 		}else{
 			$this->error('请登录','login',1);
 		}
