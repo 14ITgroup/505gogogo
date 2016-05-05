@@ -110,7 +110,7 @@
             <ul>
                 <li><a href="homepage.html">
                         <img src="/505/Public/images/home-pressed.png" alt="主页">
-                        <p>主页</p>
+                        <p style="color: #b63c39;">主页</p>
                     </a></li>
                 <li><a href="chart.html">
                         <img src="/505/Public/images/shop-car.png" alt="购物车">

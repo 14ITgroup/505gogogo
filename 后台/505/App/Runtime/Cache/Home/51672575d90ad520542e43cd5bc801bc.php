@@ -18,7 +18,7 @@
 <body>
     <section class="pay-head">
         <div class="pay-head-h">
-            <a href="#"><img src="/505/Public/images/arrow-left.png" alt="返回"></a>
+            <a href="homepage.html"><img src="/505/Public/images/arrow-left.png" alt="返回"></a>
             <h3>支付</h3>
         </div>
         <div class="pay-info">
@@ -42,7 +42,7 @@
                 <?php if(is_array($carts)): $i = 0; $__LIST__ = $carts;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cart): $mod = ($i % 2 );++$i;?><li>
                         <img src="<?php echo ($cart["image"]); ?>" alt="things">
                         <div>
-                            <input type="hidden" class="gi" id="goodsid" name="goodsid" value="<?php echo ($cart["type_id"]); ?>">
+                            <input type="hidden" id="typeid" name="typeid" value="<?php echo ($cart["type_id"]); ?>">
                             <input type="hidden" id="name" name="name" value="<?php echo ($cart["name"]); ?>" />
                             <input type="hidden" id="color" name="color" value="<?php echo ($cart["color"]); ?>" />
                             <input type="hidden" id="size" name="size" value="<?php echo ($cart["size"]); ?>" />
@@ -59,77 +59,41 @@
         </section>
     </section>
     <section class="pay-confirm">
-    	<a href="#" onclick="paying();">支付</a>
+    	<a href="" onclick="paying();">支付</a>
     	<p>总计: <span>￥<?php echo ($allprice); ?></span></p>
     	<div style="clear: both;"></div>
     </section>
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="homepage.html">
-                        <img src="/505/Public/images/home-pressed.png" alt="主页">
-                        <p>主页</p>
-                    </a></li>
-                <li><a href="chart.html">
-                        <img src="/505/Public/images/shop-car.png" alt="购物车">
-                        <p>购物车</p>
-                    </a></li>
-                <li><a href="people.html">
-                        <img src="/505/Public/images/mine.png" alt="个人">
-                        <p>个人</p>
-                    </a></li>
-            </ul>
-        </nav>
-    </footer>
 </body>
     <script type="text/javascript" src="/505/Public/js/jquery-v1.10.2.min.js"></script>
 <script type="text/javascript">
     function paying(){
-        var name = $(".shopping-list li div #name");
-        var color = $(".shopping-list li div #color");
-        var size = $(".shopping-list li div #size");
-        var goodsnum = $(".shopping-list li div #goodsnum");
-        var price = $(".shopping-list li div #price");
-        //var type_id=$(".gi");
-        var length=name.length+0;
+        //获取typeid序列
+        var typeid=$(".shopping-list li div #typeid");
+        var length=typeid.length+0;
+        var typeids=new Array(length);
 
-        var names = new Array(length);
-        var colors = new Array(length);
-        var sizes = new Array(length);
-        var goodsnums = new Array(length);
-        var prices = new Array(length);
         for(i=0;i<length;i++){
-            names[i]=name[i].value;
-            colors[i]=color[i].value;
-            sizes[i]=size[i].value;
-            goodsnums[i]=goodsnum[i].value;
-            prices[i]=price[i].value;
+            typeids[i]=typeid[i].value;
+            // alert(typeids[i]);
         }
-        //var ids=new Array();
-        //for(var i =0;i<$(type_id).length;i++){
-        //    ids[i]=$($(type_id)[i]).value;
-        //}
-        //alert(ids);
-        //alert("111");
-        //var data={
-        //    id:ids,
-        //}
         var data = {
-            names: names,
-            sizes: sizes,
-            colors: colors,
-           goodsnums: goodsnums,
-            prices: prices
+           typeids:typeids
         };
         $.ajax({
             url: '<?php echo U("index.php/home/index/buildorderajax");?>',
             type: 'POST',
+            //false和true对应两种传值方式，默认为false
+            //traditional :false,
             data: data
         })
         .done(function(dataget) {
             console.log("success");
-            console.log(dataget);
             //alert(dataget);
+            console.log(dataget);
+            $.each(dataget, function(){     
+                alert(this);
+                console.log(this);     
+            }); 
         })
         .fail(function() {
             console.log("error");

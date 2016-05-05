@@ -1,0 +1,10 @@
+[ 2016-05-05T09:09:33+08:00 ] ::1 /505/index.php/home/Index/_PUBLIC_/images/arrow-left.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000884s ]
+
+[ 2016-05-05T09:10:33+08:00 ] ::1 /505/index.php/home/Index/_PUBLIC_/images/arrow-left.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+

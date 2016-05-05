@@ -17,6 +17,7 @@
 
 <body>
     <section class="details-head">
+    <a href="homepage.html"><img src="/505/Public/images/arrow-left.png" alt="返回"></a>
         <h3>商品详情</h3>
     </section>
     <?php if(is_array($good)): $i = 0; $__LIST__ = $good;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$single): $mod = ($i % 2 );++$i;?><section class="details-banner">
@@ -45,24 +46,6 @@
     <section class="details-pay-btn">
         <?php if(is_array($good)): $i = 0; $__LIST__ = $good;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$single): $mod = ($i % 2 );++$i;?><a href="" id='cart' >加入购物车</a><a href="javascript:void(0)" onclick="buynow();" id='buynow'>立即购买</a><?php endforeach; endif; else: echo "" ;endif; ?>  
     </section>
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="homepage.html">
-                        <img src="/505/Public/images/home-pressed.png" alt="主页">
-                        <p>主页</p>
-                    </a></li>
-                <li><a href="chart.html">
-                        <img src="/505/Public/images/shop-car.png" alt="购物车">
-                        <p>购物车</p>
-                    </a></li>
-                <li><a href="people.html">
-                        <img src="/505/Public/images/mine.png" alt="个人">
-                        <p>个人</p>
-                    </a></li>
-            </ul>
-        </nav>
-    </footer>
     <script type="text/javascript" src="/505/Public/js/jquery-v1.10.2.min.js"></script>
     <script type="text/javascript">
         $("#cart").click(function(){

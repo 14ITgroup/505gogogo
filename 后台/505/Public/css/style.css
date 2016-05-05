@@ -569,7 +569,7 @@ header {
 nav.top-nav {
     width: 90%;
     margin: 0 auto;
-    padding: 10px 0;
+    padding: 6px 0;
 }
 nav.top-nav a {
     display: inline-block;
@@ -584,7 +584,7 @@ nav.top-nav a img {
 nav.top-nav input {
     display: inline-block;
     width: 75%;
-    height: 40px;
+    height: 30px;
     border-radius: 2px;
     margin: 0 8px;
     padding: 0 8px;
@@ -600,10 +600,10 @@ nav.top-nav input {
 section.focus-wrap {
     /*position: relative;*/
     /*top: 60px;*/
-    margin-top: 60px;
+    margin-top: 42px;
 }
 .flickerplate {
-    height: 180px !important;
+    height: 140px !important;
 }
 .flickerplate .dot-navigation {
     bottom: 0 !important;
@@ -612,13 +612,13 @@ section.focus-wrap {
 /* 分类 */
 section.categories {
     width: 100%;
-    padding: 10px 0;
+    padding: 6px 0;
     background-color: #fff;
 }
 section.categories ul {
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 15px;
+    margin-bottom: 6px;
 }
 section.categories ul+ul {
     margin-bottom: 0;
@@ -630,15 +630,16 @@ section.categories ul li {
 section.categories ul a {
     display: block;
     text-align: center;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
 section.categories ul a img {
     margin: 0 auto;
 }
 section.categories ul a p {
-    color: #545454;
+    color: #7a7a7a;
     padding-top: 4px;
+    font-size: 14px;
 }
 
 /* 好物推荐 */
@@ -649,11 +650,11 @@ section.recommend {
 section.recommend h3 {
     /*display: inline-block;*/
     background-color: #fff;
-    font-size: 20px;
+    /*font-size: 20px;*/
     font-weight: normal;
     color: #ce4845;
     margin: 0;
-    padding: 8px 0;
+    padding: 4px 0;
 }
 section.recommend h3 img {
     display: inline;
@@ -703,7 +704,7 @@ section.recommend ul li {
 /* 底部导航栏 */
 footer {
     width: 100%;
-    background-color: #ce4845;
+    background:rgba(249, 248, 247, 0.8);
     position: fixed;
     bottom: 0;
     z-index: 1000;
@@ -711,7 +712,8 @@ footer {
 footer nav {
     width: 100%;
     margin: 0 auto;
-    padding: 8px 0;
+    padding: 6px 0;
+    font-size: 12px;
 }
 footer nav ul {
     width: 90%;
@@ -725,10 +727,10 @@ footer ul li {
 }
 footer ul li a {
     display: block;
-    color: #fff;
+    color: #7a7a7a;
 }
 footer ul li a img {
-    width: 30px;
+    width: 23px;
     margin: 0 auto;
 }
 
@@ -751,13 +753,13 @@ section.pay-head .pay-head-h {
 div.pay-head-h a {
     display: block;
     position: absolute;
-    left: 14px;
+    left: 5px;
     top: 9px;
 }
 div.pay-head-h h3 {
     margin: 0;
     color: #fff;
-    font-size: 24px;
+    font-size: 20px;
     padding: 14px 0;
 }
 div.pay-info {
@@ -778,11 +780,11 @@ div.pay-info div {
 
 section.pay-things {
     width: 100%;
-    margin-top: 178px;
+    margin-top: 170px;
     margin-bottom: 138px;
 }
 div.shop-info {
-    margin: 14px 0;
+    margin: 2% 0;
 }
 div.shop-info img {
     display: inline-block;
@@ -802,7 +804,7 @@ ul.shopping-list li {
     -webkit-box-sizing:border-box;
     padding: 6px;
     background-color: #EAEAEA;
-    /*margin-bottom: 1px;*/
+    margin-bottom: 1px;
 }
 ul.shopping-list li img {
     display: inline-block;
@@ -827,10 +829,10 @@ ul.shopping-list li strong {
 
 .pay-confirm {
     position: fixed;
-    bottom: 64px;
+    bottom: 0px;
     width: 100%;
     height: 70px;
-    background-color: #EFEFEF;
+    background:rgba(247, 248, 249, 0.8);
     z-index: 1000;
 }
 .pay-confirm p {
@@ -862,31 +864,31 @@ ul.shopping-list li strong {
 section.mine-info {
     width: 100%;
     background-color: #ce4845;
-    padding: 60px 0 10px 0;
+    padding: 42px 0 10px 0;
     position: relative;
 }
 section.mine-info a {
     display: block;
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 10px;
+    top: 10px;
     width: 30px;
 }
 section.mine-info > img {
-    width: 100px;
+    width: 20%;
     border-radius: 50%;
     margin: 0 auto;
 }
 section.mine-info p {
     text-align: center;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     padding-top: 10px;
 }
 
 section.tab-choice {
     width: 100%;
-    margin: 15px 0;
+    margin: 2% 0;
 }
 section.tab-choice ul {
     width: 88%;
@@ -895,17 +897,17 @@ section.tab-choice ul {
 }
 section.tab-choice ul li {
     display: inline-block;
-    /*width: 18.3%;*/
-    width: 22%;
+    width: 18.8%;
 }
 section.tab-choice ul li a {
     display: block;
     text-align: center;
-    color: #5e5d5d;
+    color: #7a7a7a;
+    font-size: 14px;
 }
 section.tab-choice ul li a img {
     margin: 0 auto;
-    width: 50px;
+    width: 60%;
 }
 
 section.shopping-list-container {
@@ -927,19 +929,21 @@ section.chart-head {
     background-color: #ce4845;
 }
 section.chart-head h3 {
-    font-size: 22px;
+    font-size: 18px;
+    font-weight: normal;
     margin: 0;
-    padding: 1em 0;
+    padding: 2.83% 0;
 }
 section.chart-head p {
     position: absolute;
+    font-size: 14px;
     right: 14px;
-    top: 20px;
+    top: 9px;
 }
 
 section.chart-list {
     width: 100%;
-    margin-top: 74px;
+    margin-top: 42px;
     margin-bottom: 138px;
     z-index: 999;
     position: relative;
@@ -986,10 +990,16 @@ section.details-head {
     color: #fff;
     background-color: #ce4845;
 }
+section.details-head a{
+    display: inline-block;
+    height: 70%;
+    float: left;
+}
 section.details-head h3 {
-    font-size: 22px;
+    font-size: 18px;
+    font-weight: normal;
     margin: 0;
-    padding: 1em 0;
+    padding: 2.83% 0;
 }
 section.details-banner {
     width: 100%;
@@ -1059,9 +1069,12 @@ div.categ .checked, div.color-choice .checked {
     color: #000;
 }
 section.details-pay-btn {
+    display: inline-block;
+    width: 100%;
+    background: rgba(247,248,249,0.8);
     position: fixed;
     right: 0;
-    bottom: 65px;
+    bottom: 0px;
     z-index: 10000;
 }
 section.details-pay-btn a {
@@ -1071,6 +1084,7 @@ section.details-pay-btn a {
     width: 100px;
     background-color: #de8a4d;
     color: #fff;
+    float: right;
 }
 section.details-pay-btn a+a {
     background-color: #E05B58;

@@ -116,7 +116,7 @@
 			
 			.register {
 				display: inline-block;
-				margin: 0 0 0 10vw;
+				margin: 0 auto;
 			}
 			
 			a{
@@ -148,7 +148,6 @@
 				<button id="login" value="" class="btn btn-primary btn-circle btn-xs" onclick="transition();isOk();"><span class="login">登录</span></button>
 				<a href="shake.html"></a>
 			</form>
-			<a href="#" class="forget">忘记密码</a>
 			<a href="register.html" class="register">注册会员</a>
 		</div>
 	</body>

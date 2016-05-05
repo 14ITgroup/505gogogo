@@ -17,6 +17,7 @@
 
 <body>
     <section class="details-head">
+    <a href="homepage.html"><img src="__PUBLIC__/images/arrow-left.png" alt="返回"></a>
         <h3>商品详情</h3>
     </section>
     <volist name="good" id="single">
@@ -53,24 +54,6 @@
             <a href="" id='cart' >加入购物车</a><a href="javascript:void(0)" onclick="buynow();" id='buynow'>立即购买</a>
         </volist>  
     </section>
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="homepage.html">
-                        <img src="__PUBLIC__/images/home-pressed.png" alt="主页">
-                        <p>主页</p>
-                    </a></li>
-                <li><a href="chart.html">
-                        <img src="__PUBLIC__/images/shop-car.png" alt="购物车">
-                        <p>购物车</p>
-                    </a></li>
-                <li><a href="people.html">
-                        <img src="__PUBLIC__/images/mine.png" alt="个人">
-                        <p>个人</p>
-                    </a></li>
-            </ul>
-        </nav>
-    </footer>
     <js href="/505/Public/js/jquery-v1.10.2.min.js" />
     <script type="text/javascript">
         $("#cart").click(function(){

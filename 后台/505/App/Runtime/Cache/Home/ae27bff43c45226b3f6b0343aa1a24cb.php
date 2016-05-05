@@ -47,12 +47,12 @@
         <nav>
             <ul>
                 <li><a href="homepage.html">
-                        <img src="/505/Public/images/home-pressed.png" alt="主页">
+                        <img src="/505/Public/images/home.png" alt="主页">
                         <p>主页</p>
                     </a></li>
                 <li><a href="chart.html">
-                        <img src="/505/Public/images/shop-car.png" alt="购物车">
-                        <p>购物车</p>
+                        <img src="/505/Public/images/shop-car-pressed.png" alt="购物车">
+                        <p style="color: #b63c39;">购物车</p>
                     </a></li>
                 <li><a href="people.html">
                         <img src="/505/Public/images/mine.png" alt="个人">
