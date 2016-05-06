@@ -835,6 +835,9 @@ ul.shopping-list li strong {
     background:rgba(247, 248, 249, 0.8);
     z-index: 1000;
 }
+#pay-sum-confirm{
+    bottom: 51px !important;
+}
 .pay-confirm p {
     color: #5e5d5d;
     font-size: 14px;
