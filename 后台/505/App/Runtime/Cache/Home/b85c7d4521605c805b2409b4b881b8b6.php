@@ -20,45 +20,44 @@
 			
 			.center-block .title {
 				font-size: 8vh;
+				font-family: "微软雅黑";
 				display: block;
+				color: #ce4845;
 			}
 			
 			.le {
 				margin: 3vh auto 7vh;
-				height: 5vh;
-				width: 5vh;
+				height: 8vh;
+				width: 8vh;
 				font-size: 3vh;
 				font-family: "微软雅黑";
 				color: #FFFFFF;
-				background: #333333;
+				background: #EAE174;
 				border-radius: 80px;
 				display: block;
-				line-height: 155%;
+				line-height: 8vh;
 			}
 			
 			.box {
 				position: relative;
+				height: 40px;
+    			width: 80%;
+    			border: 1px solid #ce4845;
+    			margin: 0 auto;
+    			margin-bottom: 5%;
 			}
-			
-			.box img {
-				height: 100%;
-				width: 60vw;
-				margin: 1vh auto;
-			}
-			
 			.box input {
 				text-align: center;
 				display: block;
-				font-size: 1.5rem;
+				font-size: 18px;
 				font-family: "微软雅黑";
 				color: #808080;
-				width: 40vw;
+				width: 100%;
 				position: absolute;
-				left: 25vw;
 				top: 0;
-				margin: 3% auto;
+				margin: 0% auto;
 				border: 0px;
-				height: 66%;
+				line-height: 38px;
 				/*出现框更改top:0.5vh height:5vh margin:2vh auto*/
 			}
 			
@@ -67,15 +66,17 @@
 			}
 			
 			.btn-circle {
-				background: #5B9BD5;
-				margin: 12% auto;
-				width: 27vw;
-				height: 27vw;
+				background: #ce4845;
+				margin: 0 auto;
+				width: 80%;
+				height: 40px;
 				text-align: center;
-				padding: 6px 0;
-				font-size: 7.5vw;
-				line-height: 1.628571;
-				border-radius: 50%;
+				/*padding: 6px 0;*/
+				font-size: 18px;
+				font-family: "微软雅黑";
+				color: #ffffff;
+				/*line-height: 40px;*/
+				/*border-radius: 50%;*/
 				border: 0px;
 			}
 			
@@ -117,10 +118,14 @@
 			.register {
 				display: inline-block;
 				margin: 0 auto;
+				background: transparent;
+				color: #ce4845;
+				margin-top: 2%;
 			}
-			
+
 			a{
 				font-size: 1.5rem;
+				text-decoration: none;
 			}
 		</style>
 
@@ -130,25 +135,24 @@
 		<div class="container center" id="pageone">
 			<div class="place-holder"></div>
 			<div class="center-block">
-				<span class="title">ULer</span>
+				<span class="title">Welcome</span>
 				<!--<img class="img-responsive" src="img/le.png" alt="le" />-->
-				<span class="le" id="le">乐</span>
+				<span class="le" id="le">505</span>
 			</div>
 			<form action="" method="post" id="pageone">
 				<div class="box">
-					<img class="lower" src="/505/Public/images/input.png" alt="" />
 					<input id="phone_num" type="text" value="" name="useraccount" required="required" placeholder="请输入用户名" />
 					<br />
 				</div>
 				<div class="box">
-					<img class="lower" src="/505/Public/images/input.png" alt="" />
 					<input id="pwd" type="password" value="" name="password" required="required" placeholder="请输入密码" />
 					<br />
 				</div>
 				<button id="login" value="" class="btn btn-primary btn-circle btn-xs" onclick="transition();isOk();"><span class="login">登录</span></button>
-				<a href="shake.html"></a>
+				<!-- <a href="shake.html"></a> -->			
+				<a href="register.html" class="register btn-circle">注册会员</a>
 			</form>
-			<a href="register.html" class="register">注册会员</a>
+
 		</div>
 	</body>
 	<script type="text/javascript">

@@ -14,7 +14,7 @@ class IndexController extends Controller {
 			} else {
 				//显示登录的管理员帐号
 				$adminaccount = $_SESSION['adminaccount'];
-				$admin = M('admins')->where("account=" . $adminaccount)->select();
+				$admin = M('admins')->where("account='" . $adminaccount . "'")->select();
 				$name = $admin[0]['name'];
 				$this->assign("name", $name);
 			}
@@ -135,7 +135,7 @@ class IndexController extends Controller {
 	//管理员信息
 	public function admin() {
 		$adminaccount = $_SESSION['adminaccount'];
-		$admin = M('admins')->where("account=" . $adminaccount)->select();
+		$admin = M('admins')->where("account='" . $adminaccount . "'")->select();
 		$power = $admin[0]['power'];
 		//判断该管理员是否为最高管理员
 		if ($power) {
@@ -150,7 +150,9 @@ class IndexController extends Controller {
 				$admin->id = $id;
 				$admin->name = $_POST['name'];
 				$admin->account = $_POST['account'];
-				$admin->password = $_POST['password'];
+				$password = $_POST['password'];
+				//采用md5加密
+				$admin->password = md5($password);
 				$result = $admin->save();
 				if ($result) {
 					echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
@@ -169,7 +171,7 @@ class IndexController extends Controller {
 	public function addadmin() {
 		$this->display();
 		$adminaccount = $_SESSION['adminaccount'];
-		$admin = M('admins')->where("account=" . $adminaccount)->select();
+		$admin = M('admins')->where("account='" . $adminaccount . "'")->select();
 		$power = $admin[0]['power'];
 		//判断该管理员是否为最高管理员
 		if ($power) {
@@ -301,7 +303,7 @@ class IndexController extends Controller {
 	//删除管理员
 	public function delete() {
 		$adminaccount = $_SESSION['adminaccount'];
-		$admin = M('admins')->where("account=" . $adminaccount)->select();
+		$admin = M('admins')->where("account='" . $adminaccount . "'")->select();
 		$power = $admin[0]['power'];
 		//判断该管理员是否为最高管理员
 		if ($power) {
