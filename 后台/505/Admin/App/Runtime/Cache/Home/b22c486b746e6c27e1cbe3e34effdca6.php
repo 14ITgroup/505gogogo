@@ -103,10 +103,10 @@
                     <i class="fa fa-caret-down"></i>
                 </a>
               <ul class="dropdown-menu">
-                <li><a href="<?php echo U('/Home/index/order');?>">订单</a></li>        
-                <li><a href="<?php echo U('/Home/index/users');?>">用户</a></li>
+                <li><a href="<?php echo U('/Home/Index/order');?>">订单</a></li>        
+                <li><a href="<?php echo U('/Home/Index/users');?>">用户</a></li>
                 <li class="divider"></li>
-                <li><a tabindex="-1" href="<?php echo U('/Home/index/login');?>">退出</a></li>
+                <li><a tabindex="-1" href="<?php echo U('/Home/Index/login');?>">退出</a></li>
               </ul>
             </li>
           </ul>
@@ -119,27 +119,27 @@
     <ul>
     <li><a href="#" data-target=".dashboard-menu" class="nav-header" data-toggle="collapse"><i class="fa fa-fw fa-dashboard"></i>505后台<i class="fa fa-collapse"></i></a></li>
     <li><ul class="dashboard-menu nav nav-list collapse in">
-            <li><a href="<?php echo U('/Home/index/');?>"><span class="fa fa-caret-right"></span>后台首页</a></li>
-            <li><a href="<?php echo U('/Home/index/order');?>"><span class="fa fa-caret-right"></span>最新业务</a></li>
-            <li ><a href="<?php echo U('/Home/index/notice');?>"><span class="fa fa-caret-right"></span>公告管理</a></li>
+            <li><a href="<?php echo U('/Home/Index/');?>"><span class="fa fa-caret-right"></span>后台首页</a></li>
+            <li><a href="<?php echo U('/Home/Index/order');?>"><span class="fa fa-caret-right"></span>最新业务</a></li>
+            <li ><a href="<?php echo U('/Home/Index/notice');?>"><span class="fa fa-caret-right"></span>公告管理</a></li>
     </ul></li>
 
     <li data-popover="true" rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i>商品管理<i class="fa fa-collapse"></i></a></li>
         <li><ul class="premium-menu nav nav-list collapse">
                 <li class="visible-xs visible-sm"><a href="#">- Premium features require a license -</a>
-            <li ><a href="<?php echo U('/Home/index/goodslist');?>"><span class="fa fa-caret-right"></span>最新商品</a></li>
+            <li ><a href="<?php echo U('/Home/Index/goodslist');?>"><span class="fa fa-caret-right"></span>最新商品</a></li>
     </ul></li>
 
         <li><a href="#" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-briefcase"></i>用户管理<span class="label label-info">+3</span></a></li>
         <li><ul class="accounts-menu nav nav-list collapse">
-            <li ><a href="<?php echo U('/Home/index/users');?>"><span class="fa fa-caret-right"></span>用户列表</a></li>
-            <li ><a href="<?php echo U('/Home/index/userselect');?>"><span class="fa fa-caret-right"></span>用户检索</a></li>
+            <li ><a href="<?php echo U('/Home/Index/users');?>"><span class="fa fa-caret-right"></span>用户列表</a></li>
+            <li ><a href="<?php echo U('/Home/Index/userselect');?>"><span class="fa fa-caret-right"></span>用户检索</a></li>
     </ul></li>
 
         <li><a href="#" data-target=".legal-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-legal"></i>管理员管理<i class="fa fa-collapse"></i></a></li>
         <li><ul class="legal-menu nav nav-list collapse">
-            <li ><a href="<?php echo U('/Home/index/admins');?>"><span class="fa fa-caret-right"></span>管理员列表</a></li>
-            <li ><a href="<?php echo U('/Home/index/addadmin');?>"><span class="fa fa-caret-right"></span>新增管理员</a></li>
+            <li ><a href="<?php echo U('/Home/Index/admins');?>"><span class="fa fa-caret-right"></span>管理员列表</a></li>
+            <li ><a href="<?php echo U('/Home/Index/addadmin');?>"><span class="fa fa-caret-right"></span>新增管理员</a></li>
     </ul></li>
 
         <li><a href="#" class="nav-header"><i class="fa fa-fw fa-question-circle"></i>帮助</a></li>
@@ -157,14 +157,18 @@
 <head>
     <meta charset="utf-8">
     <title>商品修改</title>
-    <link rel="stylesheet" type="text/css" href="/505/admin/Public/umeditor1_2_2-utf8-php/themes/default/css/umeditor.css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <!--<link rel="stylesheet" type="text/css" href="/505/admin/Public/umeditor1_2_2-utf8-php/themes/default/css/umeditor.css" />
     <script type="text/javascript" src="/505/admin/Public/umeditor1_2_2-utf8-php/third-party/jquery.min.js"></script>
     <script type="text/javascript" src="/505/admin/Public/umeditor1_2_2-utf8-php/umeditor.config.js"></script>
     <script type="text/javascript" src="/505/admin/Public/umeditor1_2_2-utf8-php/umeditor.min.js"></script>
-    <script type="text/javascript" src="/505/admin/Public/umeditor1_2_2-utf8-php/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript" src="/505/admin/Public/umeditor1_2_2-utf8-php/lang/zh-cn/zh-cn.js"></script>-->
+    <script type="text/javascript" src="/505/admin/Public/utf8-php/ueditor.config.js"></script>
+        <script type="text/javascript" src="/505/admin/Public/utf8-php/ueditor.all.min.js"></script>
+    <script type="text/javascript" src="/505/admin/Public/utf8-php/lang/zh-cn/zh-cn.js"></script>
     <link rel="stylesheet" href="/505/admin/Public/css/jquery.fileupload.css">
     <link rel="stylesheet" href="/505/admin/Public/css/jquery.fileupload-ui.css">
-    <script src="/505/admin/Public/js/jquery.min.js"></script>
+    <!--<script src="/505/admin/Public/js/jquery.min.js"></script>-->
     <script src="/505/admin/Public/js/vendor/jquery.ui.widget.js"></script>
     <script src="/505/admin/Public/js/jquery.fileupload.js"></script>
     <script src="/505/admin/Public/js/jquery.iframe-transport.js"></script>
@@ -232,8 +236,8 @@
     <div class="header">
         <h1 class="page-title">商品</h1>
         <ul class="breadcrumb">
-            <li><a href="index.html">主页</a> </li>
-            <li><a href="users.html">商品管理</a> </li>
+            <li><a href="<?php echo U("Home/Index/");?>">主页</a> </li>
+            <li><a href="<?php echo U("Home/Index/goodslist");?>">商品管理</a> </li>
             <li class="active">商品修改</li>
         </ul>
     </div>
@@ -278,8 +282,8 @@
                                 <textarea name="detail" id="myEditor" style="width:1000px;height:480px;" value=""><?php echo ($detail); ?></textarea>
                                 <script type="text/javascript">
                                 //实例化编辑器
-                                var um = UM.getEditor('myEditor');
-                                editor.render("myEditor");
+                                var um = UE.getEditor('myEditor');
+                                //editor.render("myEditor");
                                 </script>
                             </div>
                             <div class="btn-toolbar list-toolbar">
@@ -291,26 +295,26 @@
                             <div class="adco">
                                 <label>颜色分类</label>
                                 <input type="text" class="form-control" id="txtcolor" name="txtcolor">
-                                <button class="btn btn-primary" id="addcolor" name="addcolor" onclick="form1.action='/505/admin/index.php/home/index/goodseditor/id/lib/bootstrap/js/bootstrap.js';form1.submit();">增加</button>
+                                <button class="btn btn-primary" id="addcolor" name="addcolor" onclick="form1.action='/505/admin/index.php/Home/Index/goodseditor/id/lib/bootstrap/js/bootstrap.js';form1.submit();">增加</button>
                             </div>
                             <div class="deco">
                                 <label>颜色分类</label>
                                 <select id="goodscolor" name="goodscolor" class="form-control">
                                     <?php if(is_array($colorlist)): $i = 0; $__LIST__ = $colorlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo1): $mod = ($i % 2 );++$i;?><option <?php echo ($vo1["ch"]); ?>><?php echo ($vo1["color"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                                 </select>
-                                <button class="btn btn-primary" id="decolor" name="decolor" onclick="form1.action='/505/admin/index.php/home/index/goodseditor/id/lib/bootstrap/js/bootstrap.js';form1.submit();">删除</button>
+                                <button class="btn btn-primary" id="decolor" name="decolor" onclick="form1.action='/505/admin/index.php/Home/Index/goodseditor/id/lib/bootstrap/js/bootstrap.js';form1.submit();">删除</button>
                             </div>
                             <div class="adsi">
                                 <label>尺寸分类</label>
                                 <input type="text" class="form-control" id="txtsize" name="txtsize">
-                                <button class="btn btn-primary" id="addsize" name="addsize" onclick="form1.action='/505/admin/index.php/home/index/goodseditor/id/lib/bootstrap/js/bootstrap.js';form1.submit();">增加</button>
+                                <button class="btn btn-primary" id="addsize" name="addsize" onclick="form1.action='/505/admin/index.php/Home/Index/goodseditor/id/lib/bootstrap/js/bootstrap.js';form1.submit();">增加</button>
                             </div>
                             <div class="desi">
                                 <label>尺寸分类</label>
                                 <select id="goodssize" name="goodssize" class="form-control">
                                     <?php if(is_array($sizelist)): $i = 0; $__LIST__ = $sizelist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo2): $mod = ($i % 2 );++$i;?><option <?php echo ($vo2["ch"]); ?>><?php echo ($vo2["size"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                                 </select>
-                                <button class="btn btn-primary" id="desize" name="desize" onclick="form1.action='/505/admin/index.php/home/index/goodseditor/id/lib/bootstrap/js/bootstrap.js';form1.submit();">删除</button>
+                                <button class="btn btn-primary" id="desize" name="desize" onclick="form1.action='/505/admin/index.php/Home/Index/goodseditor/id/lib/bootstrap/js/bootstrap.js';form1.submit();">删除</button>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="editor">
@@ -344,7 +348,7 @@
                         </div>
                         <div class="modal-footer">
                             <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">取消</button>
-                            <button class="btn btn-danger" id="delete" name="delete" onclick="form1.action='/505/admin/index.php/home/index/goodseditor/id/lib/bootstrap/js/bootstrap.js';form1.submit();" >删除</button>
+                            <button class="btn btn-danger" id="delete" name="delete" onclick="form1.action='/505/admin/index.php/Home/Index/goodseditor/id/lib/bootstrap/js/bootstrap.js';form1.submit();" >删除</button>
                         </div>
                     </div>
                 </div>
@@ -462,7 +466,7 @@
             };
             var leftNum = $("#leftnum");
             $.ajax({
-                    url: '<?php echo U("home/index/goodsajax");?>',
+                    url: '<?php echo U("Home/Index/goodsajax");?>',
                     type: 'POST',
                     data: data
                 })
@@ -492,7 +496,7 @@
                 left: leftNum
             };
             $.ajax({
-                    url: '<?php echo U("home/index/goodsajax2");?>',
+                    url: '<?php echo U("Home/Index/goodsajax2");?>',
                     type: 'POST',
                     data: data
                 })

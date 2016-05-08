@@ -63,7 +63,7 @@
         </section>
     </section>
     <section class="pay-confirm">
-    	<a href="{:U('index.php/Home/Index/peopleinfo')}" onclick="paying();">支付</a>
+    	<a href='/505/index.php/home/index/peopleinfo.html' onclick="paying();">支付</a>
     	<p>总计: <span>￥{$allprice}</span></p>
     	<div style="clear: both;"></div>
     </section>
@@ -97,7 +97,7 @@
             $.each(dataget, function(){     
                 alert(this);
                 console.log(this);
-                window.location.href='{:U("index.php/Home/Index/peopleinfo")}'; 
+                self.location='{:U("index.php/Home/Index/peopleinfo")}'; 
             }); 
 
         })

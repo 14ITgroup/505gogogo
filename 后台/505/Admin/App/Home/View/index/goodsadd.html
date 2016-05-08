@@ -4,11 +4,14 @@
 <head>
     <meta charset="utf-8">
     <title>商品修改</title>
-    <load href="__PUBLIC__/umeditor1_2_2-utf8-php/themes/default/css/umeditor.css" />
+    <!--<load href="__PUBLIC__/umeditor1_2_2-utf8-php/themes/default/css/umeditor.css" />
     <load href="__PUBLIC__/umeditor1_2_2-utf8-php/third-party/jquery.min.js" />
     <load href="__PUBLIC__/umeditor1_2_2-utf8-php/umeditor.config.js" />
-    <load href="__PUBLIC__/umeditor1_2_2-utf8-php/umeditor.min.js" />
-    <load href="__PUBLIC__/umeditor1_2_2-utf8-php/lang/zh-cn/zh-cn.js" />
+    <load href="__PUBLIC__/umeditor1_2_2-utf8-php/umeditor.js" />
+    <load href="__PUBLIC__/umeditor1_2_2-utf8-php/lang/zh-cn/zh-cn.js" />-->
+        <load href="__PUBLIC__/utf8-php/ueditor.config.js" />
+        <load href="__PUBLIC__/utf8-php/ueditor.all.min.js" />
+    <load href="__PUBLIC__/utf8-php/lang/zh-cn/zh-cn.js" />
     <link rel="stylesheet" href="__PUBLIC__/css/jquery.fileupload.css">
     <link rel="stylesheet" href="__PUBLIC__/css/jquery.fileupload-ui.css">
     <script src="__PUBLIC__/js/jquery.min.js"></script>
@@ -121,7 +124,7 @@
                                 <textarea name="detail" id="myEditor" style="width:1000px;height:480px;" value=""></textarea>
                                 <script type="text/javascript">
                                 //实例化编辑器
-                                var um = UM.getEditor('myEditor');
+                                var um = UE.getEditor('myEditor');
                                 editor.render("myEditor");
                                 </script>
                             </div>

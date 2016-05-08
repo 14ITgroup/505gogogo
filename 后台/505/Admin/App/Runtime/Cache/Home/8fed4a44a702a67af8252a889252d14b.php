@@ -103,10 +103,10 @@
                     <i class="fa fa-caret-down"></i>
                 </a>
               <ul class="dropdown-menu">
-                <li><a href="<?php echo U('/Home/index/order');?>">订单</a></li>        
-                <li><a href="<?php echo U('/Home/index/users');?>">用户</a></li>
+                <li><a href="<?php echo U('/Home/Index/order');?>">订单</a></li>        
+                <li><a href="<?php echo U('/Home/Index/users');?>">用户</a></li>
                 <li class="divider"></li>
-                <li><a tabindex="-1" href="<?php echo U('/Home/index/login');?>">退出</a></li>
+                <li><a tabindex="-1" href="<?php echo U('/Home/Index/login');?>">退出</a></li>
               </ul>
             </li>
           </ul>
@@ -119,27 +119,27 @@
     <ul>
     <li><a href="#" data-target=".dashboard-menu" class="nav-header" data-toggle="collapse"><i class="fa fa-fw fa-dashboard"></i>505后台<i class="fa fa-collapse"></i></a></li>
     <li><ul class="dashboard-menu nav nav-list collapse in">
-            <li><a href="<?php echo U('/Home/index/');?>"><span class="fa fa-caret-right"></span>后台首页</a></li>
-            <li><a href="<?php echo U('/Home/index/order');?>"><span class="fa fa-caret-right"></span>最新业务</a></li>
-            <li ><a href="<?php echo U('/Home/index/notice');?>"><span class="fa fa-caret-right"></span>公告管理</a></li>
+            <li><a href="<?php echo U('/Home/Index/');?>"><span class="fa fa-caret-right"></span>后台首页</a></li>
+            <li><a href="<?php echo U('/Home/Index/order');?>"><span class="fa fa-caret-right"></span>最新业务</a></li>
+            <li ><a href="<?php echo U('/Home/Index/notice');?>"><span class="fa fa-caret-right"></span>公告管理</a></li>
     </ul></li>
 
     <li data-popover="true" rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i>商品管理<i class="fa fa-collapse"></i></a></li>
         <li><ul class="premium-menu nav nav-list collapse">
                 <li class="visible-xs visible-sm"><a href="#">- Premium features require a license -</a>
-            <li ><a href="<?php echo U('/Home/index/goodslist');?>"><span class="fa fa-caret-right"></span>最新商品</a></li>
+            <li ><a href="<?php echo U('/Home/Index/goodslist');?>"><span class="fa fa-caret-right"></span>最新商品</a></li>
     </ul></li>
 
         <li><a href="#" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-briefcase"></i>用户管理<span class="label label-info">+3</span></a></li>
         <li><ul class="accounts-menu nav nav-list collapse">
-            <li ><a href="<?php echo U('/Home/index/users');?>"><span class="fa fa-caret-right"></span>用户列表</a></li>
-            <li ><a href="<?php echo U('/Home/index/userselect');?>"><span class="fa fa-caret-right"></span>用户检索</a></li>
+            <li ><a href="<?php echo U('/Home/Index/users');?>"><span class="fa fa-caret-right"></span>用户列表</a></li>
+            <li ><a href="<?php echo U('/Home/Index/userselect');?>"><span class="fa fa-caret-right"></span>用户检索</a></li>
     </ul></li>
 
         <li><a href="#" data-target=".legal-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-legal"></i>管理员管理<i class="fa fa-collapse"></i></a></li>
         <li><ul class="legal-menu nav nav-list collapse">
-            <li ><a href="<?php echo U('/Home/index/admins');?>"><span class="fa fa-caret-right"></span>管理员列表</a></li>
-            <li ><a href="<?php echo U('/Home/index/addadmin');?>"><span class="fa fa-caret-right"></span>新增管理员</a></li>
+            <li ><a href="<?php echo U('/Home/Index/admins');?>"><span class="fa fa-caret-right"></span>管理员列表</a></li>
+            <li ><a href="<?php echo U('/Home/Index/addadmin');?>"><span class="fa fa-caret-right"></span>新增管理员</a></li>
     </ul></li>
 
         <li><a href="#" class="nav-header"><i class="fa fa-fw fa-question-circle"></i>帮助</a></li>
@@ -227,13 +227,13 @@
     <div class="header">
         <h1 class="page-title">商品列表</h1>
         <ul class="breadcrumb">
-            <li><a href="index.html">主页</a> </li>
+            <li><a href="<?php echo U("Home/Index/");?>">主页</a> </li>
             <li class="active">商品</li>
         </ul>
     </div>
     <div class="main-content">
         <div class="btn-toolbar list-toolbar">
-            <a href="<?php echo U("home/index/goodsadd");?>"><button class="btn btn-primary" ><i class="fa fa-plus"></i>新添加商品</button></a>
+            <a href="<?php echo U("Home/Index/goodsadd");?>"><button class="btn btn-primary" ><i class="fa fa-plus"></i>新添加商品</button></a>
             <div class="btn-group">
             </div>
         </div>
@@ -254,7 +254,7 @@
                         <td><?php echo ($vo["price"]); ?></td>
                         <td><?php echo ($vo["addtime"]); ?></td>
                         <td>
-                            <a href="<?php echo U("home/index/goodseditor?id=$vo[id]");?>"><i class="fa fa-pencil"></i></a>
+                            <a href="<?php echo U("Home/Index/goodseditor?id=$vo[id]");?>"><i class="fa fa-pencil"></i></a>
                             <a href="#myModal" role="button" data-toggle="modal"><i class="fa fa-trash-o"></i></a>
                         </td>
                     </tr><?php endforeach; endif; else: echo "" ;endif; ?>
