@@ -38,7 +38,7 @@
                 <a href="chart.html?delete=<?php echo ($cart["id"]); ?>" onclick="<!-- jump(<?php echo ($cart["id"]); ?>); -->alert('哈哈哈');">删除</a>
             </section><?php endforeach; endif; else: echo "" ;endif; ?> 
     </section>
-    <section class="pay-confirm">
+    <section class="pay-confirm" id="pay-sum-confirm">
         <a href="pay.html">支付</a>
         <p>总计: <span>￥<?php echo ($allprice); ?></span></p>
         <div style="clear: both;"></div>

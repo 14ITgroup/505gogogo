@@ -19,27 +19,39 @@ jQuery(document).ready(function($) {
 			top: tempHeight
 		});
 	});
-	$(dragEdit).swipe({
-		swipeLeft: function(event, direction, distance, duration, fingerCount) {
-			$(this).animate({
-				left: -180
-			});
-		},
-		swipeRight: function(event, direction, distance, duration, fingerCount) {
-			$(this).animate({
-				left: 0
-			})
-		},
-		swipeStatus: function(event, phase, direction, distance, duration, fingerCount) {
-			if (direction === "up") {
-				$(document).scrollTop($(document).scrollTop() + distance);
-			}
-			if (direction === "down") {
-				$(document).scrollTop($(document).scrollTop() - distance);
-			}
-		}
-	});
 
+	/*购物车列表右滑出现删除按钮*/
+	$(dragEdit).each(function(index, el) {
+		$(this).swipe({
+			/*左滑*/
+			swipeLeft: function(event, direction, distance, duration, fingerCount) {
+				$(this).animate({
+					left: -90
+				});
+				/*显示删除后调整z-index*/
+				$($(hideEdit)[index]).animate({
+					zIndex: 1000
+				})
+				
+			},
+			/*右滑*/
+			swipeRight: function(event, direction, distance, duration, fingerCount) {
+				$(this).animate({
+					left: 0
+				});
+				$($(hideEdit)[index]).css("z-index","-1");
+			},
+			/*重写页面上下滑动*/
+			swipeStatus: function(event, phase, direction, distance, duration, fingerCount) {
+				if (direction === "up") {
+					$(document).scrollTop($(document).scrollTop() + distance);
+				}
+				if (direction === "down") {
+					$(document).scrollTop($(document).scrollTop() - distance);
+				}
+			}
+		});
+	});
 
 	/*商品详情页 尺寸及颜色选择*/
 	var goodsChoice = $(".details-categories label");
