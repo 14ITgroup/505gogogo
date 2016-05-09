@@ -49,7 +49,12 @@
     <script type="text/javascript" src="/505/Public/js/jquery-v1.10.2.min.js"></script>
     <script type="text/javascript">
         $("#cart").click(function(){
-            addCart();
+            var left = $(".goods-left span").text();
+            if(left=='0'){
+            }
+            else{
+              addCart();
+            }
         });
     </script>
     <script type="text/javascript">
@@ -93,6 +98,12 @@
 	    	console.log("success");
 	    	console.log(dataget)
 	    	$(leftNum).text(dataget);
+            if(dataget=='0'){
+                $("#cart").attr('href','<?php echo U("index.php/home/index/goodsinfo?goodsstatus=0");?>');
+            }
+            else{
+                $("#cart").attr('href','<?php echo U("index.php/home/index/goodsinfo?goodsstatus=1");?>');
+            }
 	    })
 	    .fail(function() {
 	    	console.log("error");

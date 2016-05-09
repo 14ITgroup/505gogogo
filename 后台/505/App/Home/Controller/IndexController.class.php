@@ -128,9 +128,9 @@ class IndexController extends Controller {
 			if (isset($_GET['state'])) {
 				$state = I('request.state');
 				$this->assign("state", $state);
-				$all = $da->where("userid=%d and state=%d", $userid, $state)->select();
+				$all = $da->where("userid=%d and state=%d", $userid, $state)->order('addtime desc')->select();
 			} else {
-				$all = $da->where("userid=%d", $userid)->select();
+				$all = $da->where("userid=%d", $userid)->order('addtime desc')->select();
 			}
 
 			$this->assign("list", $all);
@@ -397,6 +397,15 @@ class IndexController extends Controller {
 
 	public function peopleinfo() {
 		$this->success('支付成功', U("index.php/Home/Index/homepage"));
+	}
+
+	public function goodsinfo() {
+		$status = I('request.goodsstatus');
+		if ($status == '0') {
+			$this->error("加入购物车失败，库存不足", 'JavaScript:history.go(-1)');
+		} else {
+			$this->success('加入成功，跳转至购物车...', U("index.php/Home/Index/chart"));
+		}
 	}
 }
 

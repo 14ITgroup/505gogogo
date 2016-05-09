@@ -59,7 +59,7 @@
         </section>
     </section>
     <section class="pay-confirm">
-    	<a href="" onclick="paying();">支付</a>
+    	<a href='/505/index.php/home/index/peopleinfo.html' onclick="paying();">支付</a>
     	<p>总计: <span>￥<?php echo ($allprice); ?></span></p>
     	<div style="clear: both;"></div>
     </section>
@@ -80,7 +80,7 @@
            typeids:typeids
         };
         $.ajax({
-            url: '<?php echo U("index.php/home/index/buildorderajax");?>',
+            url: '<?php echo U("index.php/Home/Index/buildorderajax");?>',
             type: 'POST',
             //false和true对应两种传值方式，默认为false
             //traditional :false,
@@ -92,8 +92,10 @@
             console.log(dataget);
             $.each(dataget, function(){     
                 alert(this);
-                console.log(this);     
+                console.log(this);
+                self.location='<?php echo U("index.php/Home/Index/peopleinfo");?>'; 
             }); 
+
         })
         .fail(function() {
             console.log("error");
