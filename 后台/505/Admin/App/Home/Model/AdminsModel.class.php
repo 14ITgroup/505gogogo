@@ -4,8 +4,8 @@ namespace Home\Model;
 use Think\Model\ViewModel;
 class AdminsModel extends ViewModel {
 	public function IsExist($name,$account) {
-		$isName = M('admins')->where('name='.$name)->select();
-		$isAccount = M('admins')->where('account='.$account)->select();
+		$isName = M('admins')->where("name='".$name."'")->select();
+		$isAccount = M('admins')->where("account='".$account."'")->select();
 		if($isName&&$isAccount)
 			return "用户名和账户已存在";
 		else if($isName)
