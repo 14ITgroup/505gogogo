@@ -26,7 +26,7 @@ class IndexController extends Controller {
 		$vo = M('users')->order('id desc')->select();
 		$this->assign("list", $vo);
 		//使用OrdersView模型读取订单有关数据
-		$order = D('OrdersView')->where('orders.state=0')->select();
+		$order = D('OrdersView')->where('orders.state=1')->select();
 		$this->assign("order", $order);
 		$this->display();
 	}
@@ -221,7 +221,7 @@ class IndexController extends Controller {
 		$order = M("orders")->where('id=' . $id)->select();
 		$state = $order[0]['state'];
 		//判断订单是否受理完毕
-		if ($state == 1) {
+		if ($state == 2||$state == 3) {
 			echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
 			echo "<script>alert('该订单以执行');location.href='" . $_SERVER["HTTP_REFERER"] . "';</script>";
 		} else {
@@ -239,7 +239,7 @@ class IndexController extends Controller {
 				//受理订单
 				$orders = M('orders');
 				$orders->id = $id;
-				$orders->state = 1;
+				$orders->state = 2;
 				$result2 = $orders->save();
 
 				if ($result && $result2) {
